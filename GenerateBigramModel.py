@@ -4,7 +4,7 @@ Created on Sep 11, 2015
 @author: gaurav
 '''
 
-from Controller import removeSpecialCharacters
+from Controller import formatWordForQuality
 from collections import defaultdict
 import nltk
 import os
@@ -78,8 +78,18 @@ def createBigrams( content, use_nltk = False ):
         return list(nltk.bigrams(content))
         
     #Manual method to create a list of bigrams from the given content
-    bigram_list = [(removeSpecialCharacters((str(content[i].lower()))), removeSpecialCharacters(str(content[i+1].lower()))) 
-                            for i in range(0, len(content)-1) if content[i] and content[i+1]]
+    bigram_list = []
+    for i in range(0, len(content)-1):
+        word1 = formatWordForQuality(content[i])
+        word2 = formatWordForQuality(content[i+1])
+        
+        if word1 and word2:
+            bigram_list.extend(tuple(word1, word2))
+    
+    #List comprehention for the same. Difficult to read
+    #bigram_list = [(removeSpecialCharacters((str(content[i].lower()))), removeSpecialCharacters(str(content[i+1].lower()))) 
+    #               for i in range(0, len(content)-1) if content[i] and content[i+1]]
+    
     return bigram_list
 
 def getBigramFrequencies( bigrams, simple = True ):
