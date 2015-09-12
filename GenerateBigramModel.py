@@ -12,8 +12,8 @@ import codecs
 
 #Variable definitions relative to the path of the source files
 base_path     = os.path.dirname(__file__)
-#genres        = ['children', 'crime', 'history']
-genres        = ['history']
+genres        = ['children', 'crime', 'history']
+#Testing genres        = ['children']
 training_path = base_path + '/books/train_books/'
 test_path     = base_path + '/books/test_books/'
 
@@ -29,9 +29,6 @@ def generateBigramModels():
     for genre in genres:
         print("\nReading files for genre {0}".format(genre))
         bigrams[genre] = getBigramsForGenre(training_path+genre)
-    
-    #Print this at your own risk :)
-    #pprint.pprint(bigrams['children'])
     
     #NLTK package conditional probabilities. Storing it like this would be ideal
     #for key,value in nltk.ConditionalFreqDist(bigrams['children']).items():
@@ -84,11 +81,7 @@ def createBigrams( content, use_nltk = False ):
         word2 = formatWordForQuality(content[i+1])
         
         if word1 and word2:
-            bigram_list.extend(tuple(word1, word2))
-    
-    #List comprehention for the same. Difficult to read
-    #bigram_list = [(removeSpecialCharacters((str(content[i].lower()))), removeSpecialCharacters(str(content[i+1].lower()))) 
-    #               for i in range(0, len(content)-1) if content[i] and content[i+1]]
+            bigram_list.append([word1, word2])
     
     return bigram_list
 
@@ -102,23 +95,42 @@ def getBigramFrequencies( bigrams, simple = True ):
                             in which the calculations become much faster
     '''
     print("\nComputing the frequency of the bigrams")
-    bigram_frequencies = {}
     
     #If we want a bigram frequency model like { (a,b) : 2, (a,c) : 3 }
     if simple:
-        for genre, pairs in bigrams.items():
-            genre_bigram_frequency = defaultdict(int)
-            
-            #Adding the frequency of each unique bigram to the genre level bigram frequency
-            for bigram in pairs:
-                if bigram not in genre_bigram_frequency:
-                    genre_bigram_frequency[bigram] = pairs.count(bigram)
-            
-            bigram_frequencies[genre] = genre_bigram_frequency
-            
+        return createSimpleBigramFrequency(bigrams) 
+        
     #If we want a bigram frequency model like { a : { b:2, c:3 } }
     else:
-        for genre, pairs in bigrams.items():
+        return createAdvancedBigramFrequency(bigrams)
+            
+def createSimpleBigramFrequency( bigrams ):
+    '''
+        Creates bigram frequency model like { (a,b) : 2, (a,c) : 3 }
+    '''
+    bigram_frequencies = {}
+    
+    for genre, pairs in bigrams.items():
+        genre_bigram_frequency = defaultdict(int)
+        
+        #Adding the frequency of each unique bigram to the genre level bigram frequency
+        for bigram in pairs:
+            if bigram not in genre_bigram_frequency:
+                genre_bigram_frequency[bigram] = pairs.count(bigram)
+        
+        bigram_frequencies[genre] = genre_bigram_frequency
+    
+    print("Finished computing the frequency of the bigrams")
+    return bigram_frequencies
+
+def createAdvancedBigramFrequency( bigrams ):
+    '''
+        Creates bigram frquency model like { a : { b:2, c:3 } }
+        in which the calculations become much faster
+    '''
+    bigram_frequencies = {}
+    
+    for genre, pairs in bigrams.items():
             genre_bigram_frequency = defaultdict(lambda: defaultdict(dict))
             
             #Keep updating the dictionary of the first part of the bigram 
@@ -127,14 +139,12 @@ def getBigramFrequencies( bigrams, simple = True ):
                 if not bigram[1] in genre_bigram_frequency[genre][bigram[0]]:
                     genre_bigram_frequency[genre][bigram[0]].update({bigram[1] : pairs.count(bigram)})
             
-            bigram_frequencies[genre] = genre_bigram_frequency    
-    
+            bigram_frequencies[genre] = genre_bigram_frequency
+                
     print("Finished computing the frequency of the bigrams")
     return bigram_frequencies
 
-
-     
-     
+#Temportary call to the main bigram model method
 generateBigramModels()
                 
    
