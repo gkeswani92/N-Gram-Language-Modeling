@@ -5,12 +5,12 @@ Created on Sep 9, 2015
 '''
 
 from ModelingUtilities import genres, training_path, serializeUnigramModelToDisk
-from collections import defaultdict
-from itertools   import count
+from nltk.tokenize     import word_tokenize
+from collections       import defaultdict, Counter
+from itertools         import count
 import pprint 
 import os
 import codecs
-from nltk.tokenize import word_tokenize
 
 
 def generateUnigramModels():
@@ -50,12 +50,12 @@ def getUnigramFrequencyForGenre(dir_path, use_nltk = True):
         print("Reading file at {0}".format(file_path))
         
         #Using nltk only for tokenizing the word
-        f = codecs.open(file_path,'r','utf-8')
+        f = codecs.open(file_path,'r','utf8', errors='ignore')
         words = word_tokenize(f.read())
+        f.close()
         
         #Creating a frequency chart of the word occurences
-        for word in words:
-            word_frequency[word] += 1
+        word_frequency = Counter(words)
    
     return word_frequency    
         

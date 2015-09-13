@@ -7,6 +7,7 @@ Created on Sep 13, 2015
 import re
 import json
 import os
+import cPickle
 
 
 #Variable definitions relative to the path of the source files
@@ -44,9 +45,15 @@ def serializeUnigramModelToDisk(model, ngram):
     model_path = base_path + '/{0}/'.format(ngram)
     if not os.path.exists(model_path):
         os.mkdir(model_path)
-        
+    
     for genre, model in model.items():
         print("Serialising {0} model to disk".format(genre))
-        json.dump(model, open(model_path+genre,'w'))
+        f = open(model_path+genre,'w')
+        
+        if ngram == 'Unigram': 
+            json.dump(model, f)
+        else:
+            cPickle.dump(model, f)
+        f.close()
     
         

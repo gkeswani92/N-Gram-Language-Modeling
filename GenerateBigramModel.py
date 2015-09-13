@@ -4,8 +4,9 @@ Created on Sep 11, 2015
 @author: gaurav
 '''
 
-from Controller import formatWordForQuality
-from collections import defaultdict
+from ModelingUtilities import serializeUnigramModelToDisk
+from nltk.tokenize     import word_tokenize
+from collections       import defaultdict, Counter
 import nltk
 import os
 import codecs
@@ -30,12 +31,11 @@ def generateBigramModels():
         print("\nReading files for genre {0}".format(genre))
         bigrams[genre] = getBigramsForGenre(training_path+genre)
     
-    #NLTK package conditional probabilities. Storing it like this would be ideal
-    #for key,value in nltk.ConditionalFreqDist(bigrams['children']).items():
-    #    print ((key,value))
+    #Creating the frequency model of the bigrams
+    bigram_frequencies = getBigramFrequencies(bigrams, simple = True, use_nltk = False)
     
-    bigram_frequencies = getBigramFrequencies(bigrams, simple = False)
-    print(bigram_frequencies)
+    #Storing the model on the disk in JSON format
+    serializeUnigramModelToDisk(bigram_frequencies, 'Bigram')
 
 def getBigramsForGenre(dir_path):
     '''
@@ -49,20 +49,17 @@ def getBigramsForGenre(dir_path):
         
         #Reading the file's contents
         file_path = dir_path + '/' + path
-        f = codecs.open(file_path,'r')
         print("Reading file at {0}".format(file_path))
         
         #Creating a list of all the tokens in the file
-        for line in f.readlines():
-            line = [x.strip() for x in line.split(' ') if x]
-            content.extend(line)
+        f = codecs.open(file_path,'r','utf8', errors='ignore')
+        content = word_tokenize(f.read())
+        f.close()
         
         #All books in the same genre are aggregated into one bigram list
         #Keeping the use_nltk param false by default, so that is used 
         #only when we want to use it explicitly
-        genre_bigram.extend(createBigrams( content, use_nltk = False ))
-        
-        break
+        genre_bigram.extend(createBigrams(content, use_nltk = False))
     
     return genre_bigram
 
@@ -75,17 +72,10 @@ def createBigrams( content, use_nltk = False ):
         return list(nltk.bigrams(content))
         
     #Manual method to create a list of bigrams from the given content
-    bigram_list = []
-    for i in range(0, len(content)-1):
-        word1 = formatWordForQuality(content[i])
-        word2 = formatWordForQuality(content[i+1])
-        
-        if word1 and word2:
-            bigram_list.append([word1, word2])
-    
+    bigram_list = [(content[i], content[i+1]) for i in range(0, len(content)-1)]
     return bigram_list
 
-def getBigramFrequencies( bigrams, simple = True ):
+def getBigramFrequencies( bigrams, simple = True, use_nltk = False ):
     '''
         Computes the frequencies of the bigrams in two ways depending on the 
         value of the param simple.
@@ -102,7 +92,7 @@ def getBigramFrequencies( bigrams, simple = True ):
         
     #If we want a bigram frequency model like { a : { b:2, c:3 } }
     else:
-        return createAdvancedBigramFrequency(bigrams)
+        return createAdvancedBigramFrequency(bigrams, use_nltk)
             
 def createSimpleBigramFrequency( bigrams ):
     '''
@@ -110,20 +100,13 @@ def createSimpleBigramFrequency( bigrams ):
     '''
     bigram_frequencies = {}
     
-    for genre, pairs in bigrams.items():
-        genre_bigram_frequency = defaultdict(int)
-        
-        #Adding the frequency of each unique bigram to the genre level bigram frequency
-        for bigram in pairs:
-            if bigram not in genre_bigram_frequency:
-                genre_bigram_frequency[bigram] = pairs.count(bigram)
-        
-        bigram_frequencies[genre] = genre_bigram_frequency
+    for genre, pairs in bigrams.items():    
+        bigram_frequencies[genre] = Counter(pairs)
     
     print("Finished computing the frequency of the bigrams")
     return bigram_frequencies
 
-def createAdvancedBigramFrequency( bigrams ):
+def createAdvancedBigramFrequency( bigrams, use_nltk ):
     '''
         Creates bigram frquency model like { a : { b:2, c:3 } }
         in which the calculations become much faster
@@ -131,6 +114,14 @@ def createAdvancedBigramFrequency( bigrams ):
     bigram_frequencies = {}
     
     for genre, pairs in bigrams.items():
+        
+        #Using NLTK if flag is passed through which is not by default
+        if use_nltk:
+            #NLTK package conditional probabilities. Storing it like this would be ideal
+            bigram_frequencies[genre] = nltk.ConditionalFreqDist(bigrams['children'])
+        
+        #Manual method to create the frequency distribution
+        else: 
             genre_bigram_frequency = defaultdict(lambda: defaultdict(dict))
             
             #Keep updating the dictionary of the first part of the bigram 
