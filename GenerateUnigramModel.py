@@ -4,19 +4,12 @@ Created on Sep 9, 2015
 @author: gaurav
 '''
 
+from ModelingUtilities import genres, training_path, formatWordForQuality, serializeUnigramModelToDisk
 from collections import defaultdict
 from itertools   import count
 import pprint 
 import os
-import re
 import codecs
-
-#Variable definitions relative to the path of the source files
-base_path     = os.path.dirname(__file__)
-genres        = ['children', 'crime', 'history']
-training_path = base_path + '/books/train_books/'
-test_path     = base_path + '/books/test_books/'
-special_characters = '[~!@#$%^?&*()_,.+{}":;/\']+$123456789'
 
 
 def generateUnigramModels():
@@ -36,7 +29,11 @@ def generateUnigramModels():
     unigram_features = getUnigramModelFeatures(unigram_frequencies)
     pprint.pprint("\nUnigram Features (Word Types, Work Tokens) {0}".format(unigram_features))
     
+    #Creating the unigram model i.e. calculating the probabilities of the unigrams
     unigram_model = createUnigramModel(unigram_frequencies, unigram_features)
+     
+    #Storing the model on the disk in JSON format
+    serializeUnigramModelToDisk(unigram_model, 'Unigram')
     
     return unigram_model
 
@@ -55,20 +52,9 @@ def getUnigramFrequencyForGenre(dir_path):
         for line in f.readlines():
             for word in line.split():
                 mod_word = word.strip().lower()
-                word_frequency[removeSpecialCharacters(mod_word)] += 1
+                word_frequency[formatWordForQuality(mod_word)] += 1
                 
     return word_frequency    
-
-def removeSpecialCharacters(word):
-    '''
-        Replaces the special characters in the passed word with None. This is
-        done to weed out the unwanted characters
-    '''
-    
-    #translate works like this only in Python 2.x
-    return word.translate(None, special_characters)
-    
-    #return re.sub(special_characters, '', word)
         
 def getUnigramModelFeatures(unigram_models):
     '''
@@ -102,7 +88,6 @@ def createUnigramModel(unigram_frequencies, unigram_features):
             unigram_model[genre][word] = frequency * 1.0 / token_count
             
     return unigram_model
-        
-    
+
             
         
