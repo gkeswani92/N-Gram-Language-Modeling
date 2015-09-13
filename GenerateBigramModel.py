@@ -4,19 +4,12 @@ Created on Sep 11, 2015
 @author: gaurav
 '''
 
-from ModelingUtilities import serializeUnigramModelToDisk
+from ModelingUtilities import serializeUnigramModelToDisk, genres, training_path
 from nltk.tokenize     import word_tokenize
 from collections       import defaultdict, Counter
 import nltk
 import os
 import codecs
-
-#Variable definitions relative to the path of the source files
-base_path     = os.path.dirname(__file__)
-genres        = ['children', 'crime', 'history']
-#Testing genres        = ['children']
-training_path = base_path + '/books/train_books/'
-test_path     = base_path + '/books/test_books/'
 
 def generateBigramModels():
     '''
@@ -24,7 +17,6 @@ def generateBigramModels():
         Iterates over the given genre folders and retrieves the unigram model
         to create the final unigram model dictionary
     '''
-    
     #Get the bigrams in the corpus by the genre
     bigrams = {}
     for genre in genres:

@@ -12,7 +12,6 @@ import pprint
 import os
 import codecs
 
-
 def generateUnigramModels():
     '''
         Controller for the generation of the unigram models. 
