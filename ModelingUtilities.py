@@ -4,7 +4,6 @@ Created on Sep 13, 2015
 @author: gaurav
 '''
 
-import re
 import json
 import os
 import cPickle
