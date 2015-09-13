@@ -1,2 +1,4 @@
 
 *.pyc
+Unigram/
+Bigram/
