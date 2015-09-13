@@ -22,6 +22,8 @@ def formatWordForQuality(word):
         done to weed out the unwanted characters
     '''
     
+    word = str(word)
+    
     #Removing the special characters from the words
     special_characters = '[~!@#$%^?&*()_,.+{}":;/\']+$123456789'
     #word = word.translate(None, special_characters)
@@ -39,7 +41,7 @@ def serializeUnigramModelToDisk(model, ngram):
     '''
         Serialises the model of the ngram to its respective folder
     '''
-    model_path = base_path + '/ngram/'
+    model_path = base_path + '/{0}/'.format(ngram)
     if not os.path.exists(model_path):
         os.mkdir(model_path)
         

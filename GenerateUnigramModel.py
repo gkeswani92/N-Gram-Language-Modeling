@@ -4,12 +4,13 @@ Created on Sep 9, 2015
 @author: gaurav
 '''
 
-from ModelingUtilities import genres, training_path, formatWordForQuality, serializeUnigramModelToDisk
+from ModelingUtilities import genres, training_path, serializeUnigramModelToDisk
 from collections import defaultdict
 from itertools   import count
 import pprint 
 import os
 import codecs
+from nltk.tokenize import word_tokenize
 
 
 def generateUnigramModels():
@@ -37,7 +38,7 @@ def generateUnigramModels():
     
     return unigram_model
 
-def getUnigramFrequencyForGenre(dir_path):
+def getUnigramFrequencyForGenre(dir_path, use_nltk = True):
     '''
         Reads through the contents of a complete directory path and finds
         the frequency of each word to create a dictionary of word : count
@@ -48,12 +49,14 @@ def getUnigramFrequencyForGenre(dir_path):
         file_path = dir_path + '/' + path
         print("Reading file at {0}".format(file_path))
         
+        #Using nltk only for tokenizing the word
         f = codecs.open(file_path,'r','utf-8')
-        for line in f.readlines():
-            for word in line.split():
-                mod_word = word.strip().lower()
-                word_frequency[formatWordForQuality(mod_word)] += 1
-                
+        words = word_tokenize(f.read())
+        
+        #Creating a frequency chart of the word occurences
+        for word in words:
+            word_frequency[word] += 1
+   
     return word_frequency    
         
 def getUnigramModelFeatures(unigram_models):
