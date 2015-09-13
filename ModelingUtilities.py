@@ -7,13 +7,13 @@ Created on Sep 13, 2015
 import json
 import os
 import cPickle
+from scipy.stats import rv_discrete
 
 #Variable definitions relative to the path of the source files
 base_path     = os.path.dirname(__file__)
 genres        = ['children', 'crime', 'history']
 training_path = base_path + '/books/train_books/'
 test_path     = base_path + '/books/test_books/'
-special_characters = '[~!@#$%^?&*()_,.+{}":;/\']+$123456789'
 
 def serializeUnigramModelToDisk(model, ngram):
     '''
@@ -32,5 +32,35 @@ def serializeUnigramModelToDisk(model, ngram):
         else:
             cPickle.dump(model, f)
         f.close()
+
+def loadUnigramModels():
+    '''
+        Loads the unigram models for all the genres from the JSON dump
+    '''
+    model_path = base_path + '/Unigram/'
+    unigram_model = {}
+    
+    for genre in genres:
+        f = open(model_path+genre,'r')
+        unigram_model[genre] = json.load(f)
+    
+    return unigram_model
+
+def loadBigramModels():
+    '''
+        Loads the bigram models for all genres by unpickling 
+    '''
+    model_path = base_path + '/Bigram/'
+    bigram_model = {}
+    
+    for genre in genres:
+        f = open(model_path+genre,'r')
+        bigram_model[genre] = cPickle.load(f)
+    
+    return bigram_model
+    
+    
+    
+            
     
         
