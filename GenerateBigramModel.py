@@ -22,9 +22,12 @@ def generateBigramModels():
     for genre in genres:
         print("\nReading files for genre {0}".format(genre))
         bigrams[genre] = getBigramsForGenre(training_path+genre)
-    
+        
     #Creating the frequency model of the bigrams
-    bigram_frequencies = getBigramFrequencies(bigrams, simple = True, use_nltk = False)
+    bigram_frequencies = getBigramFrequencies(bigrams, simple = False, use_nltk = False)
+    
+    #Creating the bigram model i.e. calculating the probabilities of the unigrams
+    bigram_model = createBigramModel(bigram_frequencies)
     
     #Storing the model on the disk in JSON format
     serializeUnigramModelToDisk(bigram_frequencies, 'Bigram')
@@ -67,7 +70,7 @@ def createBigrams( content, use_nltk = False ):
     bigram_list = [(content[i], content[i+1]) for i in range(0, len(content)-1)]
     return bigram_list
 
-def getBigramFrequencies( bigrams, simple = True, use_nltk = False ):
+def getBigramFrequencies( bigrams, simple = False, use_nltk = False ):
     '''
         Computes the frequencies of the bigrams in two ways depending on the 
         value of the param simple.
@@ -78,13 +81,14 @@ def getBigramFrequencies( bigrams, simple = True, use_nltk = False ):
     '''
     print("\nComputing the frequency of the bigrams")
     
-    #If we want a bigram frequency model like { (a,b) : 2, (a,c) : 3 }
+    simple_frequency_distribution = createSimpleBigramFrequency(bigrams) 
+    
     if simple:
-        return createSimpleBigramFrequency(bigrams) 
+        return simple_frequency_distribution
         
     #If we want a bigram frequency model like { a : { b:2, c:3 } }
     else:
-        return createAdvancedBigramFrequency(bigrams, use_nltk)
+        return createAdvancedBigramFrequency(simple_frequency_distribution, bigrams, use_nltk)
             
 def createSimpleBigramFrequency( bigrams ):
     '''
@@ -95,39 +99,54 @@ def createSimpleBigramFrequency( bigrams ):
     for genre, pairs in bigrams.items():    
         bigram_frequencies[genre] = Counter(pairs)
     
-    print("Finished computing the frequency of the bigrams")
+    print("Finished computing the simple frequency of the bigrams")
     return bigram_frequencies
 
-def createAdvancedBigramFrequency( bigrams, use_nltk ):
+def createAdvancedBigramFrequency( simple_frequency_distribution, bigrams, use_nltk ):
     '''
         Creates bigram frquency model like { a : { b:2, c:3 } }
         in which the calculations become much faster
     '''
     bigram_frequencies = {}
     
-    for genre, pairs in bigrams.items():
+    for genre in genres:
         
         #Using NLTK if flag is passed through which is not by default
         if use_nltk:
-            #NLTK package conditional probabilities. Storing it like this would be ideal
             bigram_frequencies[genre] = nltk.ConditionalFreqDist(bigrams['children'])
         
         #Manual method to create the frequency distribution
         else: 
-            genre_bigram_frequency = defaultdict(lambda: defaultdict(dict))
+            genre_level_frequencies = defaultdict(dict)
             
-            #Keep updating the dictionary of the first part of the bigram 
-            #with the second word and the number of times it appeared
-            for bigram in pairs:
-                if not bigram[1] in genre_bigram_frequency[genre][bigram[0]]:
-                    genre_bigram_frequency[genre][bigram[0]].update({bigram[1] : pairs.count(bigram)})
-            
-            bigram_frequencies[genre] = genre_bigram_frequency
+            for bigram, count in simple_frequency_distribution[genre].iteritems():
+                genre_level_frequencies[bigram[0]].update({bigram[1]:count})
                 
-    print("Finished computing the frequency of the bigrams")
+            bigram_frequencies[genre] = genre_level_frequencies
+                
+                
+    print("Finished computing the advanced frequency of the bigrams")
     return bigram_frequencies
-
-#Temportary call to the main bigram model method
-generateBigramModels()
                 
-   
+def createBigramModel( bigram_frequencies ): 
+    '''
+        Creating the bigram model for words depending on which kind of frequency
+        model was passed to it
+    '''
+    print("\nCreating the bigram model")
+    bigram_model = {}
+    
+    for genre in genres:
+        genre_level_model = defaultdict(dict)
+        
+        for word, followers in bigram_frequencies[genre].iteritems():
+            total_count = float(sum(followers.values()))
+            
+            for following_word, count in followers.iteritems():
+                genre_level_model[word].update({following_word : count/total_count})
+        
+        bigram_model[genre] = genre_level_model                    
+    
+    print("Finished creating the bigram model")
+    return bigram_model            
+         
