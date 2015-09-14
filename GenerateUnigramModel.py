@@ -51,7 +51,7 @@ def getUnigramFrequencyForGenre(dir_path, use_nltk = True):
         
         #Using nltk only for tokenizing the word
         f = codecs.open(file_path,'r','utf8', errors='ignore')
-        text_string = re.sub(r'([.?!] )', r'\1 STARTCHAR ', f.read());
+        text_string = re.sub(r'([.?!]|[.?!]")(\s)', r'\1\2STARTCHAR ', f.read());
         words = word_tokenize(text_string);
         f.close()
         

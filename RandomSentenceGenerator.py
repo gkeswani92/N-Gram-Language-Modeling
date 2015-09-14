@@ -7,7 +7,7 @@ from ModelingUtilities import genres
 from scipy.stats       import rv_discrete
 import pprint
 
-def generateRandomSentenceFromUnigram( unigram_model, n = 10 ):
+def generateRandomSentenceFromUnigram( unigram_model, n = 30 ):
     '''
         Generating random sentences from the unigram model
     '''

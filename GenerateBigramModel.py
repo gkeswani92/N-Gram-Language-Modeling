@@ -49,7 +49,7 @@ def getBigramsForGenre(dir_path):
         
         #Creating a list of all the tokens in the file
         f = codecs.open(file_path,'r','utf8', errors='ignore')
-        text_string = re.sub(r'([.?!] )', r'\1 STARTCHAR ', f.read());
+        text_string = re.sub(r'([.?!]|[.?!]")(\s)', r'\1\2STARTCHAR ', f.read());
         content = word_tokenize(text_string);
         f.close()
         
