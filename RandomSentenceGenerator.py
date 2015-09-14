@@ -4,7 +4,8 @@ Created on Sep 13, 2015
 @author: gaurav
 '''
 from ModelingUtilities import genres
-from scipy.stats import rv_discrete
+from scipy.stats       import rv_discrete
+import pprint
 
 def generateRandomSentenceFromUnigram( unigram_model, n = 10 ):
     '''
@@ -36,9 +37,13 @@ def generateRandomSentenceFromUnigram( unigram_model, n = 10 ):
         #Creating a sentence from the sample by matching the numbers to the words
         sentence = ' '.join([numberToWordMapping[genre][num] for num in genre_sample])
         
-        randomUnigramSentences[genre] = sentence
+        randomUnigramSentences[genre] = str(sentence)
         
-    import pprint
+    print("Unigram random sentences:")
     pprint.pprint(randomUnigramSentences)
     return randomUnigramSentences
+
+def generateRandomSentenceFromBigram(bigram_model):
+    pass
+
     

@@ -4,10 +4,10 @@ Created on Sep 10, 2015
 @author: gaurav
 '''
 
-from GenerateUnigramModel import generateUnigramModels
-from GenerateBigramModel  import generateBigramModels
-from ModelingUtilities    import loadUnigramModels, loadBigramModels
-from RandomSentenceGenerator import generateRandomSentenceFromUnigram
+from GenerateUnigramModel    import generateUnigramModels
+from GenerateBigramModel     import generateBigramModels
+from ModelingUtilities       import loadUnigramModels, loadBigramModels
+from RandomSentenceGenerator import generateRandomSentenceFromUnigram, generateRandomSentenceFromBigram
     
 def main( create_model = False ):
     
@@ -20,6 +20,9 @@ def main( create_model = False ):
         
         #Generate the bigram model for all the genres
         bigram_model = generateBigramModels() if create_model else loadBigramModels()
+        
+        #Generate random sentences from the bigram model
+        generateRandomSentenceFromBigram(bigram_model)    
     
 if __name__ == '__main__':
     main()
