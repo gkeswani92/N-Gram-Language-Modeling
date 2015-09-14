@@ -6,6 +6,7 @@ Created on Sep 13, 2015
 from ModelingUtilities import genres
 from scipy.stats       import rv_discrete
 import pprint
+import pdb
 
 def generateRandomSentenceFromUnigram( unigram_model, n = 30 ):
     '''
@@ -43,7 +44,36 @@ def generateRandomSentenceFromUnigram( unigram_model, n = 30 ):
     pprint.pprint(randomUnigramSentences)
     return randomUnigramSentences
 
-def generateRandomSentenceFromBigram(bigram_model):
-    pass
+def generateRandomSentenceFromBigram(bigram_model, n=60, seed=None):
+    '''
+        Generating random sentences from the bigram model
+    '''
+
+    if not seed:
+        seed = {'children':'STARTCHAR','crime':'STARTCHAR','history':'STARTCHAR'}
+        #seed = {'children':'Suddenly','crime':'Inch','history':'Religion'}
+
+    genre_sentences = []
+    for genre in genres:
+        current_word = seed[genre]
+
+        genre_sentence = [current_word]
+        for word_ind in range(n-1):
+
+            next_word_dict = bigram_model[genre][current_word]
+
+            wordLevelNumberMapping = {}
+        
+            for i, key in enumerate(next_word_dict.keys()):
+                wordLevelNumberMapping[i] = key
+
+            next_word_num = rv_discrete(values=(wordLevelNumberMapping.keys(), next_word_dict.values())).rvs(size=1)
+            #pdb.set_trace()
+            current_word = wordLevelNumberMapping[next_word_num[0]]
+            genre_sentence.append(current_word)
+
+        print(' '.join(genre_sentence))
+
+
 
     
