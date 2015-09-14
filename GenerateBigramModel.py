@@ -6,11 +6,13 @@ Created on Sep 11, 2015
 
 from ModelingUtilities import serializeUnigramModelToDisk, genres, training_path
 from nltk.tokenize     import word_tokenize
+from nltk.data         import load
 from collections       import defaultdict, Counter
 import nltk
 import os
 import codecs
 import re
+import pdb
 
 def generateBigramModels():
     '''
@@ -18,20 +20,27 @@ def generateBigramModels():
         Iterates over the given genre folders and retrieves the unigram model
         to create the final unigram model dictionary
     '''
+
     #Get the bigrams in the corpus by the genre
     bigrams = {}
+    startchar_successors = {}
     for genre in genres:
         print("\nReading files for genre {0}".format(genre))
         bigrams[genre] = getBigramsForGenre(training_path+genre)
+        print("\nReading files for genre {0} (start_char extraction)".format(genre))
+        startchar_successors[genre] = getStartCharSuccessorsForGenre(training_path+genre)
         
     #Creating the frequency model of the bigrams
     bigram_frequencies = getBigramFrequencies(bigrams, simple = False, use_nltk = False)
-    
+    bigram_frequencies = getStartCharBigramFrequencies(bigram_frequencies, startchar_successors)
+
     #Creating the bigram model i.e. calculating the probabilities of the unigrams
     bigram_model = createBigramModel(bigram_frequencies)
-    
+
     #Storing the model on the disk in JSON format
     serializeUnigramModelToDisk(bigram_model, 'Bigram')
+
+    return bigram_model
 
 def getBigramsForGenre(dir_path):
     '''
@@ -49,8 +58,7 @@ def getBigramsForGenre(dir_path):
         
         #Creating a list of all the tokens in the file
         f = codecs.open(file_path,'r','utf8', errors='ignore')
-        text_string = re.sub(r'([.?!]|[.?!]")(\s)', r'\1\2STARTCHAR ', f.read());
-        content = word_tokenize(text_string);
+        content = word_tokenize(f.read());
         f.close()
         
         #All books in the same genre are aggregated into one bigram list
@@ -59,6 +67,33 @@ def getBigramsForGenre(dir_path):
         genre_bigram.extend(createBigrams(content, use_nltk = False))
     
     return genre_bigram
+
+def getStartCharSuccessorsForGenre(dir_path):
+    '''
+        Uses nltk's sentence detector to determine where to place STARTCHAR's,
+        and returns all tokens succeeding these STARTCHAR's 
+    '''
+
+    # Train a sentence-subdivision model to be used to identify where to place STARTCHAR characters
+    sent_detector = load('tokenizers/punkt/english.pickle')
+
+    genre_startchar_successors = []
+    
+    for path in os.listdir(dir_path):
+        
+        #Reading the file's contents
+        file_path = dir_path + '/' + path
+        print("Reading file at {0}".format(file_path))
+        
+        #Creating a list of all the tokens in the file
+        f = codecs.open(file_path,'r','utf8', errors='ignore')
+        split_sentences = sent_detector.tokenize(f.read().strip())
+        f.close()
+        
+        # Consider every word that begins a sentence to be a word which follows an invisible '<START>' character
+        genre_startchar_successors.extend([word_tokenize(sentence)[0] for sentence in split_sentences])
+    
+    return genre_startchar_successors
 
 def createBigrams( content, use_nltk = False ):
     '''
@@ -91,7 +126,7 @@ def getBigramFrequencies( bigrams, simple = False, use_nltk = False ):
     #If we want a bigram frequency model like { a : { b:2, c:3 } }
     else:
         return createAdvancedBigramFrequency(simple_frequency_distribution, bigrams, use_nltk)
-            
+
 def createSimpleBigramFrequency( bigrams ):
     '''
         Creates bigram frequency model like { (a,b) : 2, (a,c) : 3 }
@@ -129,11 +164,26 @@ def createAdvancedBigramFrequency( simple_frequency_distribution, bigrams, use_n
                 
     print("Finished computing the advanced frequency of the bigrams")
     return bigram_frequencies
-                
+
+def getStartCharBigramFrequencies(bigram_frequencies, startchar_successors):
+    '''
+        Assumes that "bigram_frequences" were created using 'advanced' method
+    '''
+
+    for genre in genres:
+        genre_successor_counter = Counter(startchar_successors[genre])
+        for successor,count in genre_successor_counter.iteritems():
+            bigram_frequencies[genre]['<START>'].update({successor:count})
+        
+    return bigram_frequencies
+
 def createBigramModel( bigram_frequencies ): 
     '''
         Creating the bigram model for words depending on which kind of frequency
         model was passed to it
+
+        (Does it really depend on which frequency model was passed in?
+        I don't see an if/else statement anywhere...)
     '''
     print("\nCreating the bigram model")
     bigram_model = {}
@@ -151,4 +201,3 @@ def createBigramModel( bigram_frequencies ):
     
     print("Finished creating the bigram model")
     return bigram_model            
-         

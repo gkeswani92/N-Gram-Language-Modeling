@@ -50,7 +50,7 @@ def generateRandomSentenceFromBigram(bigram_model, n=60, seed=None):
     '''
 
     if not seed:
-        seed = {'children':'STARTCHAR','crime':'STARTCHAR','history':'STARTCHAR'}
+        seed = {'children':'<START>','crime':'<START>','history':'<START>'}
         #seed = {'children':'Suddenly','crime':'Inch','history':'Religion'}
 
     genre_sentences = []
@@ -68,7 +68,6 @@ def generateRandomSentenceFromBigram(bigram_model, n=60, seed=None):
                 wordLevelNumberMapping[i] = key
 
             next_word_num = rv_discrete(values=(wordLevelNumberMapping.keys(), next_word_dict.values())).rvs(size=1)
-            #pdb.set_trace()
             current_word = wordLevelNumberMapping[next_word_num[0]]
             genre_sentence.append(current_word)
 
