@@ -31,7 +31,7 @@ def generateBigramModels():
     bigram_model = createBigramModel(bigram_frequencies)
     
     #Storing the model on the disk in JSON format
-    serializeUnigramModelToDisk(bigram_frequencies, 'Bigram')
+    serializeUnigramModelToDisk(bigram_model, 'Bigram')
 
 def getBigramsForGenre(dir_path):
     '''
