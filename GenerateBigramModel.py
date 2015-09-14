@@ -10,6 +10,7 @@ from collections       import defaultdict, Counter
 import nltk
 import os
 import codecs
+import re
 
 def generateBigramModels():
     '''
@@ -48,7 +49,8 @@ def getBigramsForGenre(dir_path):
         
         #Creating a list of all the tokens in the file
         f = codecs.open(file_path,'r','utf8', errors='ignore')
-        content = word_tokenize(f.read())
+        text_string = re.sub(r'([.?!] )', r'\1 STARTCHAR ', f.read());
+        content = word_tokenize(text_string);
         f.close()
         
         #All books in the same genre are aggregated into one bigram list
