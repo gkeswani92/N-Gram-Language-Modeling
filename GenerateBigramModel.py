@@ -4,7 +4,7 @@ Created on Sep 11, 2015
 @author: gaurav
 '''
 
-from ModelingUtilities import serializeUnigramModelToDisk, genres, training_path
+from ModelingUtilities import serializeModelToDisk, genres, training_path
 from nltk.tokenize     import word_tokenize
 from nltk.data         import load
 from collections       import defaultdict, Counter
@@ -27,13 +27,15 @@ def generateBigramModels():
         
     #Creating the frequency model of the bigrams
     bigram_frequencies = getBigramFrequencies(bigrams)
+    
+    #TODO: Ask Jonathan why he is overwriting the original bigram frequencies?
     bigram_frequencies = getStartCharBigramFrequencies(bigram_frequencies, startchar_successors)
 
     #Creating the bigram model i.e. calculating the probabilities of the unigrams
     bigram_model = createBigramModel(bigram_frequencies)
 
     #Storing the model on the disk in JSON format
-    serializeUnigramModelToDisk(bigram_model, 'Bigram')
+    serializeModelToDisk(bigram_model, 'Bigram')
 
     return bigram_model
 
@@ -102,14 +104,12 @@ def createAdvancedBigramFrequency( simple_frequency_distribution, bigrams ):
     bigram_frequencies = {}
     
     for genre in genres:
-        
         genre_level_frequencies = defaultdict(dict)
         
         for bigram, count in simple_frequency_distribution[genre].iteritems():
             genre_level_frequencies[bigram[0]].update({bigram[1]:count})
             
         bigram_frequencies[genre] = genre_level_frequencies
-                
                 
     print("Finished computing the advanced frequency of the bigrams")
     return bigram_frequencies

@@ -4,7 +4,7 @@ Created on Sep 9, 2015
 @author: gaurav
 '''
 
-from ModelingUtilities import genres, training_path, serializeUnigramModelToDisk
+from ModelingUtilities import genres, training_path, serializeModelToDisk
 from nltk.tokenize     import word_tokenize
 from collections       import defaultdict, Counter
 import os
@@ -31,7 +31,7 @@ def generateUnigramModels():
     unigram_model = createUnigramModel(unigram_frequencies, unigram_features)
      
     #Storing the model on the disk in JSON format
-    serializeUnigramModelToDisk(unigram_model, 'Unigram')
+    serializeModelToDisk(unigram_model, 'Unigram')
     
     return unigram_model
 

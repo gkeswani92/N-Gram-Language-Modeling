@@ -14,7 +14,7 @@ genres        = ['children', 'crime', 'history']
 training_path = base_path + '/books/train_books/'
 test_path     = base_path + '/books/test_books/'
 
-def serializeUnigramModelToDisk(model, ngram):
+def serializeModelToDisk(model, ngram):
     '''
         Serialises the model of the ngram to its respective folder
     '''
