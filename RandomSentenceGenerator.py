@@ -119,7 +119,7 @@ def smartJoin(word_list):
         elif current_word in end_punctuation: #Sentence ending
             use_space = False
             
-        elif current_word == "''" and prev_word in end_punctuation or prev_word in middle_punctuation: # Quote ending
+        elif current_word == "''" and (prev_word in end_punctuation or prev_word in middle_punctuation): # Quote ending
             use_space = False
             
         elif prev_word == "``" and current_word.isalpha(): # Quote starting
