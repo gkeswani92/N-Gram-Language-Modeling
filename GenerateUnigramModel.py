@@ -58,7 +58,9 @@ def getUnigramFrequencyForGenre(dir_path, use_nltk = True):
         
 def getUnigramModelFeatures(unigram_models):
     '''
-        Creates a dictionary of genre : (word_types, word_tokens)
+        Creates a dictionary of genre : (word_types, word_tokens) where word
+        types are the unique words while work tokens is the total count of the 
+        words in the corpus.
     '''
     unigram_features = {}
     for genre, model in unigram_models.items():
@@ -71,12 +73,17 @@ def getUnigramModelFeatures(unigram_models):
 def createUnigramModel(unigram_frequencies, unigram_features):
     '''
         Uses the word frequency and the work token count to create the 
-        unigram model per corpus
+        unigram model per genre i.e genre : { word1 : probability1, word2 : 
+        probability2 }
     '''
     unigram_model = {}
     
     for genre, frequencies in unigram_frequencies.items():
+        
+        #Number of tokens for the particular genre is used to calculate probabilities of a word occuring in that genre
         token_count = unigram_features[genre][1]
+        
+        #Creating the model at the genre level
         unigram_model[genre] = dict((word, frequency * 1.0 / token_count) for word, frequency in frequencies.items())
         
     return unigram_model
