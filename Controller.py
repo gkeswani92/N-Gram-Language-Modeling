@@ -16,13 +16,13 @@ def main( create_model = False ):
         unigram_model = generateUnigramModels() if create_model else loadUnigramModels()
         
         #Generate random sentences from the unigram model
-        generateRandomSentenceFromUnigram(unigram_model)
+        generateRandomSentenceFromUnigram(unigram_model, n=200)
         
         #Generate the bigram model for all the genres
         bigram_model = generateBigramModels() if create_model else loadBigramModels()
         
         #Generate random sentences from the bigram model
-        generateRandomSentenceFromBigram(bigram_model)    
+        generateRandomSentenceFromBigram(bigram_model, n=200)    
     
 if __name__ == '__main__':
     main()
