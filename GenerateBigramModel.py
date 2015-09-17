@@ -126,11 +126,7 @@ def getStartCharBigramFrequencies(bigram_frequencies, startchar_successors):
 
 def createBigramModel( bigram_frequencies ): 
     '''
-        Creating the bigram model for words depending on which kind of frequency
-        model was passed to it
-
-        (Does it really depend on which frequency model was passed in?
-        I don't see an if/else statement anywhere...)
+        Creating the bigram model for words
     '''
     print("\nCreating the bigram model")
     bigram_model = {}
