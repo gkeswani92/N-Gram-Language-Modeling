@@ -12,7 +12,7 @@ middle_punctuation  = set([',',';',':'])
 open_brace          = set(['(','['])
 close_brace         = set([')',']'])
     
-def generateRandomSentenceFromUnigram(unigram_model):
+def generateRandomSentenceFromUnigram(unigram_model, n = None):
     '''
         Generating random sentences from the unigram model
     '''
@@ -30,8 +30,9 @@ def generateRandomSentenceFromUnigram(unigram_model):
         current_token    = '<START>'
         current_sample   = []
         unigram_sentence = []
+        count            = 0
          
-        while current_token not in end_punctuation:
+        while (n and count<=n) or current_token not in end_punctuation:
             
             #Sampling on the probability distribution and creating a sample of size 1
             current_sample = rv_discrete( values=(numberToWordMapping[genre].keys(), numberToProbalityMapping[genre]) ).rvs(size=1)[0]
@@ -41,6 +42,7 @@ def generateRandomSentenceFromUnigram(unigram_model):
             
             #Contains all the tokens of the senetnce
             unigram_sentence.append(current_token)
+            count += 1
             
         #Creating a sentence from the sample by matching the numbers to the words
         randomUnigramSentences[genre] = str(smartJoin(unigram_sentence))
@@ -106,7 +108,7 @@ def smartJoin(word_list):
         
         use_space    = True
         current_word = word_list[i]
-        prev_word    = word_list[i-1]
+        prev_word    = word_list[i-1] 
 
         if "'" in current_word[:2] and prev_word.isalpha(): #Contractions- do and n't would have a space in between by default. Removing it.
             use_space = False
