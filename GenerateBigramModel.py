@@ -28,11 +28,12 @@ def generateBigramModels():
     #Creating the frequency model of the bigrams
     bigram_frequencies = getBigramFrequencies(bigrams)
     
-    #TODO: Ask Jonathan why he is overwriting the original bigram frequencies?
-    bigram_frequencies = getStartCharBigramFrequencies(bigram_frequencies, startchar_successors)
+    #Adding the frequency of the bigrams that include the start character
+    bigram_frequencies_with_startChar = getStartCharBigramFrequencies(bigram_frequencies, startchar_successors)
 
+    #TODO: Have only refactored code until this point. 
     #Creating the bigram model i.e. calculating the probabilities of the unigrams
-    bigram_model = createBigramModel(bigram_frequencies)
+    bigram_model = createBigramModel(bigram_frequencies_with_startChar)
 
     #Storing the model on the disk in JSON format
     serializeModelToDisk(bigram_model, 'Bigram')
@@ -116,12 +117,10 @@ def createAdvancedBigramFrequency( simple_frequency_distribution, bigrams ):
 
 def getStartCharBigramFrequencies(bigram_frequencies, startchar_successors):
     '''
-        Assumes that "bigram_frequences" were created using 'advanced' method
+        Add the frequencies of the bigrams involving the start character
     '''
     for genre in genres:
-        genre_successor_counter = Counter(startchar_successors[genre])
-        for successor,count in genre_successor_counter.iteritems():
-            bigram_frequencies[genre]['<START>'].update({successor:count})
+        bigram_frequencies[genre]['<START>'].update(Counter(startchar_successors[genre]))
         
     return bigram_frequencies
 
