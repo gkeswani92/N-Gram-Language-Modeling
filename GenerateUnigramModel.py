@@ -7,8 +7,6 @@ Created on Sep 9, 2015
 from ModelingUtilities import genres, training_path, serializeUnigramModelToDisk
 from nltk.tokenize     import word_tokenize
 from collections       import defaultdict, Counter
-from itertools         import count
-import pprint 
 import os
 import codecs
 
