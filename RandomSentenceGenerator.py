@@ -70,7 +70,7 @@ def generateRandomSentenceFromBigram(bigram_model, seed=None, n = None):
 
         #Even though the word being used as a seed is one word, the sentence should contain
         #the complete string from the beginning
-        genre_sentence = seed.get(genre,'<START>').split()
+        genre_sentence = genre_seed.split()
         
         while ( n and count<=n ) or current_token not in end_punctuation:
             
