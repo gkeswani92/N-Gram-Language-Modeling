@@ -65,27 +65,36 @@ def generateRandomSentenceFromBigram(bigram_model, seed=None, n = None):
         
         #If the seed is a single word, take it as it is. If it is a sentence, split it 
         #and take the last word
-        current_token = seed[genre] if ' ' not in seed[genre] else seed[genre].split()[-1]
+        genre_seed = seed.get(genre, '<START>')
+        current_token = genre_seed if ' ' not in genre_seed else genre_seed.split()[-1]
 
         #Even though the word being used as a seed is one word, the sentence should contain
         #the complete string from the beginning
-        genre_sentence = seed[genre].split()
+        genre_sentence = seed.get(genre,'<START>').split()
         
         while ( n and count<=n ) or current_token not in end_punctuation:
             
-            successor_dict = bigram_model[genre][current_token]
+            successor_dict = bigram_model[genre].get(current_token,None)
             
-            #Create a integer to word mapping of the possible next words
-            numberToWordMapping = dict((i,key) for i, key in enumerate(successor_dict.keys()) )
+            #If the current word is one that was seen in the corpus and thus 
+            #has known possible next words
+            if successor_dict:
+                
+                #Create a integer to word mapping of the possible next words
+                numberToWordMapping = dict((i,key) for i, key in enumerate(successor_dict.keys()) )
+                
+                #Sampling on the probability distribution and creating a sample of size 1
+                current_sample = rv_discrete(values=(numberToWordMapping.keys(), successor_dict.values())).rvs(size=1)[0]
+                
+                #Converts the sampled number to its corresponding word
+                current_token = numberToWordMapping[current_sample]
+                
+                genre_sentence.append(current_token)
+                count += 1
             
-            #Sampling on the probability distribution and creating a sample of size 1
-            current_sample = rv_discrete(values=(numberToWordMapping.keys(), successor_dict.values())).rvs(size=1)[0]
-            
-            #Converts the sampled number to its corresponding word
-            current_token = numberToWordMapping[current_sample]
-            
-            genre_sentence.append(current_token)
-            count += 1
+            else:
+                genre_sentence.append("(Word not seen in corpus before)")
+                break;
             
         #Smart joins the genre level sentence and stores it in the dictionary
         randomBigramSentences[genre] = smartJoin(genre_sentence) # remove <START> before passing
