@@ -27,7 +27,7 @@ def generateUnigramModels():
     
     #Get the word type and token count for the corpus
     unigram_features = getUnigramModelFeatures(unigram_frequencies)
-    pprint.pprint("\nUnigram Features (Word Types, Work Tokens) {0}".format(unigram_features))
+    print("\n Unigram Features (Word Types, Work Tokens) {0} \n".format(unigram_features))
     
     #Creating the unigram model i.e. calculating the probabilities of the unigrams
     unigram_model = createUnigramModel(unigram_frequencies, unigram_features)
@@ -79,11 +79,8 @@ def createUnigramModel(unigram_frequencies, unigram_features):
     
     for genre, frequencies in unigram_frequencies.items():
         token_count = unigram_features[genre][1]
-        unigram_model[genre] = {}
+        unigram_model[genre] = dict((word, frequency * 1.0 / token_count) for word, frequency in frequencies.items())
         
-        for word, frequency in frequencies.items():
-            unigram_model[genre][word] = frequency * 1.0 / token_count
-            
     return unigram_model
 
             
