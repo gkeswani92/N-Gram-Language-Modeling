@@ -11,7 +11,6 @@ from itertools         import count
 import pprint 
 import os
 import codecs
-import re
 
 def generateUnigramModels():
     '''
@@ -49,7 +48,7 @@ def getUnigramFrequencyForGenre(dir_path, use_nltk = True):
         file_path = dir_path + '/' + path
         print("Reading file at {0}".format(file_path))
         
-        #Using nltk only for tokenizing the word
+        #Using nltk for tokenizing the word
         f = codecs.open(file_path,'r','utf8', errors='ignore')
         words = word_tokenize(f.read());
         f.close()
@@ -66,12 +65,7 @@ def getUnigramModelFeatures(unigram_models):
     unigram_features = {}
     for genre, model in unigram_models.items():
         word_types  = len(model.keys())
-        word_tokens = 0
-        
-        #Adding the count of each word to the token count
-        for count in model.values():
-            word_tokens += count
-        
+        word_tokens = sum(model.values())
         unigram_features[genre] = (word_types, word_tokens)
         
     return unigram_features
