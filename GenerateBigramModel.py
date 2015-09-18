@@ -13,7 +13,7 @@ import codecs
 
 def generateBigramModels():
     '''
-        Controller for the generation of the bigram models. Calls the various
+        ControllerModelAndRandomSentence for the generation of the bigram models. Calls the various
         methods needed to generate the model and serialise it to the disc.
     '''
     bigrams              = {}

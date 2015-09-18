@@ -12,7 +12,7 @@ import codecs
 
 def generateUnigramModels():
     '''
-        Controller for the generation of the unigram models. 
+        ControllerModelAndRandomSentence for the generation of the unigram models. 
         Iterates over the given genre folders and retrieves the unigram model
         to create the final unigram model dictionary
     '''
