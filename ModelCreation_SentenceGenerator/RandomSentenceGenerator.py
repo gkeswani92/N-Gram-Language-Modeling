@@ -3,8 +3,8 @@ Created on Sep 13, 2015
 
 @author: gaurav
 '''
-from ModelingUtilities import genres
-from scipy.stats       import rv_discrete
+from ModelCreation_SentenceGenerator.ModelingUtilities  import genres
+from scipy.stats                                        import rv_discrete
 import pprint
 
 end_punctuation     = set(['.','!','?'])

@@ -4,9 +4,9 @@ Created on Sep 9, 2015
 @author: gaurav
 '''
 
-from ModelingUtilities import genres, training_path, serializeModelToDisk
-from nltk.tokenize     import word_tokenize
-from collections       import defaultdict, Counter
+from ModelCreation_SentenceGenerator.ModelingUtilities  import genres, training_path, serializeModelToDisk
+from nltk.tokenize                                      import word_tokenize
+from collections                                        import defaultdict, Counter
 import os
 import codecs
 

@@ -4,10 +4,10 @@ Created on Sep 11, 2015
 @author: gaurav
 '''
 
-from ModelingUtilities import serializeModelToDisk, genres, training_path
-from nltk.tokenize     import word_tokenize
-from nltk.data         import load
-from collections       import defaultdict, Counter
+from ModelCreation_SentenceGenerator.ModelingUtilities  import serializeModelToDisk, genres, training_path
+from nltk.tokenize                                      import word_tokenize
+from nltk.data                                          import load
+from collections                                        import defaultdict, Counter
 import os
 import codecs
 

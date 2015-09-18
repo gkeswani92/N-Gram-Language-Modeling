@@ -4,10 +4,10 @@ Created on Sep 10, 2015
 @author: gaurav
 '''
 
-from GenerateUnigramModel    import generateUnigramModels
-from GenerateBigramModel     import generateBigramModels
-from ModelingUtilities       import loadUnigramModels, loadBigramModels
-from RandomSentenceGenerator import generateRandomSentenceFromUnigram, generateRandomSentenceFromBigram
+from ModelCreation_SentenceGenerator.GenerateUnigramModel    import generateUnigramModels
+from ModelCreation_SentenceGenerator.GenerateBigramModel     import generateBigramModels
+from ModelCreation_SentenceGenerator.ModelingUtilities       import loadUnigramModels, loadBigramModels
+from ModelCreation_SentenceGenerator.RandomSentenceGenerator import generateRandomSentenceFromUnigram, generateRandomSentenceFromBigram
     
 def main( create_model = False ):
     
