@@ -35,7 +35,7 @@ def tfIdfTransform(vector_dict):
             no_of_documents_token_occurs  = sum([1 if possible_dict.get(token,0) else 0 for possible_dict in vector_dict.values()])
 
             #Formula for transformed frequency = Frequency in current vector x log(Total no of documents/Total number of documents the word occurs in)
-            tfidf_transform_vector[token] =  normalized_count * math.log(len(vector_dict) / no_of_documents_token_occurs)
+            tfidf_transform_vector[token] =  normalized_count * math.log(float(len(vector_dict)) / no_of_documents_token_occurs)
             
         transformed_vector_dict[filename] = tfidf_transform_vector
     
@@ -76,3 +76,4 @@ def findNearestNeighbour(training_vectors, test_vector, k):
     
     #Returning the k nearest neighbours of the test vector
     return test_neighbours[:k]
+
