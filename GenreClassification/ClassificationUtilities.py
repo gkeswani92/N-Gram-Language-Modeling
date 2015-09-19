@@ -4,10 +4,29 @@ Created on Sep 18, 2015
 @author: gaurav
 '''
 
+from ModelCreation_SentenceGenerator.ModelingUtilities import genres
 import math
-import numpy
-import operator
+import os
 
+def getFileListAndLabels(path):
+    '''
+        Gets the list of all files in the under the training/test path depending 
+        on what is passed. 
+        
+        It also creates a dictionary of file name: genre
+    ''' 
+    file_paths = []
+    genre_labels = {}
+    
+    for genre in genres:
+        dir_path = path + genre
+        for file_name in os.listdir(dir_path):
+            file_paths.append(dir_path+'/'+file_name)
+            genre_labels[file_name] = genre
+            
+    print(genre_labels)
+    return file_paths, genre_labels
+    
 def tfIdfTransform(vector_dict):
     '''
         Performing TF IDF (Token Frequency - Inverse Document Frequency) transformation
@@ -40,40 +59,4 @@ def tfIdfTransform(vector_dict):
         transformed_vector_dict[filename] = tfidf_transform_vector
     
     return transformed_vector_dict
-
-def computeDistance(vector1, vector2, method = 'cosine'):
-    '''
-        Computes the distance between two vector depending on the method that
-        is passed in. Default method is cosine distance
-    '''
-
-    if method == 'cosine':
-        theta = numpy.dot(vector1, vector2)
-        distance = 1 - theta
-        
-    return distance
-
-def findNearestNeighbour(training_vectors, test_vector, k):
-    '''
-        Calculate distance of the test vector from all the training vectors and 
-        return the k-nearest neighbours
-        
-        Expected format: 
-        training_vectors = {'children.text': {'a': 0.0, 'c': 0.0, 'b': 0.0, 'd': 0.0}, 
-                            'history.text': {'a': 0.0, 'c': 0.0, 'b': 0.0, 'd': 0.0}}
-                            
-        test_vector      = {'a': 0.0, 'c': 0.0, 'b': 0.0, 'd': 0.0}
-        k                = 1 (any integer)
-    '''
-    
-    #Computer distance of the test vector from all the training vectors
-    distance_from_training_vectors = {}
-    for filename, vector in training_vectors.iteritems():
-        distance_from_training_vectors[filename] = computeDistance(vector.values(), test_vector.values())
-    
-    #Sorting the neighbours in ascending order based on their distance from the test vector
-    test_neighbours = sorted(distance_from_training_vectors.iteritems(), key=operator.itemgetter(1))
-    
-    #Returning the k nearest neighbours of the test vector
-    return test_neighbours[:k]
 
