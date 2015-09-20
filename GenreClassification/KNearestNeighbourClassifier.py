@@ -11,7 +11,7 @@ import codecs
 import numpy
 import operator
 
-def KNearestNeighbourController(training_paths, test_paths = None, validation = True, k = 1):
+def KNearestNeighbourController(training_paths, training_labels, test_paths = None, validation = True, k = 1):
     '''
         Controller function to co-ordinate the K-Nearest neighbour algorithm
     '''
@@ -39,7 +39,9 @@ def KNearestNeighbourController(training_paths, test_paths = None, validation = 
             #Finding the nearest neighbours by passing in a manual k
             nearest_neighbours = findNearestNeighbour(training_vectors, validation_vector, k)
             
-            print(nearest_neighbours)
+            genre = detectClassOfTestSet(nearest_neighbours, training_labels, k)
+            
+            print(genre)
             break
  
 def readTextFromFilePaths(paths):
@@ -77,9 +79,10 @@ def createTrainingVectors(tokenized_texts_dict, test_file):
     #and store it in a dict, indexed by its corresponding filename
     vectors = {}
     for filename, token_list in tokenized_texts_dict.iteritems():
-        current_vector = zero_vector.copy()
-        current_vector.update(Counter(token_list))
-        vectors[filename] = current_vector
+        if filename != test_file:
+            current_vector = zero_vector.copy()
+            current_vector.update(Counter(word_tokenize(token_list)))
+            vectors[filename] = current_vector
     
     #Creating the test vector with only those tokens that were a part of the training set
     print("Creating vectors for test data")
@@ -93,7 +96,7 @@ def createTestVectors(testset, zero_vector):
         test set that are present in the zero_vector
     '''
     test_set_word_frequency = Counter(word_tokenize(testset))
-    test_vector = dict((token, test_set_word_frequency.get(token,0)) for token in zero_vector)
+    test_vector = OrderedDict((token, test_set_word_frequency.get(token,0)) for token in zero_vector)
     return test_vector
 
 def computeDistance(vector1, vector2, method = 'cosine'):
@@ -130,4 +133,22 @@ def findNearestNeighbour(training_vectors, test_vector, k):
     #Returning the k nearest neighbours of the test vector
     return test_neighbours[:k]
 
+def detectClassOfTestSet(nearest_neighbours, training_labels, k):
+    '''
+        Takes in the nearest neighbours of a vector and its training labels
+        to determine the class of the test set
+    '''
+    nearest_neighbour = []
+    
+    #Continue this loop until we find a genre that is maximum
+    while True:
+        genres_neighbours = [training_labels[book] for book, _ in nearest_neighbours]
+        count_genres = Counter(genres_neighbours)
+        nearest_neighbour = [genre for genre, count in count_genres.iteritems() if count == max(count_genres.values())]
+        
+        if len(nearest_neighbour) == 1:
+            return nearest_neighbour[0]
+        else:
+            k = k - 1
+            nearest_neighbours = nearest_neighbours[:k]
     

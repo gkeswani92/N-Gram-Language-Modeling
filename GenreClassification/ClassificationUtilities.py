@@ -34,6 +34,7 @@ def tfIdfTransform(vector_dict):
         on the data to reduce the weights of those words that appear frequently across
         all genres since they do not help any genre in standing out from the other
     '''
+    print("Performing TF-IDF transformation on the vectors")
     transformed_vector_dict = {}
     
     for filename, vector in vector_dict.iteritems():
@@ -52,8 +53,8 @@ def tfIdfTransform(vector_dict):
         for token, normalized_count in normalized_vector.iteritems():
             
             #Finding the number of documents that this token occurs in 
-            no_of_documents_token_occurs  = sum([1 if possible_dict.get(token,0) else 0 for possible_dict in vector_dict.values()])
-
+            no_of_documents_token_occurs  = sum([1 if possible_dict.get(token, False) else 0 for possible_dict in vector_dict.values()])
+            
             #Formula for transformed frequency = Frequency in current vector x log(Total no of documents/Total number of documents the word occurs in)
             tfidf_transform_vector[token] =  normalized_count * math.log(float(len(vector_dict)) / no_of_documents_token_occurs)
             
