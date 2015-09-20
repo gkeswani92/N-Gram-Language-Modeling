@@ -14,7 +14,7 @@ def main( validation = True ):
     training_files, training_labels = getFileListAndLabels(training_path)
     
     if validation:
-        KNearestNeighbourController(training_files)
+        KNearestNeighbourController(training_files, k = 3)
        
   
 if __name__ == '__main__':

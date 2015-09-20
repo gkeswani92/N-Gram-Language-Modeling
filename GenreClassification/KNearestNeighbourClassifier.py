@@ -4,16 +4,16 @@ Created on Sep 18, 2015
 @author: gaurav
 '''
 
+from GenreClassification.ClassificationUtilities        import tfIdfTransform
 from collections 										import OrderedDict, Counter
 from nltk.tokenize                                      import word_tokenize
-from copy import deepcopy
 import codecs
 import numpy
 import operator
 
 def KNearestNeighbourController(training_paths, test_paths = None, validation = True, k = 1):
     '''
-        Controlled function to co-ordinate the K-Nearest neighbour algorithm
+        Controller function to co-ordinate the K-Nearest neighbour algorithm
     '''
     #Returns the text per file and their labels once and for all
     training_text_dict = readTextFromFilePaths(training_paths)
@@ -21,32 +21,27 @@ def KNearestNeighbourController(training_paths, test_paths = None, validation = 
     #If this is a validation run, we need to keep one book aside at a time and send
     #the rest of the them to create the training vectors
     if validation:
-        print("K-Nearest Neighbout validation run")
-        
+       
         #Creating the vectors for the training set. This includes all but one book
         #which will be used for validation
         for validation_file in training_text_dict:
+            print(validation_file)
             
-            #Making a copy of the total text set, removing the validation file text
-            #and passing the rest to create training vectors
-            current_text_dict = deepcopy(training_text_dict)
-            test_text         = current_text_dict.pop(validation_file)  #Contains the text of the current validation file
-            training_dict     = current_text_dict                       #Contains file names of all files and their text except the validation file
+            #Creating the training vectors and validation vectors from the training dictionary
+            vectors = createTrainingVectors(training_text_dict, validation_file)
             
-            #Creating the training vectors from the training dict
-            training_vectors, zero_vector = createTrainingVectors(training_dict)
+            #Performing tf-idf transform on all the vectors
+            tfidf_transform_dict = tfIdfTransform(vectors)
             
-            #Create the test vector depending on the words that were a part of training set
-            test_vector = createTestVectors(test_text, zero_vector)
+            validation_vector = tfidf_transform_dict.pop(validation_file)
+            training_vectors = tfidf_transform_dict
             
             #Finding the nearest neighbours by passing in a manual k
-            nearest_neighbours = findNearestNeighbour(training_vectors, test_vector, k)
+            nearest_neighbours = findNearestNeighbour(training_vectors, validation_vector, k)
             
             print(nearest_neighbours)
-            
             break
-
-    
+ 
 def readTextFromFilePaths(paths):
     '''
         Reads in all text files and converts them to count vectors, represented by orderedDicts
@@ -64,29 +59,33 @@ def readTextFromFilePaths(paths):
         
     return tokenized_texts_dict
 
-def createTrainingVectors(tokenized_texts_dict):
+def createTrainingVectors(tokenized_texts_dict, test_file):
     '''
         Given the filenames and their contents, this methods creates the training 
         vectors by creating a unique list of all words together in the training
         set
     '''
-    print("Creating vectors for the training data")
+    print("Creating vectors for training data")
     
-    #Creating a set of all the words in the training set
-    unique_words = set([token for text in tokenized_texts_dict.values() for token in text])
-    
+    #Creating a set of all the words that in the texts except the ones in the validation file
+    unique_words = set([token for filename, text in tokenized_texts_dict.iteritems() for token in word_tokenize(text) if filename != test_file])
+
     #Creating the initial vector with counts 0 for all training sets
     zero_vector = OrderedDict(zip(unique_words,[0]*len(unique_words)))
     
     #For each training file, create an OrderedDict containing its word counts (together with zero counts),
     #and store it in a dict, indexed by its corresponding filename
-    training_vectors = {}
+    vectors = {}
     for filename, token_list in tokenized_texts_dict.iteritems():
         current_vector = zero_vector.copy()
         current_vector.update(Counter(token_list))
-        training_vectors[filename] = current_vector
-        
-    return training_vectors, zero_vector
+        vectors[filename] = current_vector
+    
+    #Creating the test vector with only those tokens that were a part of the training set
+    print("Creating vectors for test data")
+    vectors[test_file] = createTestVectors(tokenized_texts_dict[test_file], zero_vector)
+    
+    return vectors
 
 def createTestVectors(testset, zero_vector):
     '''
@@ -94,7 +93,7 @@ def createTestVectors(testset, zero_vector):
         test set that are present in the zero_vector
     '''
     test_set_word_frequency = Counter(word_tokenize(testset))
-    test_vector = dict((token, count) for token, count in test_set_word_frequency.iteritems() if token in zero_vector)
+    test_vector = dict((token, test_set_word_frequency.get(token,0)) for token in zero_vector)
     return test_vector
 
 def computeDistance(vector1, vector2, method = 'cosine'):
@@ -102,7 +101,6 @@ def computeDistance(vector1, vector2, method = 'cosine'):
         Computes the distance between two vector depending on the method that
         is passed in. Default method is cosine distance
     '''
-
     if method == 'cosine':
         theta = numpy.dot(vector1, vector2)
         distance = 1 - theta
@@ -121,7 +119,6 @@ def findNearestNeighbour(training_vectors, test_vector, k):
         test_vector      = {'a': 0.0, 'c': 0.0, 'b': 0.0, 'd': 0.0}
         k                = 1 (any integer)
     '''
-    
     #Computer distance of the test vector from all the training vectors
     distance_from_training_vectors = {}
     for filename, vector in training_vectors.iteritems():

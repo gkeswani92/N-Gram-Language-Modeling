@@ -5,6 +5,7 @@ Created on Sep 18, 2015
 '''
 
 from ModelCreation_SentenceGenerator.ModelingUtilities import genres
+from copy import deepcopy
 import math
 import os
 
@@ -41,7 +42,7 @@ def tfIdfTransform(vector_dict):
         #and so it is the relative frequency that matters instead of the absolute
         #frequency
         total_tokens      = float(sum(vector.values()))
-        normalized_vector = dict((token, count/total_tokens) for token, count in vector.iteritems())
+        normalized_vector = dict((token, float(count)/total_tokens) for token, count in vector.iteritems())
         
         #Performing the tf-idf transformation to give more weight to those words 
         #help a document to stand out from the others. This will reduce the importance
@@ -60,3 +61,13 @@ def tfIdfTransform(vector_dict):
     
     return transformed_vector_dict
 
+def getTrainingAndTestSetText(training_text_dict, validation_file):
+    '''
+        Making a copy of the total text set, removing the validation file text
+        and passing the rest to create training vectors
+    '''
+    current_text_dict = deepcopy(training_text_dict)
+    test_text         = current_text_dict.pop(validation_file)  #Contains the text of the current validation file
+    training_dict     = current_text_dict      
+    
+    return training_dict, test_text
