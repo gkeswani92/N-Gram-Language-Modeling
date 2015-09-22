@@ -41,8 +41,8 @@ def KNearestNeighbourController(training_paths, training_labels, test_paths = No
             
             genre = detectClassOfTestSet(nearest_neighbours, training_labels, k)
             
+            #Replace this and keep track of right and wrong answers
             print(genre)
-            break
  
 def readTextFromFilePaths(paths):
     '''
@@ -70,8 +70,17 @@ def createTrainingVectors(tokenized_texts_dict, test_file):
     print("Creating vectors for training data")
     
     #Creating a set of all the words that in the texts except the ones in the validation file
-    unique_words = set([token for filename, text in tokenized_texts_dict.iteritems() for token in word_tokenize(text) if filename != test_file])
-
+    #unique_words = set([token for filename, text in tokenized_texts_dict.iteritems() for token in word_tokenize(text) if filename != test_file])
+    #unique_words = set([token for filename, text in tokenized_texts_dict.iteritems() for token in word_tokenize(text) if filename != test_file])
+    
+    unique_words = []
+    for filename, text in tokenized_texts_dict.iteritems():
+        print(filename)
+        if filename != test_file:
+            unique_words.extend(word_tokenize(text))
+    
+    unique_words = set(unique_words)
+    
     #Creating the initial vector with counts 0 for all training sets
     zero_vector = OrderedDict(zip(unique_words,[0]*len(unique_words)))
     
@@ -105,7 +114,7 @@ def computeDistance(vector1, vector2, method = 'cosine'):
         is passed in. Default method is cosine distance
     '''
     if method == 'cosine':
-        theta = numpy.dot(vector1, vector2)
+        theta = numpy.dot(vector1, vector2) / numpy.sqrt(numpy.dot(vector1, vector1) * numpy.dot(vector2, vector2))  
         distance = 1 - theta
         
     return distance
