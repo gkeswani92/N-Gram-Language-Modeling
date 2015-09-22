@@ -3,53 +3,43 @@ Created on Sep 21, 2015
 
 @author: gaurav
 '''
-
-from ModelCreation_SentenceGenerator.ModelingUtilities import test_path, base_path, genres, training_path, serializeModelToDisk
-from ModelCreation_SentenceGenerator.ModelingUtilities import loadUnigramModels
-from math import exp, log
+from ModelCreation_SentenceGenerator.GenerateUnigramModel import getUnigramsForFile
+from utils.ModelingUtilities                              import test_path, genres, loadUnigramModels
+from math                                                 import exp, log
+from collections                                          import defaultdict
+import pprint
 import os
-import codecs
-from nltk import word_tokenize
 
 def getUnigramPerplexity():
-    unigram_model = loadUnigramModels(smoothed=True)
+    '''
+        Controller method to find the perplexity of all the test books with all the genres
+    '''
+    unigram_model = loadUnigramModels()
     
-    unigram_test_tokens = {}
+    #Reads in the unigrams one file at a time and stores it with their bookname
+    book_tokens = {}
     for genre in genres:
-        unigram_test_tokens[genre] = getTestUnigrams(test_path+genre)
+        print("\nReading test files for genre {0}".format(genre))
+        for path in os.listdir(test_path + genre):
+            book_tokens[path] = getUnigramsForFile(test_path + genre + '/' + path)
     
-    for training_genre in genres:
-        print("")
-        for test_genre in genres:
-            perplexity = computeUnigramPerplexity(unigram_model[training_genre],unigram_test_tokens[test_genre])
-            print("\nPerplexity for {0} probability model on {1} data: {2}".format(training_genre,test_genre,str(perplexity)))
+    book_perplexity = defaultdict(dict)
+    for book, unigrams in book_tokens.iteritems():
+        for genre, model in unigram_model.iteritems():
+            book_perplexity[book][genre] = computeUnigramPerplexity(model, unigrams)
     
-
-def getTestUnigrams(dir_path):
+    pprint.pprint(book_perplexity)
+    
+    
+def computeUnigramPerplexity(genre_model, unigrams):
     '''
-        Reads through the contents of a complete directory path and finds
-        the frequency of each word to create a dictionary of word : count
+        Computes the perplexity of a given set of unigrams with the model that has been
+        passed in
     '''
-    unigram_tokens = []
-    for path in os.listdir(dir_path):
-        file_path = dir_path + '/' + path
-        print("Reading file at {0}".format(file_path))
-        
-        #Using nltk for tokenizing the word
-        f = codecs.open(file_path,'r','utf8', errors='ignore')
-        word_tokens = word_tokenize(f.read());
-        f.close()
-        
-        unigram_tokens.extend(word_tokens)
-   
-    return unigram_tokens
-    
-
-def computeUnigramPerplexity(genre_model, test_unigrams):
-    test_unigram_probabilities = [genre_model[unigram] for unigram in test_unigrams]
-    perplexity_value = exp(1.0/len(test_unigrams)*sum([-log(1.0*x) for x in test_unigram_probabilities]))
+    unigram_probabilities = [ genre_model.get(unigram, genre_model['<UNKNOWN>']) for unigram in unigrams ]
+    perplexity_value = exp(1.0/len(unigrams) * sum([ -log(1.0 * x) for x in unigram_probabilities]))
     return perplexity_value
-    
+
 
 if __name__ == '__main__':
     getUnigramPerplexity()
