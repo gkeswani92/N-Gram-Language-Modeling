@@ -2,3 +2,9 @@
 *.pyc
 Unigram/
 Bigram/
+
+ModelCreation_SentenceGenerator/SmoothedUnigram/children
+
+ModelCreation_SentenceGenerator/SmoothedUnigram/crime
+
+ModelCreation_SentenceGenerator/SmoothedUnigram/history

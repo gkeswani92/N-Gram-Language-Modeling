@@ -40,8 +40,8 @@ def getUnigramFrequencyForGenre(dir_path, use_nltk = True):
         Reads through the contents of a complete directory path and finds
         the frequency of each word to create a dictionary of word : count
     '''
-    word_frequency = defaultdict(int)
     
+    word_list = []
     for path in os.listdir(dir_path):
         file_path = dir_path + '/' + path
         print("Reading file at {0}".format(file_path))
@@ -51,8 +51,10 @@ def getUnigramFrequencyForGenre(dir_path, use_nltk = True):
         words = word_tokenize(f.read());
         f.close()
         
-        #Creating a frequency chart of the word occurences
-        word_frequency = Counter(words)
+        word_list.extend(words)
+        
+    #Creating a frequency chart of the word occurences
+    word_frequency = Counter(word_list)
    
     return word_frequency    
         
