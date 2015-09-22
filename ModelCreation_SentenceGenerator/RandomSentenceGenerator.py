@@ -3,7 +3,7 @@ Created on Sep 13, 2015
 
 @author: gaurav
 '''
-from ModelCreation_SentenceGenerator.ModelingUtilities  import genres
+from utils.ModelingUtilities  import genres
 from scipy.stats                                        import rv_discrete
 import pprint
 
