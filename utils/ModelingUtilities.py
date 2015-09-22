@@ -26,20 +26,17 @@ def serializeModelToDisk(model, ngram):
         print("Serialising {0} model to disk".format(genre))
         f = open(model_path+genre,'w')
         
-        if 'Unigram' in ngram: 
+        if ngram == 'Unigram': 
             json.dump(model, f)
         else:
             cPickle.dump(model, f)
         f.close()
 
-def loadUnigramModels(smoothed=False):
+def loadUnigramModels():
     '''
         Loads the unigram models for all the genres from the JSON dump
     '''
-    if not smoothed:
-        model_path = base_path + '/Unigram/'
-    else:
-        model_path = base_path + '/SmoothedUnigram/'
+    model_path = base_path + '/Unigram/'
     unigram_model = {}
     
     for genre in genres:

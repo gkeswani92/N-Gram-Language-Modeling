@@ -51,14 +51,14 @@ def getUnigramFrequenciesforTrainingSet():
         
         #Reads in the unigrams one file at a time
         for path in os.listdir(training_path + genre):
-            word_list.extend(getUnigramFrequencyForFile(training_path + genre + '/' + path))
+            word_list.extend(getUnigramsForFile(training_path + genre + '/' + path))
         
         #Creating a counter of the frequencies at the genre level
         unigram_frequencies[genre] = Counter(word_list)
     
     return unigram_frequencies
 
-def getUnigramFrequencyForFile(path):
+def getUnigramsForFile(path):
     '''
         Reads through the contents of a file and returns the individual tokens
         as a list
