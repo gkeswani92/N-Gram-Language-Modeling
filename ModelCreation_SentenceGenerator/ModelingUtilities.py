@@ -10,7 +10,7 @@ import cPickle
 
 #Variable definitions relative to the path of the source files
 base_path     = os.path.dirname(__file__)
-genres        = ['children', 'crime', 'history']
+genres        = ['children','crime','history']
 training_path = base_path + '/books/train_books/'
 test_path     = base_path + '/books/test_books/'
 
@@ -26,17 +26,20 @@ def serializeModelToDisk(model, ngram):
         print("Serialising {0} model to disk".format(genre))
         f = open(model_path+genre,'w')
         
-        if ngram == 'Unigram': 
+        if 'Unigram' in ngram: 
             json.dump(model, f)
         else:
             cPickle.dump(model, f)
         f.close()
 
-def loadUnigramModels():
+def loadUnigramModels(smoothed=False):
     '''
         Loads the unigram models for all the genres from the JSON dump
     '''
-    model_path = base_path + '/Unigram/'
+    if not smoothed:
+        model_path = base_path + '/Unigram/'
+    else:
+        model_path = base_path + '/SmoothedUnigram/'
     unigram_model = {}
     
     for genre in genres:
