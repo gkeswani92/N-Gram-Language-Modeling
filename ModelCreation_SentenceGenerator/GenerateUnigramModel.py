@@ -4,12 +4,10 @@ Created on Sep 9, 2015
 @author: gaurav
 '''
 
-from utils.ModelingUtilities  import genres, training_path, serializeModelToDisk
+from utils.ModelingUtilities  import genres, training_path, serializeModelToDisk, getTokensForFile
 from Smoothing.GoodTuring     import applyGoodTuringSmoothing
-from nltk.tokenize            import word_tokenize
 from collections              import Counter
 import os
-import codecs
 
 def generateUnigramModels():
     '''
@@ -51,26 +49,12 @@ def getUnigramFrequenciesforTrainingSet():
         
         #Reads in the unigrams one file at a time
         for path in os.listdir(training_path + genre):
-            word_list.extend(getUnigramsForFile(training_path + genre + '/' + path))
+            word_list.extend(getTokensForFile(training_path + genre + '/' + path))
         
         #Creating a counter of the frequencies at the genre level
         unigram_frequencies[genre] = Counter(word_list)
     
     return unigram_frequencies
-
-def getUnigramsForFile(path):
-    '''
-        Reads through the contents of a file and returns the individual tokens
-        as a list
-    '''
-    print("Reading file at {0}".format(path))
-    
-    #Using nltk for tokenizing the word
-    f = codecs.open(path,'r','utf8', errors='ignore')
-    words = word_tokenize(f.read());
-    f.close()
-    
-    return words
         
 def getUnigramModelFeatures(unigram_models):
     '''

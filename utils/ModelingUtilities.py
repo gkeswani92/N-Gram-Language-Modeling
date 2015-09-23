@@ -7,12 +7,28 @@ Created on Sep 13, 2015
 import json
 import os
 import cPickle
+import codecs
+from nltk import word_tokenize
 
 #Variable definitions relative to the path of the source files
 base_path     = os.path.dirname(__file__)
-genres        = ['children','crime','history']
+genres        = ['history']
 training_path = base_path + '/books/train_books/'
 test_path     = base_path + '/books/test_books/'
+
+def getTokensForFile(path):
+    '''
+        Reads through the contents of a file and returns the individual tokens
+        as a list
+    '''
+    print("Reading file at {0}".format(path))
+    
+    #Using nltk for tokenizing the word
+    f = codecs.open(path,'r','utf8', errors='ignore')
+    words = word_tokenize(f.read());
+    f.close()
+    
+    return words
 
 def serializeModelToDisk(model, ngram):
     '''

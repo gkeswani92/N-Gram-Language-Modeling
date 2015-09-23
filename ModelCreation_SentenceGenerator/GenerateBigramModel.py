@@ -4,16 +4,16 @@ Created on Sep 11, 2015
 @author: gaurav
 '''
 
-from utils.ModelingUtilities  import serializeModelToDisk, genres, training_path
-from nltk.tokenize                                      import word_tokenize
-from nltk.data                                          import load
-from collections                                        import defaultdict, Counter
+from utils.ModelingUtilities  import serializeModelToDisk, genres, training_path, getTokensForFile
+from nltk.tokenize            import word_tokenize
+from nltk.data                import load
+from collections              import defaultdict, Counter
 import os
-import codecs
+from Smoothing.GoodTuring     import applyGoodTuringBigramSmoothing
 
 def generateBigramModels():
     '''
-        ControllerModelAndRandomSentence for the generation of the bigram models. Calls the various
+        Controller module for the generation of the bigram models. Calls the various
         methods needed to generate the model and serialise it to the disc.
     '''
     bigrams              = {}
@@ -26,47 +26,58 @@ def generateBigramModels():
         bigrams[genre], startchar_successors[genre] = getBigramsForGenre(training_path+genre)
         
     #Creating the frequency model of the bigrams
-    bigram_frequencies = getBigramFrequencies(bigrams)
+    bigram_frequencies, unseen_frequencies = getBigramFrequencies(bigrams)
     
     #Adding the frequency of the bigrams that include the start character
-    bigram_frequencies_with_startChar = getStartCharBigramFrequencies(bigram_frequencies, startchar_successors)
+    #bigram_frequencies_with_startChar = getStartCharBigramFrequencies(bigram_frequencies, startchar_successors)
 
-    #TODO: Have only refactored code until this point. 
     #Creating the bigram model i.e. calculating the probabilities of the unigrams
-    bigram_model = createBigramModel(bigram_frequencies_with_startChar)
+    bigram_model = createBigramModel(bigram_frequencies)
 
     #Storing the model on the disk in JSON format
     serializeModelToDisk(bigram_model, 'Bigram')
 
     return bigram_model
 
-def getBigramsForGenre(dir_path):
+def getBigramsForGenre(dir_path, unknown_words = True):
     '''
         Reads through the contents of a complete directory path and finds
         the bigrams present in a genre level corpus
     '''
-    genre_bigram         = []
+    genre_bigram               = []
     genre_startchar_successors = []
     
     for path in os.listdir(dir_path):
         
-        #Reading the file's contents
-        file_path = dir_path + '/' + path
-        print("Reading file at {0}".format(file_path))
-        f = codecs.open(file_path,'r','utf8', errors='ignore')
-        corpus = f.read()
-        f.close()
+        #Reading the file's contents and getting the tokens
+        tokens = getTokensForFile(dir_path + '/' + path)
         
-        #Creating a list of all the tokens in the file using nltk's tokenize method
-        tokens = word_tokenize(corpus);
-        bigrams = [(tokens[i], tokens[i+1]) for i in range(0, len(tokens)-1)]
+        #Modifying the list of tokens by inserting <UNKNOWN> for tokens that occur only once
+        mod_tokens = insertUnknownWords(tokens)
+        
+        #Create a list of bigrams from the tokens
+        bigrams = [(mod_tokens[i], mod_tokens[i+1]) for i in range(0, len(mod_tokens)-1)]
         genre_bigram.extend(bigrams)
         
         #Finding the list of words that are sentence starters in the current corpus
-        genre_startchar_successors.extend(getStartCharSuccessorsForGenre(corpus))
+        #if not unknown_words:
+        #    genre_startchar_successors.extend(getStartCharSuccessorsForGenre(corpus))
     
     return genre_bigram, genre_startchar_successors
 
+def insertUnknownWords(tokens):
+    '''
+        Inserts <UNKNOWN> for tokens that occur only once
+    '''
+    #Creating a list of tokens that need to be replaced since their frequency is 1
+    frequencies = Counter(tokens)
+    tokens_to_replace = [key for key, value in frequencies.iteritems() if value == 1]
+        
+    #Modifying the list to have <UNKOWN> for all tokens with frequency = 1  
+    mod_tokens = ['<UNKNOWN>' if current_token in tokens_to_replace else current_token for current_token in tokens]
+    
+    return mod_tokens
+    
 def getStartCharSuccessorsForGenre(content):
     '''
         Uses nltk's sentence detector to determine where to place STARTCHAR's,
@@ -94,8 +105,13 @@ def getBigramFrequencies( bigrams ):
     #Creates a simple bigram frequency model distribution like { (a,b) : 2, (a,c) : 3 }
     simple_frequency_distribution = dict((genre, Counter(pairs)) for genre, pairs in bigrams.iteritems())
     
+    # Smooth bigram counts
+    smoothed_simple_frequency_distribution, unseen_frequencies = applyGoodTuringBigramSmoothing(simple_frequency_distribution)
+    
     #Creates a advanced bigram frequency model distribution like { a : { b:2, c:3 } }
-    return createAdvancedBigramFrequency(simple_frequency_distribution, bigrams)
+    advanced_bigram_model = createAdvancedBigramFrequency(smoothed_simple_frequency_distribution, bigrams )
+    
+    return advanced_bigram_model, unseen_frequencies
 
 def createAdvancedBigramFrequency( simple_frequency_distribution, bigrams ):
     '''

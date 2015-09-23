@@ -9,19 +9,19 @@ from ModelCreation_SentenceGenerator.GenerateBigramModel     import generateBigr
 from utils.ModelingUtilities                                 import loadUnigramModels, loadBigramModels
 from ModelCreation_SentenceGenerator.RandomSentenceGenerator import generateRandomSentenceFromUnigram, generateRandomSentenceFromBigram
     
-def main( create_model = False ):
+def main( create_model = True ):
     
     #Generate the unigram model for all the genres or load it from memory
-    unigram_model = generateUnigramModels() if create_model else loadUnigramModels()
+    #unigram_model = generateUnigramModels() if create_model else loadUnigramModels()
     
     #Generate random sentences from the unigram model which ends as soon as sentence end character is presented
-    generateRandomSentenceFromUnigram(unigram_model)
+    #generateRandomSentenceFromUnigram(unigram_model)
     
     #Generate random sentences from the unigram model with sentence cap
-    generateRandomSentenceFromUnigram(unigram_model, n=50)
+    #generateRandomSentenceFromUnigram(unigram_model, n=50)
     
     #Generate the bigram model for all the genres
-    #bigram_model = generateBigramModels() if create_model else loadBigramModels()
+    bigram_model = generateBigramModels() if create_model else loadBigramModels()
     
     #Generate random sentences from the bigram model with default seed and n=200
     #generateRandomSentenceFromBigram(bigram_model, n=200)    
