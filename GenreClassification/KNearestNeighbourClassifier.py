@@ -11,7 +11,8 @@ import codecs
 import numpy
 import operator
 
-def KNearestNeighbourController(training_paths, training_labels, test_paths = None, validation = True, k = 1):
+
+def KNearestNeighbourController(training_paths, training_labels, test_paths = None, test_labels = None, k = 1):
     '''
         Controller function to co-ordinate the K-Nearest neighbour algorithm
     '''
@@ -20,7 +21,9 @@ def KNearestNeighbourController(training_paths, training_labels, test_paths = No
     
     #If this is a validation run, we need to keep one book aside at a time and send
     #the rest of the them to create the training vectors
-    if validation:
+    if not test_paths:
+        
+        count = 0
        
         #Creating the vectors for the training set. This includes all but one book
         #which will be used for validation
@@ -28,10 +31,11 @@ def KNearestNeighbourController(training_paths, training_labels, test_paths = No
             print(validation_file)
             
             #Creating the training vectors and validation vectors from the training dictionary
-            vectors = createTrainingVectors(training_text_dict, validation_file)
+            vectors, _ = createTrainingVectors(training_text_dict)
             
             #Performing tf-idf transform on all the vectors
-            tfidf_transform_dict = tfIdfTransform(vectors)
+            #tfidf_transform_dict = tfIdfTransform(vectors)
+            tfidf_transform_dict = vectors
             
             validation_vector = tfidf_transform_dict.pop(validation_file)
             training_vectors = tfidf_transform_dict
@@ -41,16 +45,59 @@ def KNearestNeighbourController(training_paths, training_labels, test_paths = No
             
             genre = detectClassOfTestSet(nearest_neighbours, training_labels, k)
             
-            #Replace this and keep track of right and wrong answers
+            #TODO: Replace this and keep track of right and wrong answers
             print(genre)
- 
+            if genre == training_labels[validation_file]:
+                count += 1
+    
+                print(count)
+    
+    else:
+        
+        #Creating the training vectors from the training dictionary
+        vectors, zero_vector = createTrainingVectors(training_text_dict)
+    
+        for test_file_path in test_paths:
+            test_file = test_file_path.split('/')[-1]
+            print("\nTest file is : {0}".format(test_file))
+            print("Known label of this file is {0}".format(test_labels.get(test_file,"Unknown")))
+            
+            test_text_dict = readTextFromFilePaths([test_file_path])
+            
+            #Running k nearest neighbours algorithms
+            genre = runKNearestNeighbours(vectors, test_text_dict, test_file, training_labels, zero_vector, k)
+            
+            print("Calculated label of this file is {0}".format(genre))
+
+def runKNearestNeighbours(training_vectors, tokenized_test_file, test_file, training_labels, zero_vector, k):
+    
+    #Creating the test vector with only those tokens that were a part of the training set
+    print("Creating vectors for test data")
+    training_vectors[test_file] = createTestVectors(tokenized_test_file[test_file], zero_vector)
+    
+    #Performing tf-idf transform on all the vectors
+    tfidf_transform_dict = tfIdfTransform(training_vectors)
+    
+    #tfidf_transform_dict = training_vectors
+    
+    test_vector = tfidf_transform_dict.pop(test_file)
+    training_vectors = tfidf_transform_dict
+    
+    #Finding the nearest neighbours by passing in a manual k
+    print("Finding the nearest neighbours")
+    nearest_neighbours = findNearestNeighbour(training_vectors, test_vector, k)
+    print(nearest_neighbours)
+    
+    genre = detectClassOfTestSet(nearest_neighbours, training_labels, k)
+    
+    return genre  
+            
 def readTextFromFilePaths(paths):
     '''
         Reads in all text files and converts them to count vectors, represented by orderedDicts
     '''
     #Dictionary to map the file names to the text in each file
     tokenized_texts_dict = {}
-    print("Reading the text from the provided paths")
     
     for path in paths:
         
@@ -61,7 +108,7 @@ def readTextFromFilePaths(paths):
         
     return tokenized_texts_dict
 
-def createTrainingVectors(tokenized_texts_dict, test_file):
+def createTrainingVectors(tokenized_texts_dict):
     '''
         Given the filenames and their contents, this methods creates the training 
         vectors by creating a unique list of all words together in the training
@@ -69,35 +116,26 @@ def createTrainingVectors(tokenized_texts_dict, test_file):
     '''
     print("Creating vectors for training data")
     
-    #Creating a set of all the words that in the texts except the ones in the validation file
-    #unique_words = set([token for filename, text in tokenized_texts_dict.iteritems() for token in word_tokenize(text) if filename != test_file])
-    #unique_words = set([token for filename, text in tokenized_texts_dict.iteritems() for token in word_tokenize(text) if filename != test_file])
-    
     unique_words = []
     for filename, text in tokenized_texts_dict.iteritems():
-        print(filename)
-        if filename != test_file:
-            unique_words.extend(word_tokenize(text))
+        #print("Reading {0} and adding to unique word list".format(filename))
+        unique_words.extend(word_tokenize(text))
     
     unique_words = set(unique_words)
     
     #Creating the initial vector with counts 0 for all training sets
     zero_vector = OrderedDict(zip(unique_words,[0]*len(unique_words)))
+    print("Creating the zero vector")
     
     #For each training file, create an OrderedDict containing its word counts (together with zero counts),
     #and store it in a dict, indexed by its corresponding filename
     vectors = {}
     for filename, token_list in tokenized_texts_dict.iteritems():
-        if filename != test_file:
-            current_vector = zero_vector.copy()
-            current_vector.update(Counter(word_tokenize(token_list)))
-            vectors[filename] = current_vector
+        current_vector = zero_vector.copy()
+        current_vector.update(Counter(word_tokenize(token_list)))
+        vectors[filename] = current_vector
     
-    #Creating the test vector with only those tokens that were a part of the training set
-    print("Creating vectors for test data")
-    vectors[test_file] = createTestVectors(tokenized_texts_dict[test_file], zero_vector)
-    
-    return vectors
+    return vectors, zero_vector
 
 def createTestVectors(testset, zero_vector):
     '''
@@ -117,6 +155,9 @@ def computeDistance(vector1, vector2, method = 'cosine'):
         theta = numpy.dot(vector1, vector2) / numpy.sqrt(numpy.dot(vector1, vector1) * numpy.dot(vector2, vector2))  
         distance = 1 - theta
         
+    elif method == 'euclidean':
+        distance = euclideanDistance(vector1, vector2)
+        
     return distance
 
 def findNearestNeighbour(training_vectors, test_vector, k):
@@ -134,7 +175,7 @@ def findNearestNeighbour(training_vectors, test_vector, k):
     #Computer distance of the test vector from all the training vectors
     distance_from_training_vectors = {}
     for filename, vector in training_vectors.iteritems():
-        distance_from_training_vectors[filename] = computeDistance(vector.values(), test_vector.values())
+        distance_from_training_vectors[filename] = computeDistance(vector.values(), test_vector.values(), 'cosine')
     
     #Sorting the neighbours in ascending order based on their distance from the test vector
     test_neighbours = sorted(distance_from_training_vectors.iteritems(), key=operator.itemgetter(1))
@@ -160,4 +201,10 @@ def detectClassOfTestSet(nearest_neighbours, training_labels, k):
         else:
             k = k - 1
             nearest_neighbours = nearest_neighbours[:k]
-    
+
+def euclideanDistance(instance1, instance2):
+    import math
+    distance = 0
+    for x in range(len(instance1)):
+        distance += pow((instance1[x] - instance2[x]), 2)
+    return math.sqrt(distance)  

@@ -6,7 +6,7 @@ Created on Sep 18, 2015
 
 from GenreClassification.KNearestNeighbourClassifier import KNearestNeighbourController
 from GenreClassification.ClassificationUtilities import getFileListAndLabels
-from ModelCreation_SentenceGenerator.ModelingUtilities import training_path, test_path
+from utils.ModelingUtilities import training_path, test_path
 
 def main( validation = True ):
     
@@ -14,8 +14,11 @@ def main( validation = True ):
     training_files, training_labels = getFileListAndLabels(training_path)
     
     if validation:
-        KNearestNeighbourController(training_files, training_labels, k = 5)
+        KNearestNeighbourController(training_files, training_labels, k = 3)
     
+    else:
+        test_files, test_labels = getFileListAndLabels(test_path)
+        KNearestNeighbourController(training_files, training_labels, test_files, test_labels, k = 3)
     
   
 if __name__ == '__main__':
