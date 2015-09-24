@@ -12,3 +12,7 @@ ModelCreation_SentenceGenerator/SmoothedUnigram/history
 *.xml
 
 utils/SmoothedBigram/children
+
+utils/SmoothedBigram/children
+
+utils/SmoothedBigram/crime
