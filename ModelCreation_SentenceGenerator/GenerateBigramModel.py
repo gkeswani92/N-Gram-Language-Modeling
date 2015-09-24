@@ -107,9 +107,9 @@ def getBigramFrequencies( bigrams ):
     
     #Creates a simple bigram frequency model distribution like { (a,b) : 2, (a,c) : 3 }
     simple_frequency_distribution = dict((genre, Counter(pairs)) for genre, pairs in bigrams.iteritems())
-    
+
     # Smooth bigram counts
-    smoothed_simple_frequency_distribution, unseen_frequencies = applyGoodTuringBigramSmoothing(simple_frequency_distribution)
+    smoothed_simple_frequency_distribution, unseen_frequencies = applyGoodTuringBigramSmoothing(simple_frequency_distribution, n=10)
     
     #Creates a advanced bigram frequency model distribution like { a : { b:2, c:3 } }
     advanced_bigram_model = createAdvancedBigramFrequency(smoothed_simple_frequency_distribution, bigrams )

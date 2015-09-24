@@ -13,7 +13,8 @@ def getUnigramPerplexity():
     '''
         Controller method to find the perplexity of all the test books with all the genres
     '''
-    unigram_model = loadUnigramModels()
+    #unigram_model = loadUnigramModels('UnigramSampled')
+    unigram_model = loadUnigramModels('UnigramSampled')
     
     #Reads in the unigrams one file at a time and stores it with their bookname
     book_tokens = {}
@@ -24,8 +25,10 @@ def getUnigramPerplexity():
     
     book_perplexity = defaultdict(dict)
     for book, unigrams in book_tokens.iteritems():
+        print('')
         for genre, model in unigram_model.iteritems():
             book_perplexity[book][genre] = computeUnigramPerplexity(model, unigrams)
+            print("Perplexity of '{0}' book on {1} genre model: {2}".format(book,genre,book_perplexity[book][genre]))
     
     pprint.pprint(book_perplexity)
     
@@ -98,5 +101,5 @@ def computeBigramPerplexity(bigram_model, bigrams):
 
 
 if __name__ == '__main__':
-    #getUnigramPerplexity()
-    getBigramPerplexity()
+    getUnigramPerplexity()
+    #getBigramPerplexity()
