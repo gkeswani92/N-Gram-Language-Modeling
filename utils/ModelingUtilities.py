@@ -12,7 +12,8 @@ from nltk import word_tokenize
 
 #Variable definitions relative to the path of the source files
 base_path     = os.path.dirname(__file__)
-genres        = ['history']
+genres        = ['children','crime','history']
+#genres        = ['history']
 training_path = base_path + '/books/train_books/'
 test_path     = base_path + '/books/test_books/'
 
@@ -61,11 +62,14 @@ def loadUnigramModels():
     
     return unigram_model
 
-def loadBigramModels():
+def loadBigramModels(smoothed=True):
     '''
         Loads the bigram models for all genres by unpickling 
     '''
-    model_path = base_path + '/Bigram/'
+    if smoothed:
+        model_path = base_path + '/SmoothedBigram/'
+    else:
+        model_path = base_path + '/Bigram/'
     bigram_model = {}
     
     for genre in genres:

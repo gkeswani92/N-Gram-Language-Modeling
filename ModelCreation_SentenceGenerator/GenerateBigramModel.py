@@ -19,8 +19,8 @@ def generateBigramModels():
     bigrams              = {}
     startchar_successors = {}
     
-    #Get the bigrams in the corpus by the genre and the list of tokens that are 
-    #sentence starter words in the corpus
+    # Get the bigrams in the corpus by the genre and the list of tokens that are
+    # sentence starter words in the corpus
     for genre in genres:
         print("\nReading files for genre {0}".format(genre))
         bigrams[genre], startchar_successors[genre] = getBigramsForGenre(training_path+genre)
@@ -35,7 +35,7 @@ def generateBigramModels():
     bigram_model = createBigramModel(bigram_frequencies)
 
     #Storing the model on the disk in JSON format
-    serializeModelToDisk(bigram_model, 'Bigram')
+    serializeModelToDisk(bigram_model, 'SmoothedBigram')
 
     return bigram_model
 
@@ -45,24 +45,27 @@ def getBigramsForGenre(dir_path, unknown_words = True):
         the bigrams present in a genre level corpus
     '''
     genre_bigram               = []
+    genre_tokens               = []
     genre_startchar_successors = []
     
     for path in os.listdir(dir_path):
         
         #Reading the file's contents and getting the tokens
         tokens = getTokensForFile(dir_path + '/' + path)
-        
-        #Modifying the list of tokens by inserting <UNKNOWN> for tokens that occur only once
-        mod_tokens = insertUnknownWords(tokens)
-        
-        #Create a list of bigrams from the tokens
-        bigrams = [(mod_tokens[i], mod_tokens[i+1]) for i in range(0, len(mod_tokens)-1)]
-        genre_bigram.extend(bigrams)
-        
+        genre_tokens.extend(tokens)
+
         #Finding the list of words that are sentence starters in the current corpus
         #if not unknown_words:
         #    genre_startchar_successors.extend(getStartCharSuccessorsForGenre(corpus))
-    
+
+    #Modifying the list of tokens by inserting <UNKNOWN> for tokens that occur only once
+    mod_tokens = insertUnknownWords(genre_tokens)
+
+    #Create a list of bigrams from the tokens
+    #Will include the bigrams spanning the end of one file to the beginning of the next.
+    # but that doesn't really matter (~5 bigrams out of 10s of thousands)
+    genre_bigram = [(mod_tokens[i], mod_tokens[i+1]) for i in range(0, len(mod_tokens)-1)]
+
     return genre_bigram, genre_startchar_successors
 
 def insertUnknownWords(tokens):
@@ -71,11 +74,11 @@ def insertUnknownWords(tokens):
     '''
     #Creating a list of tokens that need to be replaced since their frequency is 1
     frequencies = Counter(tokens)
-    tokens_to_replace = [key for key, value in frequencies.iteritems() if value == 1]
+    tokens_to_replace = {key for key, value in frequencies.iteritems() if value == 1}
         
     #Modifying the list to have <UNKOWN> for all tokens with frequency = 1  
     mod_tokens = ['<UNKNOWN>' if current_token in tokens_to_replace else current_token for current_token in tokens]
-    
+
     return mod_tokens
     
 def getStartCharSuccessorsForGenre(content):
@@ -149,11 +152,16 @@ def createBigramModel( bigram_frequencies ):
     
     for genre in genres:
         genre_level_model = defaultdict(dict)
-        
+        unseen_word_count = len(bigram_frequencies[genre]) # approximately
         for word, followers in bigram_frequencies[genre].iteritems():
-            total_count = float(sum(followers.values()))
+            #total_count = float(sum(followers.values()))
+            # Subtract 1 because every word has an "<UNSEEN>" following it
+            total_count = float(sum(followers.values())) + (unseen_word_count-1)*followers['<UNSEEN>']
             
             for following_word, count in followers.iteritems():
+                # May need to change this normalization factor to account for fact that
+                # "<UNSEEN>" is actually a stand-in for ALL other words --> MUCH larger
+                # value of total_count
                 genre_level_model[word].update({following_word : count/total_count})
         
         bigram_model[genre] = genre_level_model                    

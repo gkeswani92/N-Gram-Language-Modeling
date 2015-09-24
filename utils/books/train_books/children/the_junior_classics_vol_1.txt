@@ -1,3 +1,792 @@
+﻿Project Gutenberg Etext The Junior Classics V1, by Willam Patten
+
+Copyright laws are changing all over the world, be sure to check
+the laws for your country before redistributing these files!!!
+
+Please take a look at the important information in this header.
+We encourage you to keep this file on your own disk, keeping an
+electronic path open for the next readers.
+
+Please do not remove this.
+
+This should be the first thing seen when anyone opens the book.
+Do not change or edit it without written permission.  The words
+are carefully chosen to provide users with the information they
+need about what they can legally do with the texts.
+
+
+**Welcome To The World of Free Plain Vanilla Electronic Texts**
+
+**Etexts Readable By Both Humans and By Computers, Since 1971**
+
+*These Etexts Prepared By Hundreds of Volunteers and Donations*
+
+Information on contacting Project Gutenberg to get Etexts, and
+further information is included below.  We need your donations.
+The Project Gutenberg Literary Archive Foundation is a 501(c)(3)
+organization with EIN [Employee Identification Number] 64-6221541
+
+As of 12/12/00 contributions are only being solicited from people in:
+Colorado, Connecticut, Idaho, Indiana, Iowa,
+Kentucky, Louisiana, Massachusetts, Montana,
+Nevada, Oklahoma, South Carolina, South Dakota,
+Texas, Vermont, and Wyoming.
+
+As the requirements for other states are met,
+additions to this list will be made and fund raising
+will begin in the additional states.  Please feel
+free to ask to check the status of your state.
+
+These donations should be made to:
+
+Project Gutenberg Literary Archive Foundation
+PMB 113
+1739 University Ave.
+Oxford, MS 38655-4109
+
+
+Title: The Junior Classics, Volume 1
+
+Editor:  Willam Patten
+
+Release Date: April, 2002  [Etext #3152]
+[Yes, we are about one year ahead of schedule]
+[The actual date this file first posted = 01/12/01]
+
+Edition: 10
+
+Language: English
+
+Project Gutenberg Etext The Junior Classics V1, by Willam Patten
+******This file should be named 3152.txt or 3152.zip******
+
+Project Gutenberg Etexts are usually created from multiple editions,
+all of which are in the Public Domain in the United States, unless a
+copyright notice is included.  Therefore, we usually do NOT keep any
+of these books in compliance with any particular paper edition.
+
+We are now trying to release all our books one year in advance
+of the official release dates, leaving time for better editing.
+Please be encouraged to send us error messages even years after
+the official publication date.
+
+Please note:  neither this list nor its contents are final till
+midnight of the last day of the month of any such announcement.
+The official release date of all Project Gutenberg Etexts is at
+Midnight, Central Time, of the last day of the stated month.  A
+preliminary version may often be posted for suggestion, comment
+and editing by those who wish to do so.
+
+Most people start at our sites at:
+http://gutenberg.net
+http://promo.net/pg
+
+
+Those of you who want to download any Etext before announcement
+can surf to them as follows, and just download by date; this is
+also a good way to get them instantly upon announcement, as the
+indexes our cataloguers produce obviously take a while after an
+announcement goes out in the Project Gutenberg Newsletter.
+
+http://www.ibiblio.org/gutenberg/etext02
+or
+ftp://ftp.ibiblio.org/pub/docs/books/gutenberg/etext02
+
+Or /etext01, 00, 99, 98, 97, 96, 95, 94, 93, 92, 92, 91 or 90
+
+Just search by the first five letters of the filename you want,
+as it appears in our Newsletters.
+
+
+Information about Project Gutenberg (one page)
+
+We produce about two million dollars for each hour we work.  The
+time it takes us, a rather conservative estimate, is fifty hours
+to get any etext selected, entered, proofread, edited, copyright
+searched and analyzed, the copyright letters written, etc.  This
+projected audience is one hundred million readers.  If our value
+per text is nominally estimated at one dollar then we produce $2
+million dollars per hour this year as we release fifty new Etext
+files per month, or 500 more Etexts in 2000 for a total of 3000+
+If they reach just 1-2% of the world's population then the total
+should reach over 300 billion Etexts given away by year's end.
+
+The Goal of Project Gutenberg is to Give Away One Trillion Etext
+Files by December 31, 2001.  [10,000 x 100,000,000 = 1 Trillion]
+This is ten thousand titles each to one hundred million readers,
+which is only about 4% of the present number of computer users.
+
+At our revised rates of production, we will reach only one-third
+of that goal by the end of 2001, or about 3,333 Etexts unless we
+manage to get some real funding.
+
+The Project Gutenberg Literary Archive Foundation has been created
+to secure a future for Project Gutenberg into the next millennium.
+
+We need your donations more than ever!
+
+Presently, contributions are only being solicited from people in:
+Colorado, Connecticut, Idaho, Indiana, Iowa,
+Kentucky, Louisiana, Massachusetts, Nevada,
+Montana, Nevada, Oklahoma, South Carolina,
+South Dakota, Texas, Vermont, and Wyoming.
+
+As the requirements for other states are met,
+additions to this list will be made and fund raising
+will begin in the additional states.
+
+These donations should be made to:
+
+Project Gutenberg Literary Archive Foundation
+PMB 113
+1739 University Ave.
+Oxford, MS 38655-4109
+
+
+Project Gutenberg Literary Archive Foundation,
+EIN [Employee Identification Number] 64-6221541,
+has been approved as a 501(c)(3) organization by the US Internal
+Revenue Service (IRS).  Donations are tax-deductible to the extent
+permitted by law.  As the requirements for other states are met,
+additions to this list will be made and fund raising will begin in the
+additional states.
+
+All donations should be made to the Project Gutenberg Literary
+Archive Foundation.  Mail to:
+
+Project Gutenberg Literary Archive Foundation
+PMB 113
+1739 University Avenue
+Oxford, MS 38655-4109  [USA]
+
+
+We need your donations more than ever!
+
+You can get up to date donation information at:
+
+http://www.gutenberg.net/donation.html
+
+
+***
+
+If you can't reach Project Gutenberg,
+you can always email directly to:
+
+Michael S. Hart <hart@pobox.com>
+
+hart@pobox.com forwards to hart@prairienet.org and archive.org
+if your mail bounces from archive.org, I will still see it, if
+it bounces from prairienet.org, better resend later on. . . .
+
+Prof. Hart will answer or forward your message.
+
+We would prefer to send you information by email.
+
+
+***
+
+
+Example command-line FTP session:
+
+ftp ftp.ibiblio.org
+login: anonymous
+password: your@login
+cd pub/docs/books/gutenberg
+cd etext90 through etext99 or etext00 through etext02, etc.
+dir [to see files]
+get or mget [to get files. . .set bin for zip files]
+GET GUTINDEX.??  [to get a year's listing of books, e.g., GUTINDEX.99]
+GET GUTINDEX.ALL [to get a listing of ALL books]
+
+
+**The Legal Small Print**
+
+
+(Three Pages)
+
+***START**THE SMALL PRINT!**FOR PUBLIC DOMAIN ETEXTS**START***
+Why is this "Small Print!" statement here?  You know: lawyers.
+They tell us you might sue us if there is something wrong with
+your copy of this etext, even if you got it for free from
+someone other than us, and even if what's wrong is not our
+fault.  So, among other things, this "Small Print!" statement
+disclaims most of our liability to you.  It also tells you how
+you may distribute copies of this etext if you want to.
+
+*BEFORE!* YOU USE OR READ THIS ETEXT
+By using or reading any part of this PROJECT GUTENBERG-tm
+etext, you indicate that you understand, agree to and accept
+this "Small Print!" statement.  If you do not, you can receive
+a refund of the money (if any) you paid for this etext by
+sending a request within 30 days of receiving it to the person
+you got it from.  If you received this etext on a physical
+medium (such as a disk), you must return it with your request.
+
+ABOUT PROJECT GUTENBERG-TM ETEXTS
+This PROJECT GUTENBERG-tm etext, like most PROJECT GUTENBERG-tm etexts,
+is a "public domain" work distributed by Professor Michael S. Hart
+through the Project Gutenberg Association (the "Project").
+Among other things, this means that no one owns a United States copyright
+on or for this work, so the Project (and you!) can copy and
+distribute it in the United States without permission and
+without paying copyright royalties.  Special rules, set forth
+below, apply if you wish to copy and distribute this etext
+under the "PROJECT GUTENBERG" trademark.
+
+Please do not use the "PROJECT GUTENBERG" trademark to market
+any commercial products without permission.
+
+To create these etexts, the Project expends considerable
+efforts to identify, transcribe and proofread public domain
+works.  Despite these efforts, the Project's etexts and any
+medium they may be on may contain "Defects".  Among other
+things, Defects may take the form of incomplete, inaccurate or
+corrupt data, transcription errors, a copyright or other
+intellectual property infringement, a defective or damaged
+disk or other etext medium, a computer virus, or computer
+codes that damage or cannot be read by your equipment.
+
+LIMITED WARRANTY; DISCLAIMER OF DAMAGES
+But for the "Right of Replacement or Refund" described below,
+[1] Michael Hart and the Foundation (and any other party you may
+receive this etext from as a PROJECT GUTENBERG-tm etext) disclaims
+all liability to you for damages, costs and expenses, including
+legal fees, and [2] YOU HAVE NO REMEDIES FOR NEGLIGENCE OR
+UNDER STRICT LIABILITY, OR FOR BREACH OF WARRANTY OR CONTRACT,
+INCLUDING BUT NOT LIMITED TO INDIRECT, CONSEQUENTIAL, PUNITIVE
+OR INCIDENTAL DAMAGES, EVEN IF YOU GIVE NOTICE OF THE
+POSSIBILITY OF SUCH DAMAGES.
+
+If you discover a Defect in this etext within 90 days of
+receiving it, you can receive a refund of the money (if any)
+you paid for it by sending an explanatory note within that
+time to the person you received it from.  If you received it
+on a physical medium, you must return it with your note, and
+such person may choose to alternatively give you a replacement
+copy.  If you received it electronically, such person may
+choose to alternatively give you a second opportunity to
+receive it electronically.
+
+THIS ETEXT IS OTHERWISE PROVIDED TO YOU "AS-IS".  NO OTHER
+WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, ARE MADE TO YOU AS
+TO THE ETEXT OR ANY MEDIUM IT MAY BE ON, INCLUDING BUT NOT
+LIMITED TO WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A
+PARTICULAR PURPOSE.
+
+Some states do not allow disclaimers of implied warranties or
+the exclusion or limitation of consequential damages, so the
+above disclaimers and exclusions may not apply to you, and you
+may have other legal rights.
+
+INDEMNITY
+You will indemnify and hold Michael Hart, the Foundation,
+and its trustees and agents, and any volunteers associated
+with the production and distribution of Project Gutenberg-tm
+texts harmless, from all liability, cost and expense, including
+legal fees, that arise directly or indirectly from any of the
+following that you do or cause:  [1] distribution of this etext,
+[2] alteration, modification, or addition to the etext,
+or [3] any Defect.
+
+DISTRIBUTION UNDER "PROJECT GUTENBERG-tm"
+You may distribute copies of this etext electronically, or by
+disk, book or any other medium if you either delete this
+"Small Print!" and all other references to Project Gutenberg,
+or:
+
+[1]  Only give exact copies of it.  Among other things, this
+     requires that you do not remove, alter or modify the
+     etext or this "small print!" statement.  You may however,
+     if you wish, distribute this etext in machine readable
+     binary, compressed, mark-up, or proprietary form,
+     including any form resulting from conversion by word
+     processing or hypertext software, but only so long as
+     *EITHER*:
+
+     [*]  The etext, when displayed, is clearly readable, and
+          does *not* contain characters other than those
+          intended by the author of the work, although tilde
+          (~), asterisk (*) and underline (_) characters may
+          be used to convey punctuation intended by the
+          author, and additional characters may be used to
+          indicate hypertext links; OR
+
+     [*]  The etext may be readily converted by the reader at
+          no expense into plain ASCII, EBCDIC or equivalent
+          form by the program that displays the etext (as is
+          the case, for instance, with most word processors);
+          OR
+
+     [*]  You provide, or agree to also provide on request at
+          no additional cost, fee or expense, a copy of the
+          etext in its original plain ASCII form (or in EBCDIC
+          or other equivalent proprietary form).
+
+[2]  Honor the etext refund and replacement provisions of this
+     "Small Print!" statement.
+
+[3]  Pay a trademark license fee to the Foundation of 20% of the
+     gross profits you derive calculated using the method you
+     already use to calculate your applicable taxes.  If you
+     don't derive profits, no royalty is due.  Royalties are
+     payable to "Project Gutenberg Literary Archive Foundation"
+     the 60 days following each date you prepare (or were
+     legally required to prepare) your annual (or equivalent
+     periodic) tax return.  Please contact us beforehand to
+     let us know your plans and to work out the details.
+
+WHAT IF YOU *WANT* TO SEND MONEY EVEN IF YOU DON'T HAVE TO?
+Project Gutenberg is dedicated to increasing the number of
+public domain and licensed works that can be freely distributed
+in machine readable form.
+
+The Project gratefully accepts contributions of money, time,
+public domain materials, or royalty free copyright licenses.
+Money should be paid to the:
+"Project Gutenberg Literary Archive Foundation."
+
+If you are interested in contributing scanning equipment or
+software or other items, please contact Michael Hart at:
+hart@pobox.com
+
+*END THE SMALL PRINT! FOR PUBLIC DOMAIN ETEXTS*Ver.12.12.00*END*
+
+
+
+
+
+THE JUNIOR CLASSICS
+
+SELECTED AND ARRANGED BY
+
+WILLIAM PATTEN, MANAGING EDITOR OF THE HARVARD CLASSICS
+
+INTRODUCTION BY CHARLES W. ELIOT, LL.D., PRESIDENT EMERITUS OF HARVARD
+UNIVERSITY
+
+WITH A READING GUIDE BY WILLIAM ALLAN NEILSON, Ph. D., PROFESSOR OF
+ENGLISH, HARVARD UNIVERSITY, PRESIDENT SMITH COLLEGE, NORTHAMPTON,
+MASS., SINCE 1917
+
+
+
+
+VOLUME ONE
+
+Fairy and Wonder Tales
+
+
+
+
+INTRODUCTION
+
+The purpose of The Junior Classics is to provide, in ten volumes
+containing about five thousand pages, a classified collection of tales,
+stories, and poems, both ancient and modern, suitable for boys and
+girls of from six to sixteen years of age.  Thoughtful parents and
+teachers, who realize the evils of indiscriminate reading on the part
+of children, will appreciate the educational value of such a
+collection.  A child's taste in reading is formed, as a rule, in the
+first ten or twelve years of its life, and experience has shown that
+the childish mind will prefer good literature to any other, if access
+to it is made easy, and will develop far better on literature of proved
+merit than on trivial or transitory material.
+
+The boy or girl who becomes familiar with the charming tales and poems
+in this collection will have gained a knowledge of literature and
+history that will be of high value in other school and home work.  Here
+are the real elements of imaginative narration, poetry, and ethics,
+which should enter into the education of every English-speaking child.
+
+This collection, carefully used by parents and teachers with due
+reference to individual tastes and needs, will make many children enjoy
+good literature.  It will inspire them with a love of good reading,
+which is the best possible result of any elementary education.  The
+child himself should be encouraged to make his own selections from this
+large and varied collection, the child's enjoyment being the object in
+view.  A real and lasting interest in literature or in scholarship is
+only to be developed through the individual's enjoyment of his mental
+occupations.
+
+The most important change which has been made in American schools and
+colleges within my memory is the substitution of leading for driving,
+of inspiration for drill, of personal interest and love of work for
+compulsion and fear.  The schools are learning to use methods and
+materials which interest and attract the children themselves.  The
+Junior Classics will put into the home the means of using this happy
+method.
+
+Committing to memory beautiful pieces of literature, either prose or
+poetry, for recitation before a friendly audience, acting charades or
+plays, and reading aloud with vivacity and sympathetic emotion, are
+good means of instruction at home or at school This collection contains
+numerous admirable pieces of literature for such use.  In teaching
+English and English literature we should place more reliance upon
+processes and acts which awaken emotion, stimulate interest, prove to
+be enjoyable for the actors, and result in giving children the power of
+entertaining people, of blessing others with noble pleasures which the
+children create and share.
+
+>From the home training during childhood there should result in the
+child a taste for interesting and improving reading which will direct
+and inspire its subsequent intellectual life.  The training which
+results in this taste for good reading, however unsystematic or
+eccentric it may have been, has achieved one principal aim of
+education; and any school or home training which does not result in
+implanting this permanent taste has failed in a very important respect.
+Guided and animated by this impulse to acquire knowledge and exercise
+the imagination through good reading, the adult will continue to
+educate him all through life.
+
+The story of the human race through all its slow development should be
+gradually conveyed to the child's mind from the time he begins to read,
+or to listen to his mother reading; and with description of facts and
+actual events should be mingled charming and uplifting products of the
+imagination.  To try to feed the minds of children upon facts alone is
+undesirable and unwise.  The immense product of the imagination in art
+and literature is a concrete fact with which every educated human being
+should be made somewhat familiar, that product being a very real part
+of every individual's actual environment.
+
+The right selection of reading matter for children is obviously of high
+importance.  Some of the mythologies, Old Testament stories, fairy
+tales, and historical romances, on which earlier generations were
+accustomed to feed the childish mind, contain a great deal that is
+barbarous, perverse, or cruel; and to this infiltration into children's
+minds, generation after generation, of immoral, cruel, or foolish ideas
+is probably to be attributed in part the slow ethical progress of the
+race.  The commonest justification of this thoughtless practice is that
+children do not apprehend the evil in the bad mental pictures with
+which we foolishly supply them; but what should we think of a mother
+who gave her children dirty milk or porridge, on the theory that the
+children would not assimilate the dirt?  Should we be less careful
+about mental and moral food materials?  The Junior Classics have been
+selected with this principle in mind, without losing sight of the fact
+that every developing human being needs to have a vision of the rough
+and thorny road over which the human race has been slowly advancing
+during thousands of years.
+
+Whoever has committed to memory in childhood such Bible extracts as
+Genesis i, the Ten Commandments, Psalm xxiii, Matthew v, 8-12, The
+Lord's Prayer, and I Corinthians xiii, such English prose as Lincoln's
+Gettysburg speech, Bacon's "Essay on Truth," and such poems as Bryant's
+"Waterfowl," Addison's "Divine Ode," Milton's Sonnet on his Blindness,
+Wotton's "How happy is he born or taught," Emerson's "Rhodora,"
+Holmes's "Chambered Nautilus," and Gray's Elegy, and has stamped them
+on his brain by frequent repetition, will have set up in his mind high
+standards of noble thought and feeling, true patriotism, and pure
+religion.  He will also have laid in an invaluable store of good
+English.
+
+While the majority of the tales and poems are intended for children who
+have begun to do their own reading, there will be found in every volume
+selections fit for reading aloud to younger children.  Throughout the
+collection the authors tell the stories in their own words; so that the
+salt which gave them savor is preserved.  There are some condensations
+however, such as any good teller of borrowed stories would make; but as
+a rule condensation has been applied only in the case of long works
+which otherwise could not have been included.  The notes which precede
+the condensations supply explanations, and answer questions which
+experience has shown boys and girls are apt to ask about the works
+condensed or their authors.
+
+The Junior Classics constitute a set of books whose contents will
+delight children and at the same time satisfy the legitimate ethical
+requirements of those who have the children's best interests at heart.
+
+Charles W. Eliot
+
+NOTE
+
+Notices of copyright on material used in these volumes appear on the
+back of the title pages of the particular volumes in which the stories
+are printed.  A complete list of acknowledgments to authors and
+publishers, for their kind permission to use copyrighted material, is
+given on pages 3 to 6 of Volume Ten.
+
+CONTENTS
+
+INTRODUCTION		Charles, W. Eliot
+
+PREFACE		William Patten
+
+TALES OF THE AMERICAN INDIANS
+
+Manabozho		H. R. Schoolcraft
+
+The Woodpecker		H. R. Schoolcraft
+
+Why the Diver Duck Has So Few Tail Feathers	H. R. Schoolcraft
+
+Manabozho Changed to Wolf		H. R. Schoolcraft
+
+Manabozho is Robbed 		H. R. Schoolcraft
+
+Manabozho and the Woodpeckers	H. R. Schoolcraft
+
+The Boy and the Wolves		Andrew Lang
+
+The Indian Who Lost His Wife		Andrew Lang
+
+TALES FROM INDIA
+
+Punchkin		E. Frere
+
+The Sun, Moon and Wind		E. Frere
+
+Why the Fish Laughed		Joseph Jacob
+
+The Farmer and Money Lender		Joseph Jacob
+
+Pride Goeth Before a Fall		Joseph Jacob
+
+The Wicked Sons		Joseph Jacob
+
+Tiger, Brahman, and Jackal		Flora Annie Steel
+
+The Lambikin		Flora Annie Steel
+
+The Rat's Wedding		Flora Annie Steel
+
+The Jackal and the Partridge		Flora Annie Steel
+
+The Jackal and the Crocodile		Flora Annie Steel
+
+The Jackal and the Iguana 		Flora Annie Steel
+
+The Bear's Bad Bargain		Flora Annie Steel
+
+The Thief and the Fox		Ramaswami Raju
+
+The Farmer and the Fox		Ramaswami Raju
+
+The Fools and the Drum		Ramaswami Raju
+
+The Lion and the Goat		Ramaswami Raju
+
+The Glowworm and Jackdaw		Ramaswami Raju
+
+The Camel and the Pig		Ramaswami Raju
+
+The Dog and the Dog Dealer		Ramaswami Raju
+
+The Tiger, Fox, and Hunters		Ramaswami Raju
+
+The Sea, the Fox, and the Wolf		Ramaswami Raju
+
+The Fox in the Well		Ramaswami Raju
+
+TALES FROM THE NORSELAND
+
+Ashiepattle		P. C. Asbjörnsen
+
+The Squire's Bride		P. C. Asbjörnsen
+
+The Doll in the Grass		P. C. Asbjörnsen
+
+The Bear and the Fox		P. C. Asbjörnsen
+
+The Lad Who Went to the North Wind		Sir George W. Dasent
+
+The Husband Who Was to Mind the House		Sir George W. Dasent
+
+How One Went Out to Woo		Sir George W. Dasent
+
+Why the Bear is Stumpy-Tailed		Sir George W. Dasent
+
+Boots and the Princess		Sir George W. Dasent
+
+The Witch in the Stone Boat		Andrew Lang
+
+TALES FROM FRANCE, SPAIN, AND POLAND
+
+The Snuffbox		Paul Sébillot
+
+The Golden Blackbird		Paul Sébillot
+
+The Half-Chick		Andrew Lang
+
+The Three Brothers		Hermann R. Kletke
+
+The Glass Mountain		Hermann R. Kletke
+
+TALES FROM RUSSIA
+
+Huntsman the Unlucky		John T. Naaké
+
+Story of Little Simpleton		John T. Naaké
+
+The Golden Fish		Lillian M. Gask
+
+TALES FROM SERBIA
+
+The Wonderful Hair		W.S. Karajich
+
+The Language of Animals		W.S. Karajich
+
+The Emperor Trojan's Ears		W.S. Karajich
+
+The Maiden Who Was Wiser Than the King 	W.S. Karajich
+
+AN IRISH TALE
+
+The Three Sons		Lady Gregory
+
+TALES FROM CHINA AND JAPAN
+
+Hok Lee and the Dwarfs		Andrew Lang
+
+A Dreadful Boar		Adele M. Fielde
+
+The Five Queer Brothers		Adele M. Fielde
+
+The Accomplished Teakettle		A.B. Mitford
+
+Adventures of Little Peachling		A.B. Mitford
+
+A	TALE FROM NEW GUINEA
+
+The Two Lizards		Annie Ker
+
+A TALE FROM JAMAICA
+
+De King and De Peafowl	Mary P. Milne-Horne
+
+SOME OLD FAVORITES
+
+Hansel and Grethel		W. and J. Grimm
+
+Thumbling		W. and J. Grimm
+
+The Six Swans		W. and J. Grimm
+
+Snow-White and Rose-Red		W. and J. Grimm
+
+The Ugly Duckling		Hans C. Andersen
+
+The Tinder-Box		Hans C. Andersen
+
+The Constant Tin Soldier		Hans C. Andersen
+
+The Fir Tree		Hans C. Andersen
+
+The Flying Trunk		Hans C. Andersen
+
+The Darning Needle		Hans C. Andersen
+
+Pen and Inkstand		Hans C. Andersen
+
+Cinderella		Miss Mulock
+
+Little Red Riding-Hood		Charles Perrault
+
+The Story of the Three Bears		Robert Southey
+
+Puss in Boots		Charles Perrault
+
+Jack the Giant-Killer		Joseph Jacobs
+
+Tom Thumb		Joseph Jacobs
+
+Blue Beard		Charles Perrault
+
+The Brave Little Tailor		Anonymous
+
+The Sleeping Beauty		Charles Perrault
+
+The Fair One With Golden Locks	Miss Mulock
+
+Beauty and the Beast		Mme. d'AuLnoy
+
+Jack and the Beanstalk		Anonymous
+
+Hop-o'-My-Thumb		Joseph Jacobs
+
+The Goose-Girl		Anonymous
+
+He Who Knew Not Fear		Anonymous
+
+THE FABLES OF AESOP
+
+The Town Mouse and the
+
+	Country Mouse		Aesop
+
+The Man, Boy, and Donkey		Aesop
+
+The Shepherd's Boy		Aesop
+
+Androcles 		Aesop
+
+The Fox and the Stork		Aesop
+
+The Crow and the Pitcher		Aesop
+
+The Frogs Desiring a King		Aesop
+
+The Frog and the Ox		Aesop
+
+The Cock and the Pearl		Aesop
+
+The Fox Without a Tail		Aesop
+
+The Fox and the Cat		Aesop
+
+The Dog in the Manger		Aesop
+
+The Fox and the Goat		Aesop
+
+Belling the Cat		Aesop
+
+The Jay and the Peacock		Aesop
+
+The Ass and the Lap-Dog		Aesop
+
+The Ant and the Grasshopper		Aesop
+
+The Woodman and the Serpent		Aesop
+
+The Milkmaid and Her Pail		Aesop
+
+The Lion and the Mouse		Aesop
+
+Hercules and the Waggoner		Aesop
+
+The Lion's Share		Aesop
+
+The Fox and the Crow		Aesop
+
+The Dog and the Shadow		Aesop
+
+The Wolf and the Lamb		Aesop
+
+The Bat, Birds, and Beasts		Aesop
+
+The Belly and the Members		Aesop
+
+The Fox and the Grapes		Aesop
+
+The Swallow and the Birds		Aesop
+
+ILLUSTRATIONS
+
+HE OFTEN TREMBLED AT WHAT HE HEARD AND SAW, Manabozho the Mischief-
+Maker, Frontispiece illustration in color from the painting by Dan
+Sayre Groesbeck
+
+WHILE THEY WERE STUPIDLY STARING, THE KETTLE BEGAN FLYING ABOUT THE
+ROOM, The Accomplished and Lucky Teakettle, From the painting by
+Warwick Goble
+
+A VERY OLD WOMAN, WALKING UPON CRUTCHES, CAME OUT, Hansel and Grethel,
+>From the painting by Arthur Rackham
+
+THEN BLUE BEARD BAWLED OUT SO LOUD THAT HE MADE THE WHOLE HOUSE
+TREMBLE, Blue Beard, From the painting by Edmund Dulac
+
+BEING INFORMED OF EVERYTHING BY A LITTLE DWARF WHO WORE SEVEN-LEAGUE
+BOOTS, Sleeping Beauty, From the painting by Edmund Dulac
+
 PREFACE
 
 THERE are some things in this world we can get along without, but, the
@@ -14484,6 +15273,9 @@ of that very hemp.  "What did I tell you?" said the Swallow.
 "DESTROY THE SEED OF EVIL, OR IT
 
 WILL GROW UP TO YOUR RUIN."
+
+
+
 
 
 End of Project Gutenberg Etext The Junior Classics V1, by Willam Patten

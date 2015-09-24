@@ -1,3 +1,219 @@
+The Project Gutenberg EBook of The Junior Classics, by  Various
+
+Copyright laws are changing all over the world. Be sure to check the
+copyright laws for your country before downloading or redistributing
+this or any other Project Gutenberg eBook.
+
+This header should be the first thing seen when viewing this Project
+Gutenberg file.  Please do not remove it.  Do not change or edit the
+header without written permission.
+
+Please read the "legal small print," and other information about the
+eBook and Project Gutenberg at the bottom of this file.  Included is
+important information about your specific rights and restrictions in
+how the file may be used.  You can also find out about how to make a
+donation to Project Gutenberg, and how to get involved.
+
+
+**Welcome To The World of Free Plain Vanilla Electronic Texts**
+
+**eBooks Readable By Both Humans and By Computers, Since 1971**
+
+*****These eBooks Were Prepared By Thousands of Volunteers!*****
+
+
+Title: The Junior Classics
+
+Author:  Various
+
+Release Date: August, 2004  [EBook #6302]
+[Yes, we are more than one year ahead of schedule]
+[This file was first posted on November 22, 2002]
+[Most recently updated November 25, 2002]
+
+Edition: 10
+
+Language: English
+
+Character set encoding: UTF-8
+
+*** START OF THE PROJECT GUTENBERG EBOOK, THE JUNIOR CLASSICS ***
+
+
+
+
+Charles Franks and the Online Distributed Proofreading Team.
+
+
+
+The Junior Classics
+
+A LIBRARY FOR BOYS AND GIRLS
+
+[Illustration: CATHRINE DOUGLAS THRUST HER ARM THROUGH THE EMPTY
+STAPLES _From the painting by J P Shelton_]
+
+THE JUNIOR CLASSICS
+
+SELECTED AND ARRANGED BY WILLIAM PATTEN
+MANAGING EDITOR OF THE HARVARD CLASSICS
+
+INTRODUCTION BY CHARLES W. ELIOT, LL. D.
+PRESIDENT EMERITUS OF HARVARD UNIVERSITY
+
+WITH A READING GUIDE BY WILLIAM ALLAN NEILSON, Ph.D.
+PROFESSOR OF ENGLISH, HARVARD UNIVERSITY
+PRESIDENT SMITH COLLEGE, NORTHAMPTON, MASS., SINCE 1917[-1939]
+
+
+
+VOLUME SEVEN
+
+Stories of Courage and Heroism
+
+
+
+
+CONTENTS
+
+
+
+PREFACE
+
+How Phidias Helped the Image-Maker _Beatrice Harraden_
+
+The Fight at the Pass of Thermopylæ _Charlotte M. Yonge_
+
+The Bravery of Regulus _Charlotte M. Yonge_
+
+The Rabbi Who Found the Diadem _Dr. A. S. Isaacs_
+
+How Livia Won the Brooch _Beatrice Harraden_
+
+Julius Cæsar Crossing the Rubicon _Jacob Abbott_
+
+Fearless Saint Genevieve, Patron Saint of Paris _Charlotte M. Yonge_
+
+The Boy Viking--Olaf II of Norway _E. S. Brooks_
+
+The Boy-Heroes of Crecy and Poitiers _Treadwell Walden_
+
+The Noble Burghers of Calais _Charlotte M. Yonge_
+
+The Story of Joan of Arc, the Maid Who Saved France _Anonymous_
+
+How Joan the Maid Took Largess from the English _Anonymous_
+
+Death of Joan the Maid _Anonymous_
+
+How Catherine Douglas Tried to Save King James of Scotland _Charlotte
+M. Yonge_
+
+The Brave Queen of Hungary _Charlotte M. Yonge_
+
+The Story of Christopher Columbus for Little Children _Elizabeth
+Harrison_
+
+A Sea-Fight in the Time of Queen Bess _Charles Kingsley_
+
+A Brave Scottish Chief _Anonymous_
+
+The Adventure of Grizel Cochrane _Arthur Quiller-Couch_
+
+The Sunken Treasure _Nathaniel Hawthorne_
+
+The Lost Exiles of Texas _Arthur Oilman_
+
+The Boy Conqueror--Charles XII of Sweden _E. S. Brooks_
+
+The True Story of a Kidnapped Boy as Told by Himself _Peter
+Williamson_
+
+The Prisoner Who Would Not Stay in Prison _Anonymous_
+
+A White Boy Among the Indians, as Told by Himself _John Tanner_
+
+Evangeline of Acadia _Henry W. Longfellow_
+
+Jabez Rockwell's Powder-Horn _Ralph D. Paine_
+
+A Man Who Coveted Washington's Shoes _Frank R. Stockton._
+
+A Famous Fight Between an English and a French Frigate _Rev. W. H.
+Fitchett_
+
+The Trick of an Indian Spy _Arthur Quiller-Couch_
+
+The Man in the "Auger Hole" _Frank R. Stockton._
+
+The Remarkable Voyage of the _Bounty_ _Anonymous_
+
+The Two Boy Hostages at the Siege of Seringapatam _Anonymous_
+
+The Man Who Spoiled Napoleon's "Destiny" _Rev. W. H. Fitchett_
+
+A Fire-Fighter's Rescue from the Flames _Arthur Quiller-Couch_
+
+How Napoleon Rewarded His Men _Baron de Marbot_
+
+A Rescue from Shipwreck _Arthur Quiller-Couch_
+
+Rebecca the Drummer _Charles Barnard_
+
+The Messenger _M. E. M. Davis_
+
+Humphry Davy and the Safety-Lamp _George C. Towle_
+
+Kit Carson's Duel _Emerson Hough_
+
+The Story of Grace Darling _Anonymous_
+
+The Struggles of Charles Goodyear _George C. Towle_
+
+Old Johnny Appleseed _Elizabeth Harrison_
+
+The Little Post-Boy _Bayard Taylor_
+
+How June Found Massa Linkum _Elizabeth S. Phelps_
+
+The Story of a Forest Fire _Raymond S. Spears_
+
+
+
+
+ILLUSTRATIONS
+
+
+
+CATHERINE DOUGLAS THRUST HER ARM THROUGH THE EMPTY STAPLES
+
+How Catherine Douglas Tried to Save King James of Scotland
+
+_Frontispiece illustration in color from the painting by J. R.
+Skelton_
+
+
+HE SHOOK HIS CLENCHED FIST AT THE OBSTRUCTED SEA-STRAIT
+
+The Boy Viking--Olaf II of Norway
+
+_From the drawing by Gertrude Demain Hammond_
+
+
+"FIGHT ON!" CRIED THE MAID; "THE PLACE IS OURS"
+
+The Story of Joan of Arc
+
+_From the painting by William Rainey_
+
+
+THEN HE OFFERED A FERVENT PRAYER OF THANKS
+
+A Story of Christopher Columbus
+
+
+
+
 PREFACE
 
 
@@ -89,7 +305,7 @@ without food."
 
 "And who is your father?" asked Phidias kindly.
 
-"His name is Aristï¿½us," she said, "and he is a maker of images--little
+"His name is Aristæus," she said, "and he is a maker of images--little
 clay figures of gods and goddesses and heroes. Indeed, he is clever;
 and I am sure you would praise the 'Hercules' he finished before
 he was taken ill."
@@ -175,7 +391,7 @@ gods preserve his life; for he is the greatest glory of all Athens!"
 "Ay," said Iris, as she prepared her father's food, "that is what
 we all call him--the greatest glory of all Athens."
 
-"We think of him," said Aristï¿½us, feebly, "and that helps us in
+"We think of him," said Aristæus, feebly, "and that helps us in
 our work. Yes, it helps even us poor image-makers. When I saw the
 beautiful Athena I came home cheered and encouraged. May Phidias
 be watched over and blessed all his life!"
@@ -186,7 +402,7 @@ resting-place of love and gratitude in the hearts of the poorest
 citizens of Athens. He valued this tribute of the image-maker far
 more than the praises of the rich and great. Before he left, he
 saw that both father and daughter were much refreshed by the food
-which his bounty had given to them, and he bade Aristï¿½us be of good
+which his bounty had given to them, and he bade Aristæus be of good
 cheer, because he would surely regain his health and strength.
 
 "And because you love your art," he said, "I shall be a friend
@@ -196,12 +412,12 @@ done, and then Iris will be able to go out and sell the figures."
 
 He hastened away before they were able to thank him, and he left
 them wondering who this new friend could be. They talked of him
-for a long time, of his kindness and his skill; and Aristï¿½us dreamt
+for a long time, of his kindness and his skill; and Aristæus dreamt
 that night about the stranger who had come to work for him.
 
 The next day Phidias came again, and took his place at the
 image-maker's bench, just as if he were always accustomed to sit
-there. Aristï¿½us, who was better, watched him curiously, but asked
+there. Aristæus, who was better, watched him curiously, but asked
 no questions.
 
 But Iris said to him: "My father and I talk of you, and wonder who
@@ -217,12 +433,12 @@ As the days went on, the image-maker recovered his strength; and
 meanwhile Phidias had filled the little shop with dainty-wrought
 images and graceful vases, such as had never been seen there before.
 
-One evening, when Aristï¿½us was leaning against Iris, and admiring
+One evening, when Aristæus was leaning against Iris, and admiring
 the stranger's work, the door opened and Phidias came in.
 
 "What, friend," he said cheerily, "you are better to-night I see!"
 
-"Last night," said Aristï¿½us, "I dreamt that the friend who held out
+"Last night," said Aristæus, "I dreamt that the friend who held out
 a brother's hand to me and helped me in my trouble was the great
 Phidias himself.  It did not seem wonderful to me, for only the
 great do such things as you have done for me.  You must be great."
@@ -232,7 +448,7 @@ after all, I have not done so much for you. I have only helped
 a brother-workman: for I am an image-maker too--and my name is
 Phidias."
 
-Then Aristï¿½us bent down and reverently kissed the great sculptor's
+Then Aristæus bent down and reverently kissed the great sculptor's
 hands.
 
 "I cannot find words with which to thank you," he murmured, "but I
@@ -251,7 +467,7 @@ fellow-workers who need our active help.
 
 
 
-THE FIGHT AT THE PASS OF THERMOPYLï¿½
+THE FIGHT AT THE PASS OF THERMOPYLÆ
 
 By Charlotte M. Yonge
 
@@ -279,7 +495,7 @@ lay first in his path, consented to yield the token of subjugation.  A
 council was held at the Isthmus of Corinth, and attended by deputies
 from all the states of Greece to consider of the best means of
 defense.  The ships of the enemy would coast round the shores of
-the ï¿½gean Sea, the land army would cross the Hellespont on a bridge
+the Ægean Sea, the land army would cross the Hellespont on a bridge
 of boats lashed together, and march southwards into Greece. The
 only hope of averting the danger lay in defending such passages
 as, from the nature of the ground, were so narrow that only a few
@@ -288,8 +504,8 @@ of more avail than numbers.
 
 The first of these passes was called Tempe, and a body of troops
 was sent to guard it; but they found that this was useless and
-impossible, and came back again. The next was at Thermopylï¿½.  Look
-in your map of the Archipelago, or ï¿½gean Sea, as it was then called,
+impossible, and came back again. The next was at Thermopylæ.  Look
+in your map of the Archipelago, or Ægean Sea, as it was then called,
 for the great island of Negropont, or by its old name, Euboea. It
 looks like a piece broken off from the coast, and to the north is
 shaped like the head of a bird, with the beak running into a gulf,
@@ -306,7 +522,7 @@ of the pass, and were about a mile apart. There was a little more
 width left in the intervening space; but in this there were a
 number of springs of warm mineral water, salt and sulphurous, which
 were used for the sick to bathe in, and thus the place was called
-Thermopylï¿½, or the Hot Gates. A wall had once been built across
+Thermopylæ, or the Hot Gates. A wall had once been built across
 the westernmost of these narrow places, when the Thessalians and
 Phocians, who lived on either side of it, had been at war with one
 another; but it had been allowed to go to decay, since the Phocians
@@ -350,8 +566,8 @@ up to be able to say to those she best loved that they must come
 home from battle "with the shield or on it"--either carrying it
 victoriously or borne upon it as a corpse.
 
-When Leonidas came to Thermopylï¿½, the Phocians told him of the
-mountain path through the chestnut woods of Mount ï¿½ta, and begged
+When Leonidas came to Thermopylæ, the Phocians told him of the
+mountain path through the chestnut woods of Mount Œta, and begged
 to have the privilege of guarding it on a spot high up on the
 mountain side, assuring him that it was very hard to find at the
 other end, and that there was every probability that the enemy
@@ -432,7 +648,7 @@ do more to save Greece than their best efforts could ever do if
 they were careful to reserve themselves for another occasion.
 
 All the allies consented to retreat, except the eighty men who came
-from Mycenï¿½ and the 700 Thespians, who declared that they would
+from Mycenæ and the 700 Thespians, who declared that they would
 not desert Leonidas. There were also 400 Thebans who remained; and
 thus the whole number that stayed with Leonidas to confront two
 million of enemies were fourteen hundred warriors, besides the helots
@@ -526,14 +742,14 @@ Sparta.
 
 Lion, pillars, and inscriptions have all long since passed away,
 even the very spot itself has changed; new soil has been formed,
-and there are miles of solid ground between Mount ï¿½ta and the gulf,
+and there are miles of solid ground between Mount Œta and the gulf,
 so that the Hot Gates no longer exist. But more enduring than stone
 or brass--nay, than the very battle-field itself--has been the name
 of Leonidas.  Two thousand three hundred years have sped since he
 braced himself to perish for his country's sake in that narrow,
 marshy coast road, under the brow of the wooded crags, with the
 sea by his side. Since that time how many hearts have glowed, how
-many arms have been nerved at the remembrance of the Pass of Thermopylï¿½,
+many arms have been nerved at the remembrance of the Pass of Thermopylæ,
 and the defeat that was worth so much more than a victory!
 
 
@@ -993,7 +1209,7 @@ slave Marcella, the gladiator's daughter.
 
 
 
-JULIUS Cï¿½SAR CROSSING THE RUBICON
+JULIUS CÆSAR CROSSING THE RUBICON
 
 By Jacob Abbott
 
@@ -1019,7 +1235,7 @@ which is formed by the valley of the Po, one of the richest and
 most magnificent countries of the world, and the more southern
 Roman territories. This country of the Po constituted what was in
 those days called the hither Gaul, and was a Roman province. It
-belonged now to Cï¿½sar's jurisdiction, as the commander in Gaul.
+belonged now to Cæsar's jurisdiction, as the commander in Gaul.
 All south of the Rubicon was territory reserved for the immediate
 jurisdiction of the city. The Romans, in order to protect themselves
 from any danger which might threaten their own liberties from the
@@ -1032,7 +1248,7 @@ on the way to Rome was rebellion and treason. Hence the Rubicon
 became, as it were, the visible sign and symbol of civil restriction
 to military power.
 
-As Cï¿½sar found the time of his service in Gaul drawing toward
+As Cæsar found the time of his service in Gaul drawing toward
 a conclusion, he turned his thoughts more and more toward Rome,
 endeavoring to strengthen his interest there by every means in his
 power, and to circumvent and thwart the designs of Pompey. He had
@@ -1057,8 +1273,8 @@ rapidly rising to overshadow the land.
 
 It increased their anxiety to observe that Pompey was gaining the
 same kind of influence and ascendency, too. He had not the advantage
-which Cï¿½sar enjoyed in the prodigious wealth obtained from the rich
-countries over which Cï¿½sar ruled, but he possessed, instead of it,
+which Cæsar enjoyed in the prodigious wealth obtained from the rich
+countries over which Cæsar ruled, but he possessed, instead of it,
 the advantage of being all the time at Rome, and of securing, by
 his character and action there, a very wide personal popularity
 and influence. Pompey was, in fact, the idol of the people. At one
@@ -1077,16 +1293,16 @@ Plutarch, were filled with sacrifices and entertainments.  Many
 received him with garlands on their heads and torches in their hands,
 and, as they conducted him along, strewed the way with flowers.
 
-In fact, Pompey considered himself as standing far above Cï¿½sar in
+In fact, Pompey considered himself as standing far above Cæsar in
 fame and power, and this general burst of enthusiasm and applause
 educed by his recovery from sickness confirmed him in this idea.
-He felt no solicitude, he said, in respect to Cï¿½sar. He should take
+He felt no solicitude, he said, in respect to Cæsar. He should take
 no special precautions against any hostile designs which he might
 entertain on his return from Gaul. It was he himself, he said, that
-had raised Cï¿½sar up to whatever of elevation he had attained, and
+had raised Cæsar up to whatever of elevation he had attained, and
 he could put him down even more easily than he had exalted him.
 
-In the meantime, the period was drawing near in which Cï¿½sar's command
+In the meantime, the period was drawing near in which Cæsar's command
 in the provinces was to expire; and, anticipating the struggle
 with Pompey which was about to ensue, he conducted several of his
 legions through the passes of the Alps and advanced gradually,
@@ -1106,7 +1322,7 @@ interest there in order to avert as much as possible the minds
 of the people from imagining that he was contemplating any great
 design. Pompey sent to him to demand the return of a certain legion
 which he had lent him from his own army at a time when they were
-friends.  Cï¿½sar complied with this demand without any hesitation,
+friends.  Cæsar complied with this demand without any hesitation,
 and sent the legion home. He sent with this legion, also, some
 other troops which were properly his own, thus evincing a degree of
 indifference in respect to the amount of the force retained under
@@ -1115,20 +1331,20 @@ contemplated any resistance to the authority of the government at
 Rome.
 
 In the meantime, the struggle at Rome between the partisans of
-Cï¿½sar and Pompey grew more and more violent and alarming. Cï¿½sar,
+Cæsar and Pompey grew more and more violent and alarming. Cæsar,
 through his friends in the city, demanded to be elected consul.
 The other side insisted that he must first, if that was his wish,
 resign the command of his army, come to Rome, and present himself
 as a candidate in the character of a private citizen. This the
 constitution of the state very properly required.  In answer to
-this requisition, Cï¿½sar rejoined that, if Pompey would lay down
+this requisition, Cæsar rejoined that, if Pompey would lay down
 his military commands, he would do so too; if not, it was unjust to
 require it of him. The services, he added, which he had performed
 for his country demanded some recompense, which, moreover, they
 ought to be willing to award even if in order to do it it were
 necessary to relax somewhat in his favor the strictness of ordinary
 rules. To a large part of the people of the city these demands
-of Cï¿½sar appeared reasonable.  They were clamorous to have them
+of Cæsar appeared reasonable.  They were clamorous to have them
 allowed.  The partisans of Pompey, with the stern and inflexible
 Cato at their head, deemed them wholly inadmissible and contended
 with the most determined violence against them. The whole city was
@@ -1137,7 +1353,7 @@ active and turbulent spirits of the capital plunged with the most
 furious zeal, while the more considerate and thoughtful of the
 population, remembering the days of Marius and Sylla, trembled
 at the impending danger. Pompey himself had no fear. He urged the
-Senate to resist to the utmost all of Cï¿½sar's claims, saying if Cï¿½sar
+Senate to resist to the utmost all of Cæsar's claims, saying if Cæsar
 should be so presumptuous as to attempt to march to Rome he could
 raise troops enough by stamping with his foot to put him down.
 
@@ -1150,12 +1366,12 @@ the gates. At last an exciting debate was broken up in the Senate
 by one of the consuls rising to depart, saying that he would hear
 the subject discussed no longer. The time had arrived for action,
 and he should send a commander, with an armed force, to defend the
-country from Cï¿½sar's threatened invasion. Cï¿½sar's leading friends,
+country from Cæsar's threatened invasion. Cæsar's leading friends,
 two tribunes of the people, disguised themselves as slaves and
 fled to the north to join their master. The country was filled with
 commotion and panic.  The Commonwealth had obviously more fear of
-Cï¿½sar than confidence in Pompey. The country was full of rumors in
-respect to Cï¿½sar's power, and the threatening attitude which he was
+Cæsar than confidence in Pompey. The country was full of rumors in
+respect to Cæsar's power, and the threatening attitude which he was
 assuming, while they who had insisted on resistance seemed, after
 all, to have provided very inadequate means with which to resist.
 A thousand plans were formed, and clamorously insisted upon by
@@ -1163,7 +1379,7 @@ their respective advocates, for averting the danger.  This only
 added to the confusion, and the city became at length pervaded with
 a universal terror.
 
-While this was the state of things at Rome, Cï¿½sar was quietly
+While this was the state of things at Rome, Cæsar was quietly
 established at Ravenna, thirty or forty miles from the frontier.
 He was erecting a building for a fencing school there, and his mind
 seemed to be occupied very busily with the plans and models of the
@@ -1201,7 +1417,7 @@ further difficulty to the banks of the river, where they found
 that portion of the army which had been sent forward encamped and
 awaiting their arrival.
 
-Cï¿½sar stood for some time upon the banks of the stream, musing upon
+Cæsar stood for some time upon the banks of the stream, musing upon
 the greatness of the undertaking in which simply passing across it
 would involve him. His officers stood by his side.  "We can retreat
 _now_" said he, "but once across that river, we must go on."
@@ -1214,41 +1430,41 @@ or in his utter and irreparable ruin.
 There were vast public interests, too, at stake, of which, however,
 he probably thought but little.  It proved, in the end, that
 the history of the whole Roman world, for several centuries, was
-depending upon the manner in which the question now in Cï¿½sar's mind
+depending upon the manner in which the question now in Cæsar's mind
 should turn.
 
 There was a little bridge across the Rubicon at the point where
-Cï¿½sar was surveying it. While he was standing there, the story
+Cæsar was surveying it. While he was standing there, the story
 is, a peasant or shepherd came from the neighboring fields with
 a shepherd's pipe--a simple musical instrument made of a reed and
 used much by the rustic musicians of those days. The soldiers and
 some of the officers gathered around him to hear him play.  Among
-the rest came some of Cï¿½sar's trumpeters, with their trumpets in
+the rest came some of Cæsar's trumpeters, with their trumpets in
 their hands. The shepherd took one of these martial instruments
 from the hands of its possessor, laying aside his own, and began
 to sound a charge--which is a signal for a rapid advance--and to
 march at the same time over the bridge. "An omen! a prodigy!" said
-Cï¿½sar. "Let us march where we are called by such a divine intimation.
+Cæsar. "Let us march where we are called by such a divine intimation.
 _The die is cast._"
 
 So saying, he pressed forward over the bridge, while the officers,
 breaking up the encampment, put the columns in motion to follow
 him.
 
-It was shown abundantly, on many occasions in the course of Cï¿½sar's
+It was shown abundantly, on many occasions in the course of Cæsar's
 life, that he had no faith in omens. There are equally numerous
 instances to show that he was always ready to avail himself of the
 popular belief in them, to awaken his soldiers' ardor or to allay
 their fears. Whether, therefore, in respect to this story of the
 shepherd trumpeter it was an incident that really and accidently
-occurred, or whether Cï¿½sar planned and arranged it himself, with
+occurred, or whether Cæsar planned and arranged it himself, with
 reference to its effect, or whether, which is, perhaps, after all,
 the most probable supposition, the tale was only an embellishment
 invented out of something or nothing by the story-tellers of those
 days to give additional dramatic interest to the narrative of the
 crossing of the Rubicon, it must be left for each reader to decide.
 
-As soon as the bridge was crossed, Cï¿½sar called an assembly of his
+As soon as the bridge was crossed, Cæsar called an assembly of his
 troops, and, with signs of great excitement and agitation, made an
 address to them on the magnitude of the crisis through which they
 were passing. He showed them how entirely he was in their power; he
@@ -1258,9 +1474,9 @@ attained the object at which he aimed. The soldiers responded to
 this appeal with promises of the most unwavering fidelity.
 
 The first town on the Roman side of the Rubicon was Ariminum.
-Cï¿½sar advanced to this town.  The authorities opened its gates to
+Cæsar advanced to this town.  The authorities opened its gates to
 him--very willing, as it appeared, to receive him as their commander.
-Cï¿½sar's force was yet quite small, as he had been accompanied by
+Cæsar's force was yet quite small, as he had been accompanied by
 only a single legion in crossing the river. He had, however, sent
 orders for the other legions, which had been left in Gaul, to join
 him without any delay, though any reinforcement of his troops seemed
@@ -1274,29 +1490,29 @@ Ariminum, surrendering, in fact, faster than he could take possession
 of them.
 
 In the confusion of the debates and votes in the Senate at Rome
-before Cï¿½sar crossed the Rubicon, one decree had been passed deposing
+before Cæsar crossed the Rubicon, one decree had been passed deposing
 him from his command of the army and appointing a successor.  The
 name of the general thus appointed was Domitius. The only real
-opposition which Cï¿½sar encountered in his progress toward Rome
+opposition which Cæsar encountered in his progress toward Rome
 was from him. Domitius had crossed the Apennines at the head of an
-army on his way northward to supersede Cï¿½sar in his command, and
+army on his way northward to supersede Cæsar in his command, and
 had reached the town of Corfinium, which was perhaps one third of
-the way between Rome and the Rubicon.  Cï¿½sar advanced upon him here
+the way between Rome and the Rubicon.  Cæsar advanced upon him here
 and shut him in.
 
 After a brief siege the city was taken, and Domitius and his army
 were made prisoners.  Everybody gave them up for lost, expecting
-that Cï¿½sar would wreak terrible vengeance upon them.  Instead of
+that Cæsar would wreak terrible vengeance upon them.  Instead of
 this, he received the troops at once into his own service and let
 Domitius go free.
 
-In the meantime, the tidings of Cï¿½sar's having passed the Rubicon,
+In the meantime, the tidings of Cæsar's having passed the Rubicon,
 and of the triumphant success which he was meeting with at the
 commencement of his march toward Rome, reached the capital, and
 added greatly to the prevailing consternation.  The reports of the
 magnitude of his force and of the rapidity of his progress were
 greatly exaggerated.  The party of Pompey and the Senate had done
-everything to spread among the people the terror of Cï¿½sar's name
+everything to spread among the people the terror of Cæsar's name
 in order to arouse them to efforts for opposing his designs; and
 now, when he had broken through the barriers which had been intended
 to restrain him and was advancing toward the city in an unchecked
@@ -1305,12 +1521,12 @@ began to be terrified at the danger which was impending. The Senate
 held meetings without the city--councils of war, as it were, in
 which they looked to Pompey in vain for protection from the danger
 which he had brought upon them. He had said that he could raise
-an army sufficient to cope with Cï¿½sar at any time by stamping with
+an army sufficient to cope with Cæsar at any time by stamping with
 his foot. They told him they thought now that it was high time for
 him to stamp.
 
 In fact, Pompey found the current setting everywhere strongly against
-him. Some recommended that commissioners should be sent to Cï¿½sar
+him. Some recommended that commissioners should be sent to Cæsar
 to make proposals for peace. The leading men, however, knowing that
 any peace made with him under such circumstances would be their
 own ruin, resisted and defeated the proposal. Cato abruptly left
@@ -1322,7 +1538,7 @@ very little preparation and small supplies, to retreat across the
 country toward the shores of the Adriatic Sea. His destination was
 Brundusium, the usual port of embarkation for Macedon and Greece.
 
-Cï¿½sar was all this time gradually advancing toward Rome. His soldiers
+Cæsar was all this time gradually advancing toward Rome. His soldiers
 were full of enthusiasm in his cause. As his connection with the
 government at home was sundered the moment he crossed the Rubicon,
 all supplies of money and of provisions were cut off in that quarter
@@ -1341,7 +1557,7 @@ him. But, then, it was generosity too. In fact, there must be
 something of a generous spirit in the soul to enable a man even to
 see the policy of generous actions.
 
-Among the letters of Cï¿½sar that remain to the present day, there
+Among the letters of Cæsar that remain to the present day, there
 is one written about this time to one of his friends, in which he
 speaks of this subject. "I am glad," says he, "that you approve of
 my conduct at Corfinium. I am satisfied that such a course is the
@@ -1355,17 +1571,17 @@ imitate. I will conquer after a new fashion, and fortify myself in
 the possession of the power I acquire by generosity and mercy."
 
 Domitius had the ingratitude, after this release, to take up arms
-again, and wage a new war against Cï¿½sar. When Cï¿½sar heard of it he
+again, and wage a new war against Cæsar. When Cæsar heard of it he
 said it was all right. "I will act out the principles of my nature,"
 said he, "and he may act out his."
 
-Another instance of Cï¿½sar's generosity occurred which is even more
+Another instance of Cæsar's generosity occurred which is even more
 remarkable than this.  It seems that among the officers of his
 army there were some whom he had appointed at the recommendation
 of Pompey, at the time when he and Pompey were friends. These men
 would, of course, feel under obligations of gratitude to Pompey
 as they owed their military rank to his friendly interposition in
-their behalf. As soon as the war broke out Cï¿½sar gave them all his
+their behalf. As soon as the war broke out Cæsar gave them all his
 free permission to go over to Pompey's side if they chose to do
 so.
 
@@ -1373,21 +1589,21 @@ Caesar acted thus very liberally in all respects.  He surpassed
 Pompey very much in the spirit of generosity and mercy with which
 he entered upon the great contest before them. Pompey ordered every
 citizen to join his standard, declaring that he should consider
-all neutrals as his enemies.  Cï¿½sar, on the other hand, gave free
+all neutrals as his enemies.  Cæsar, on the other hand, gave free
 permission to every one to decline, if he chose, taking any part
 in the contest, saying that he should consider all who did not act
 against him as his friends. In the political contests of our day it
 is to be observed that the combatants are much more prone to imitate
-the bigotry of Pompey than the generosity of Cï¿½sar, condemning, as
+the bigotry of Pompey than the generosity of Cæsar, condemning, as
 they often do, those who choose to stand aloof from electioneering
 struggles, more than they do their most determined opponents and
 enemies.
 
-When, at length, Cï¿½sar arrived at Brundusium, he found that Pompey
+When, at length, Cæsar arrived at Brundusium, he found that Pompey
 had sent a part of his army across the Adriatic into Greece and was
 waiting for the transports to return that he might go over himself
 with the remainder. In the meantime, he had fortified himself
-strongly in the city.  Cï¿½sar immediately laid siege to the place,
+strongly in the city.  Cæsar immediately laid siege to the place,
 and he commenced some works to block up the mouth of the harbor. He
 built piers on each side, extending out as far into the sea as the
 depth of the water would allow them to be built. He then constructed
@@ -1412,16 +1628,16 @@ embarking the remainder of his army.
 
 He filled the streets of the city with barricades and pitfalls
 excepting two streets which led to the place of embarkation. The
-object of these obstructions was to embarrass Cï¿½sar's progress
+object of these obstructions was to embarrass Cæsar's progress
 through the city in case he should force an entrance while his
 men were getting on board the ships. He then, in order to divert
-Cï¿½sar's attention from his design, doubled the guards stationed upon
+Cæsar's attention from his design, doubled the guards stationed upon
 the walls on the evening of his intended embarkation, and ordered
-them to make vigorous attacks upon all Cï¿½sar's forces outside. Then,
+them to make vigorous attacks upon all Cæsar's forces outside. Then,
 when the darkness came on, he marched his troops through the two
 streets which had been left open to the landing-place, and got them
 as fast as possible on board the transports. Some of the people of
-the town contrived to make known to Cï¿½sar's army what was going on,
+the town contrived to make known to Cæsar's army what was going on,
 by means of signals from the walls; the army immediately brought
 scaling ladders in great numbers, and, mounting the walls with great
 ardor and impetuosity, they drove all before them, and soon broke
@@ -1430,21 +1646,21 @@ and pitfalls, together with the darkness, so embarrassed their
 movements that Pompey succeeded in completing his embarkation and
 sailing away.
 
-Cï¿½sar had no ships in which to follow. He returned to Rome. He met,
+Cæsar had no ships in which to follow. He returned to Rome. He met,
 of course, with no opposition.  He re-established the government
 there, organized the Senate anew, and obtained supplies of corn
 from the public granaries and of money from the city treasury in
 the capital. In going to the Capitoline Hill after this treasure,
 he found the officer who had charge of the money stationed there
-to defend it. He told Cï¿½sar that it was contrary to law for him to
-enter. Cï¿½sar said that, for men with swords in their hands, there
-was no law.  The officer still refused to admit him. Cï¿½sar then
+to defend it. He told Cæsar that it was contrary to law for him to
+enter. Cæsar said that, for men with swords in their hands, there
+was no law.  The officer still refused to admit him. Cæsar then
 told him to open the doors or he would kill him on the spot. "And
 you must understand," he added, "that it will be easier for me to
 do it than it has been to say it." The officer resisted no longer,
-and Cï¿½sar went in.
+and Cæsar went in.
 
-After this, Cï¿½sar spent some time in vigorous campaigns in Italy,
+After this, Cæsar spent some time in vigorous campaigns in Italy,
 Spain, Sicily, and Gaul, wherever there was manifested any opposition
 to his sway. When this work was accomplished, and all these countries
 were completely subjected to his dominion, he began to turn his
@@ -1495,7 +1711,7 @@ celebrated bishops passed through the village, Germanus, of Auxerre,
 and Lupus, of Troyes, who had been invited to Britain to dispute
 the false doctrines of Pelagius.  All the inhabitants flocked into
 the church to see them, pray with them, and receive their blessing;
-and here the sweet childish devotion of Geneviï¿½ve so struck Germanus,
+and here the sweet childish devotion of Geneviéve so struck Germanus,
 that he called her to him, talked to her, made her sit beside him
 at the feast, gave her his special blessing, and presented her
 with a copper medal with a cross engraven upon it. From that time
@@ -1509,7 +1725,7 @@ his converts to meet the heathen Picts at Maes Garmon, in Flintshire,
 where the exulting shout of the white-robed catechumens turned to
 flight the wild superstitious savages of the north,--and the Hallelujah
 victory was gained without a drop of bloodshed. He never lost sight
-of Geneviï¿½ve, the little maid whom he had so early distinguished
+of Geneviève, the little maid whom he had so early distinguished
 for her piety.
 
 After she lost her parents she went to live with her godmother,
@@ -1529,19 +1745,19 @@ lay in their path. Tidings came that this "Scourge of God," as
 Attila called himself, had passed the Rhine, destroyed Tongres and
 Metz, and was in full march for Paris. The whole country was in the
 utmost terror. Every one seized their most valuable possessions,
-and would have fled; but Geneviï¿½ve placed herself on the only bridge
+and would have fled; but Geneviève placed herself on the only bridge
 across the Seine, and argued with them, assuring them, in a strain
 that was afterwards thought of as prophetic, that, if they would
 pray, repent, and defend instead of abandoning their homes, God
 would protect them. They were at first almost ready to stone her
 for thus withstanding their panic, but just then a priest arrived
-from Auxerre, with a present for Geneviï¿½ve from St. Germanus, and
+from Auxerre, with a present for Geneviève from St. Germanus, and
 they were thus reminded of the high estimation in which he held
 her; they became ashamed of their violence, and she led them back
 to pray and to arm themselves.  In a few days they heard that Attila
-had paused to besiege Orleans, and that Aï¿½tius, the Roman general,
+had paused to besiege Orleans, and that Aëtius, the Roman general,
 hurrying from Italy, had united his troops with those of the Goths and
-Franks, and given Attila so terrible a defeat at Chï¿½lons that the
+Franks, and given Attila so terrible a defeat at Châlons that the
 Huns were fairly driven out of Gaul. And here it must be mentioned
 that when in the next year, 452, Attila with his murderous host,
 came down into Italy, and after horrible devastation of all the
@@ -1564,7 +1780,7 @@ the Franks were overrunning the banks of the Seine, and actually
 venturing to lay siege to the Roman walls of Paris itself. The
 fortifications were strong enough, but hunger began to do the work
 of the besiegers, and the garrison, unwarlike and untrained, began
-to despair. But Geneviï¿½ve's courage and trust never failed; and
+to despair. But Geneviève's courage and trust never failed; and
 finding no warriors willing to run the risk of going beyond the
 walls to obtain food for the women and children who were perishing
 around them, this brave shepherdess embarked alone in a little
@@ -1573,11 +1789,11 @@ camp, and repairing to the different Gallic cities, she implored them
 to send succor to their famished brethren. She obtained complete
 success. Probably the Franks had no means of obstructing the passage
 of the river, so that a convoy of boats could easily penetrate
-into the town: at any rate they looked upon Geneviï¿½ve as something
+into the town: at any rate they looked upon Geneviève as something
 sacred and inspired whom they durst not touch; probably as one of
 the battle-maids in whom their own myths taught them to believe.
 One account indeed says that, instead of going alone to obtain help,
-Geneviï¿½ve placed herself at the head of a forage party, and that
+Geneviève placed herself at the head of a forage party, and that
 the mere sight of her inspired bearing caused them to be allowed
 to enter and return in safety; but the boat version seems the more
 probable, since a single boat on the broad river would more easily
@@ -1588,7 +1804,7 @@ hold out, and in another inroad, when Genevieve was absent, Paris
 was actually seized by the Franks. Their leader, Hilperik, was
 absolutely afraid of what the mysteriously brave maiden might do
 to him, and commanded the gates of the city to be carefully guarded
-lest she should enter; but Geneviï¿½ve learnt that some of the chief
+lest she should enter; but Geneviève learnt that some of the chief
 citizens were imprisoned, and that Hilperik intended their death,
 and nothing could withhold her from making an effort in their
 behalf.  The Franks had made up their minds to settle and not to
@@ -1596,7 +1812,7 @@ destroy. They were not burning and slaying indiscriminately, but
 while despising the Romans, as they called the Gauls, for their
 cowardice, they were in awe of their superior civilization and
 knowledge of arts. The country people had free access to the city,
-and Geneviï¿½ve in her homely gown and veil passed by Hilperik's
+and Geneviève in her homely gown and veil passed by Hilperik's
 guards without being suspected of being more than any ordinary
 Gaulish village-maid; and thus she fearlessly made her way, even
 to the old Roman halls, where the long-haired Hilperik was holding
@@ -1722,7 +1938,7 @@ death. His mother, the Queen Aasta, equipped a large dragon-ship or
 war-vessel for her adventurous son, and with the lad, as helmsman
 and guardian, was sent old Rane, whom men called "the far-travelled,"
 because he had sailed westward as far as England and southward to
-Nï¿½rvasund (by which name men then knew the Straits of Gibraltar).
+Nörvasund (by which name men then knew the Straits of Gibraltar).
 Boys toughened quickly in those stirring days, and this lad,
 who, because he was commander of a dragon-ship, was called Olaf
 the King--though he had no land to rule--was of viking blood, and
@@ -3167,7 +3383,7 @@ noble.
 "No, fair sire. You are he!"
 
 Still, it was not easy to believe. Joan stayed at Chinon in the
-house of a noble lady. The young Duc d'Alenï¿½on was on her side from
+house of a noble lady. The young Duc d'Alençon was on her side from
 the first.
 
 Great people came to see her and question her, but when she was
@@ -3195,7 +3411,7 @@ Weeks had passed, and Joan had never yet seen a blow struck in war.
 She used to exercise herself in horsemanship, and knightly sports
 of tilting, and it is wonderful that a peasant-girl became, at once,
 one of the best riders among the chivalry of France. The young Duc
-d'Alenï¿½on and his wife were her friends from the first, when the
+d'Alençon and his wife were her friends from the first, when the
 politicians and advisers were against her. It was now determined
 that Joan should be taken to Poitiers, and examined before all the
 learned men, bishops, doctors, and higher clergy who still were on
@@ -3506,9 +3722,9 @@ to Reims, but could they leave behind them English garrisons in
 Jargeau, where Suffolk commanded; in Meun, where Talbot was, and in
 other strong places? Already, without Joan, the French had attacked
 Jargeau, after the rescue of Orleans, and had failed. Joan agreed
-to assail Jargeau. Her army was led by the "fair duke," D'Alenï¿½on.
+to assail Jargeau. Her army was led by the "fair duke," D'Alençon.
 
-Let us tell what followed in the words of the Duc d'Alenï¿½on:
+Let us tell what followed in the words of the Duc d'Alençon:
 
 "We were about six hundred lances, who wished to go against the
 town of Jargeau, then held by the English. That night we slept in
@@ -3589,7 +3805,7 @@ off. Talbot was taken, Fastolf fled, "making more sorrow than ever
 yet did man." The French won a great victory. They needed their
 spurs, as the Maid had told them that they would, to follow their
 flying foes. The English lost some 3,000 men. In the evening,
-Talbot, as a prisoner, was presented to the Duc d'Alenï¿½on.
+Talbot, as a prisoner, was presented to the Duc d'Alençon.
 
 At last, with difficulty, Charles was brought to visit Reims and
 consent to be crowned like his ancestors.
@@ -3673,7 +3889,7 @@ merely to gain time. Joan knew this, and said there would be no
 peace but at the lance-point.
 
 The French and English armies kept watching each other, and there
-were skirmishes near Senlis.  On August 15, the Maid and d'Alenï¿½on
+were skirmishes near Senlis.  On August 15, the Maid and d'Alençon
 hoped for a battle. But the English had fortified their position
 in the night. Come out they would not, so Joan rode up to their
 fortification, standard in hand, struck the palisade and challenged
@@ -3684,10 +3900,10 @@ out of their fort. But they were too wary and went back to Paris.
 
 Now the fortnight was over, after which the Duke of Burgundy was
 to surrender Paris, but he did nothing of the kind. The Maid was
-weary of words. She called the Duc d'Alenï¿½on and said: "My fair
+weary of words. She called the Duc d'Alençon and said: "My fair
 duke, array your men, for, by my staff, I would fain see Paris
 more closely than I have seen it yet." On August 23, the Maid and
-d'Alenï¿½on left the king at Compiï¿½gne and rode to St.  Denis, where
+d'Alençon left the king at Compiègne and rode to St.  Denis, where
 were the tombs of the kings of France.  "And when the king heard
 that they were at St.  Denis, he came, very sore against his will,
 as far as Senlis, and it seems that his advisers were contrary to
@@ -3696,20 +3912,20 @@ The king was afraid to go near Paris, but Bedford was afraid to
 stay in the town. He went to Rouen, the strongest English hold in
 Normandy, leaving the Burgundian army and 2,000 English in Paris.
 
-Every day, the Maid and d'Alenï¿½on rode from St. Denis to the gates
+Every day, the Maid and d'Alençon rode from St. Denis to the gates
 of Paris, to observe the best places for an attack. And still
 Charles dallied and delayed, still the main army did not come up.
 Thus the delay of the king gave the English time to make Paris
 almost impregnable and to frighten the people who, had Charles
 marched straight from Reims, would have yielded as Reims did.
-D'Alenï¿½on kept going to Senlis urging Charles to come up with the
+D'Alençon kept going to Senlis urging Charles to come up with the
 main army. He went on September 1--the king promised to start next
-day. D'Alenï¿½on returned to the Maid, the king still loitered. At
-last d'Alenï¿½on brought him to St. Denis on September 7, and there
+day. D'Alençon returned to the Maid, the king still loitered. At
+last d'Alençon brought him to St. Denis on September 7, and there
 was a skirmish that day.
 
 In the book of Perceval de Cagny, who was with his lord, the Duc
-d'Alenï¿½on, he says: "The assault was long and fierce, and it was
+d'Alençon, he says: "The assault was long and fierce, and it was
 marvel to hear the noise of the cannons and culverins from the
 walls, and to see the clouds of arrows. Few of those in the fosse
 with the Maid were struck, though many others on horse and foot
@@ -3723,13 +3939,13 @@ had now fallen and she was wounded, and the men-at-arms were weary
 with the long attack, De Gaucourt and others came and found her,
 and, against her will, brought her forth from the fosse. And so
 ended that onslaught.  But right sad she was to leave and said,
-'By my bï¿½ton, the place would have been taken.' They put her on
+'By my bâton, the place would have been taken.' They put her on
 horseback, and led her to her quarters, and all the rest of the
 king's company who that day had come from St. Denis."
 
 "Next day," says Cagny, "in spite of her wound, she was first in
-the field. She went to d'Alenï¿½on and bade him sound the trumpet
-for the charge.  D'Alenï¿½on and the other captains were of the same
+the field. She went to d'Alençon and bade him sound the trumpet
+for the charge.  D'Alençon and the other captains were of the same
 mind as the Maid, and Montmorency with sixty gentlemen and many
 lances came in, though he had been on the English side before. So
 they began to march on Paris, but the king sent messengers, and
@@ -3751,14 +3967,14 @@ off the Maid's armor from the chapel in St. Denis. Her Voices had
 bidden her stay at St. Denis, but this she was not permitted to
 do, and now she must hear daily how the loyal towns that she had
 won were plundered by the English, and all her work seemed wasted.
-The Duc d'Alenï¿½on offered to lead an army against the English in
+The Duc d'Alençon offered to lead an army against the English in
 Normandy, if the Maid might march with him, for the people had not
 wholly lost faith, but the courtiers and the Archbishop of Reims,
 who managed the king and the war, would not consent, nor would they
 allow the Maid and the duke to even see each other.
 
 Joan wanted to return to Paris, but the council sent her to take
-La Charitï¿½ and Saint-Pierre-le-Moustier from the English. This town
+La Charité and Saint-Pierre-le-Moustier from the English. This town
 she attacked first. Her squire, a gentleman named d'Aulon, was with
 her, and described what he saw. "When they had besieged the place
 for some time, an assault was commanded, but for the great strength
@@ -3792,7 +4008,7 @@ Anonymous
 
 
 
-From there the Maid rode to attack La Charitï¿½.  But, though the
+From there the Maid rode to attack La Charité.  But, though the
 towns helped her as well as they might with money and food, her
 force was too small and was too ill provided with everything, for
 the king did not send supplies. She abandoned the siege and departed
@@ -3820,8 +4036,8 @@ These words are Joan's.  She spoke them to her judges at Rouen.
 The name of Joan was now such a terror to the English that men
 deserted rather than face her in arms. At this time the truce with
 Burgundy ended, and the duke openly set out to besiege the strong
-town of Compiï¿½gne, held by De Flavy for France.  Burgundy had
-invested Compiï¿½gne, when Joan, with four hundred men, rode into
+town of Compiègne, held by De Flavy for France.  Burgundy had
+invested Compiègne, when Joan, with four hundred men, rode into
 the town secretly at dawn. That day Joan led a sally against the
 Burgundians. Her Voices told her nothing, good or bad, she says.
 The Burgundians were encamped at Margny and at Clairoix, the English
@@ -3837,7 +4053,7 @@ garrison of Clairoix came to their help; the battle was doubtful.
 Meanwhile the English came up; they could not have reached
 the Burgundians, to aid them, but some of the Maid's men, seeing
 the English standards, fled.  The English followed them under the
-walls of Compiï¿½gne; the gate of the redoubt was closed to prevent
+walls of Compiègne; the gate of the redoubt was closed to prevent
 the English from entering with the runaways.  Like Hector under
 Troy, the Maid was shut out from the town which she came to save.
 
@@ -3868,12 +4084,12 @@ let the doctors of the University of Paris judge and burn the girl
 whom they seldom dared to face in war.  She was the enemy of the
 English, and the English believed in witchcraft. Joan was now kept
 in a high tower and was allowed to walk on the leads.  She knew
-she was sold to England, she had heard that the people of Compiï¿½gne
+she was sold to England, she had heard that the people of Compiègne
 were to be massacred.  She would rather die than fall into English
-hands, but she hoped to escape and relieve Compiï¿½gne.  She therefore
+hands, but she hoped to escape and relieve Compiègne.  She therefore
 prayed for counsel to her Saints; might she leap from the top of
 the tower? Would they not bear her up in their hands? St. Catherine
-bade her not to leap; God would help her and the people of Compiï¿½gne.
+bade her not to leap; God would help her and the people of Compiègne.
 
 Then, for the first time, as far as we know, the Maid wilfully
 disobeyed her Voices. She leaped from the tower. They found her,
@@ -3881,8 +4097,8 @@ not wounded, not a limb broken, but stunned. She knew not what
 had happened; they told her she had leaped down For three days she
 could not eat, "yet was she comforted by St. Catherine, who bade
 her confess and seek pardon of God, and told her that, without
-fail, they of Compiï¿½gne should be relieved before Martinmas." This
-prophecy was fulfilled. Joan was more troubled about Compiï¿½gne than
+fail, they of Compiègne should be relieved before Martinmas." This
+prophecy was fulfilled. Joan was more troubled about Compiègne than
 about her own coming doom.
 
 She was now locked up in an iron cage at Rouen.  The person who
@@ -3976,7 +4192,7 @@ said that they had burned a Saint.
 Twenty years after her death Charles VII, in his own interest,
 induced the Pope to try the case of Joan over again. They collected
 the evidence of most of the living people who had known her, the
-Domremy peasants, from Dunois, d'Alenï¿½on, d'Aulon, from Isambart
+Domremy peasants, from Dunois, d'Alençon, d'Aulon, from Isambart
 and l'Advenu, they learned how nobly she died, and how she never
 made one complaint, but forgave all her enemies freely. All these
 old Latin documents were collected, edited, and printed, in 1849,
@@ -4984,7 +5200,7 @@ at those great ships of the Spaniards, which were altogether heavy
 and unwieldy." Moreover, the Spanish fashion, in the West Indies
 at least, though not in the ships of the Great Armada, was, for
 the sake of carrying merchandise, to build their men-of-war flush
-decked, or as it was called "race" (razï¿½s), which left those on
+decked, or as it was called "race" (razés), which left those on
 deck exposed and open; while the English fashion was to heighten
 the ship as much as possible at stem and stern, both by the sweep
 of her lines, and also by stockades ("close fights and cage-works")
@@ -5573,12 +5789,12 @@ and the English broke into a cheer and called to them to run her
 alongside.
 
 "Silence!" shouted Amyas. "I take no surrender from mutineers.
-Seï¿½or," cried he to the captain, springing into the rigging and
+Señor," cried he to the captain, springing into the rigging and
 taking off his hat, "for the love of God and these men, strike!
-and surrender _ï¿½ buena querra_."
+and surrender _á buena querra_."
 
 The Spaniard lifted his hat and bowed courteously, and answered,
-"Impossible, seï¿½or. No _querra_ is good which stains my honor."
+"Impossible, señor. No _querra_ is good which stains my honor."
 
 "God have mercy on you, then!"
 
@@ -5586,7 +5802,7 @@ The Spaniard lifted his hat and bowed courteously, and answered,
 
 She gave one awful lunge forward, and dived under the coming swell,
 hurling her crew into the eddies. Nothing but the point of her poop
-remained, and there stood the stern and steadfast Don, cap-ï¿½-pie
+remained, and there stood the stern and steadfast Don, cap-à-pie
 in his glistening black armor, immovable as a man of iron, while
 over him the flag, which claimed the empire of both worlds, flaunted
 its gold aloft and upward in the glare of the tropic noon.
@@ -5804,9 +6020,9 @@ nowt, man. See that ye get no harm in such a rebel service."
 Sometimes, however, searching waxed so hot and close that Gordon
 had to withdraw himself altogether out of Galloway and seek quieter
 parts of the country. On one occasion he was speeding up the Water
-of ï¿½ when he found himself so weary that he was compelled to lie
+of Æ when he found himself so weary that he was compelled to lie
 down under a bush of heather and rest before proceeding on his
-journey.  It so chanced that a noted king's man, Dalyell of Glenï¿½,
+journey.  It so chanced that a noted king's man, Dalyell of Glenæ,
 was riding homeward over the moor. His horse started back in
 astonishment, having nearly stumbled over the body of a sleeping
 man. It was Alexander Gordon. Hearing the horse's feet, he leaped
@@ -6526,7 +6742,7 @@ the inland coast, and from one of them there lands a man evidently
 higher in authority than any we have seen. His air is calm,
 dignified, forceful, persistent. He announces to those about him
 that they are at one of the mouths of the great Mississippi, or,
-as he well calls it _"La riviï¿½re fu-neste,"_ the fatal river. "Here
+as he well calls it _"La riviére fu-neste,"_ the fatal river. "Here
 shall we land all our men," he adds, "and here shall our vessels
 be placed in safe harbor."
 
@@ -6949,7 +7165,7 @@ nozzle," came the summons from the yacht; "yield thee, or I will
 drown you out like a rat in a cheese-press!"
 
 "Arvid Horn yields to no one," the plucky boy in the boat made answer,
-and with a parting shot and a laughing "_Farvï¿½l!_" he leaped from
+and with a parting shot and a laughing "_Farväl!_" he leaped from
 the sinking boat into the dancing Maelar water. Striking boldly out,
 he swam twice round the boat in sheer bravado, defying the enemy;
 now ducking to escape the pursuing stream, or now, while floating
@@ -7412,7 +7628,7 @@ the crew in a boat to the ship's side to bring us ashore. A sort
 of camp was made, and here we stayed till we were taken in by a
 vessel bound to Philadelphia.
 
-At Philadelphia, people soon came to buy us.  We were sold for ï¿½16
+At Philadelphia, people soon came to buy us.  We were sold for £16
 apiece. I never knew what became of my unhappy companions, but I
 was sold for seven years to one of my countrymen, Hugh Wilson, who
 in his youth had suffered the same fate as myself in being kidnapped
@@ -7430,7 +7646,7 @@ agreed, and I went every winter for five years, also learning as
 much as I could from my fellow-servants.
 
 With this good master I stayed till I was seventeen years old, when
-he died, leaving me a sum of money, about ï¿½120 sterling, his best
+he died, leaving me a sum of money, about £120 sterling, his best
 horse, and all his wearing apparel.
 
 I now maintained myself by working about the country, for any one
@@ -7448,7 +7664,7 @@ had formerly been very troublesome in our province, began to renew
 their old practices. Even many of the Indians whom we supposed to
 be in the English interest joined the plundering bands; it was no
 wonder, for the French did their utmost to win them over, promising
-to pay ï¿½15 for every scalp of an Englishman!
+to pay £15 for every scalp of an Englishman!
 
 Hardly a day passed but some unhappy family fell a victim to French
 bribery and savage cruelty.  As for me, though now in comfortable
@@ -7749,7 +7965,7 @@ ANONYMOUS
 Few people out of his own country would have heard of Baron Trenck
 had it not been for the wonderful skill and cunning with which he
 managed to cut through the stone walls and iron bars of all his many
-cages. He was born at Kï¿½nigsberg in Prussia in 1726, and entered
+cages. He was born at Königsberg in Prussia in 1726, and entered
 the body-guard of Frederic II in 1742, when he was about sixteen.
 Trenck was a young man of good family, rich, well educated,
 and, according to his own account, fond of amusement. He confesses
@@ -8499,10 +8715,10 @@ More than two hundred years ago there lived in Acadia, as Nova
 Scotia was then called, a beautiful maiden named Evangeline. Benedict
 Bellefontaine, Evangeline's father, was the wealthiest farmer in
 the neighborhood. His goodly acres were somewhat apart from the
-little village of Grand-Prï¿½, but near enough for Evangeline not to
+little village of Grand-Pré, but near enough for Evangeline not to
 feel lonely.
 
-The people of Grand-Prï¿½ were simple and kindly, and dwelt together
+The people of Grand-Pré were simple and kindly, and dwelt together
 in the love of God and man. They had neither locks to their doors
 nor bars to their windows; visitors were always welcome, and all
 gave of their best to whoever might come.
@@ -8521,7 +8737,7 @@ Evangeline was her father's housekeeper; her mother was dead. Benedict
 was seventy years old, but he was hale and hearty and managed his
 prosperous farm himself. His hair was as white as snow and his face
 was as brown as oak leaves.  Evangeline's hair was dark brown and
-her eyes were black. She was the loveliest girl in Grand-Prï¿½ and
+her eyes were black. She was the loveliest girl in Grand-Pré and
 many a lad was in love with her.
 
 Among all Evangeline's suitors only one was welcome, and he was Gabriel
@@ -8594,7 +8810,7 @@ sledge and the scythes of the mowers have been left."
 made the best of everything.  "What can harm us here in the midst
 of our flocks and our corn-fields? Fear no evil, my friend, and,
 above all, may no shadow fall on this house and hearth to-night. It
-is the night of the contract. Renï¿½ Leblanc will be here presently
+is the night of the contract. René Leblanc will be here presently
 with his papers and inkhorn. Shall we not be glad and rejoice in
 the happiness of our children?"
 
@@ -8602,7 +8818,7 @@ Evangeline and her lover were standing by the window. They heard
 the words of the farmer and the maiden blushed. Hardly had he spoken
 when the worthy notary entered the room.
 
-Renï¿½ Leblanc was bent with age. His hair was yellow, his forehead
+René Leblanc was bent with age. His hair was yellow, his forehead
 was high, and he looked very wise, with his great spectacles sitting
 astride on his nose. He was the father of twenty children, and more
 than a hundred grandchildren rode on his knee. All children loved
@@ -8768,13 +8984,13 @@ None could escape, for the soldiers were watching them.
 The priest moved about in the moonlight trying to comfort the people.
 He laid his hand on Evangeline's head and blessed her. Suddenly
 columns of shining smoke arose and flashes of flame were seen in
-the direction of Grand-Prï¿½. The village was on fire. The people
+the direction of Grand-Pré. The village was on fire. The people
 felt that they could never return to their homes and their hearts
 were swelled with anguish. Evangeline and the priest turned to
 Benedict. He was motionless, his soul had gone to Heaven.
 
 There on the beach, with the light of the burning village for a
-torch, they buried the farmer of Grand-Prï¿½, and the priest repeated
+torch, they buried the farmer of Grand-Pré, and the priest repeated
 the burial service to the accompaniment of the roaring sea.
 
 In the morning the work of embarking was finished and toward night
@@ -9033,7 +9249,7 @@ his hat round his head and shouted:
 
 "A huzza for ze wise general!"
 
-The soldiers cheered lustily, and General Mï¿½hlenberg followed with:
+The soldiers cheered lustily, and General Mühlenberg followed with:
 
 "Now a cheer for the Declaration of Independence and for the soldier
 who wrote down 'Seventeen seventy-six.'"
@@ -11362,11 +11578,11 @@ By Lieutenant-General Baron de Marbot
 
 
 After crossing the Traun, burning the bridge at Mauthhausen, and
-passing the Enns, Napoleon's army advanced to Mï¿½lk, without knowing
+passing the Enns, Napoleon's army advanced to Mölk, without knowing
 what had become of General Hiller.  Some spies assured us that the
 archduke had crossed the Danube and joined him, and that we should
 on the morrow meet the whole Austrian army, strongly posted in
-front of Saint-Pï¿½lten. In that case, we must make ready to fight
+front of Saint-Pölten. In that case, we must make ready to fight
 a great battle; but if it were otherwise, we had to march quickly
 on Vienna in order to get there before the enemy could reach it by
 the other bank. For want of positive information the emperor was
@@ -11376,7 +11592,7 @@ swarm of light cavalry, which, always flying, never let us get near
 enough to take a prisoner from whom one might get some enlightenment?
 
 Still knowing nothing for certain, we reached, on May 7, the pretty
-little town of Mï¿½lk, standing on the bank of the Danube, and overhung
+little town of Mölk, standing on the bank of the Danube, and overhung
 by an immense rock, on the summit of which rises a Benedictine
 convent, said to be the finest and richest in Christendom. From the
 rooms of the monastery a wide view is obtained over both banks of
@@ -11507,7 +11723,7 @@ stream.
 
 I had bidden the grenadiers follow in silence all the orders of
 the syndic, or leader, who was steering; the current was too strong
-for us to cross over straight from Mï¿½lk: we went up, therefore,
+for us to cross over straight from Mölk: we went up, therefore,
 along the bank under sail for more than a league, and although the
 wind and the waves made the boat jump, this part was accomplished
 without accident.  But when the time came to take to our oars and
@@ -11635,24 +11851,24 @@ issue to my enterprise. Still, all danger was not yet at an end.
 We had still to cross among the floating pine-stems, and more
 than once we struck on submerged islands, and were delayed by the
 branches of the poplars. At last we reached the right bank, more than
-two leagues below Mï¿½lk, and a new terror assailed me. I could see
+two leagues below Mölk, and a new terror assailed me. I could see
 bivouac fires, and had no means of learning whether they belonged
 to a French regiment. The enemy had troops on both banks, and I
 knew that on the right bank Marshal Lannes's outposts were not far
-from Mï¿½lk, facing an Austrian corps, posted at Saint-Pï¿½lten.
+from Mölk, facing an Austrian corps, posted at Saint-Pölten.
 
 Our army would doubtless go forward at daybreak, but was it already
 occupying this place? And were the fires that I saw those of friends
 or enemies?  I was afraid that the current had taken me too far
 down, but the problem was solved by French cavalry trumpets sounding
-the reveillï¿½. Our uncertainty being at an end, we rowed with all
+the reveillé. Our uncertainty being at an end, we rowed with all
 our strength to the shore, where in the dawning light we could
 see a village. As we drew near, the report of a carbine was heard,
 and a bullet whistled by our ears. It was evident that the French
 sentries took us for a hostile crew. I had not foreseen this
 possibility, and hardly knew how we were to succeed in getting
 recognized, till the happy thought struck me of making my six
-grenadiers shout "Vive l'Empereur Napolï¿½on!" This was, of course,
+grenadiers shout "Vive l'Empereur Napoléon!" This was, of course,
 no certain evidence that we were French, but it would attract the
 attention of the officers, who would have no fear of our small
 numbers, and would no doubt prevent the men from firing on us before
@@ -12336,7 +12552,7 @@ When he returned, two officers in the British uniform were seated
 in the barge with him. The freebooters, a formidable array of
 French, Italians, Portuguese and West Indians, with here and there
 a sunburned American, stared with bold and threatening eyes at
-the intruders as they passed through the whispering _chï¿½naiï¿½_ (oak
+the intruders as they passed through the whispering _chênaié_ (oak
 grove) to the house, to unfold their mission to the "Great Chief,"
 and to share his princely hospitality.
 
@@ -12896,7 +13112,7 @@ By Emerson Hough
 
 
 
-"How much farther, Franï¿½ois?" asked the leader of a little mountain
+"How much farther, François?" asked the leader of a little mountain
 cavalcade which wound its way down a broad river valley in the heart
 of the Rocky Mountains. "See, it is now noon, and the encampment
 is not yet in sight.  Shall we not stop and rest?"
@@ -12917,7 +13133,7 @@ Green?"
 "It is establish for ze month of August in ze valley of ze Green.
 Those man of the mountain, he do not disappoint. This rendezvous
 of ze year 1835, it may be ze last one for ze trappaire. But me,
-Franï¿½ois Verrier, say to you that you shall see ze rendezvous,
+François Verrier, say to you that you shall see ze rendezvous,
 also ze trappaire, and ze trader, and ze Injin--hundreds of heem.
 My faith! Zay shall see for ze first time ze missionaire to ze
 Injin!  M'sieu' Parker, you are not ze good father? _Eh bien_, you
@@ -12960,7 +13176,7 @@ He pointed. There, against the sky-line, on a projecting range of
 the mountainside which sloped down to the edge of the valley, was
 the figure of a mountain man, motionless, and evidently on guard.
 
-"_En avant!_" cried Franï¿½ois, setting heels to his horse. "_V'la!_
+"_En avant!_" cried François, setting heels to his horse. "_V'la!_
 It is ze guard of ze encampment.  Ride quick, _mes camarades!_"
 
 The train, packhorses and all, pushed forward at a gallop, which
@@ -14084,7 +14300,7 @@ in front and spreading out to a breadth of ten or twelve feet.
 This machine not only cut through the drifts but packed the snow,
 leaving a good, solid road behind it. After it had passed, we sped
 along merrily in the cold morning twilight, and in a little more
-than an hour reached the post-house at Umeï¿½, where we found Lars'
+than an hour reached the post-house at Umeå, where we found Lars'
 father prepared to return home. He waited, nevertheless, until Lars
 had eaten a good warm breakfast, when I said good-bye to both, and
 went on towards Lapland.
@@ -14693,3 +14909,322 @@ the story of the fire. In response to an offer from Will, he replied:
 else. I'm in debt to you for saving my timber above the settlement,
 instead." Then he added, in a quiet way characteristic of him,
 "It seems a pity if wit like yours doesn't get its full growth."
+
+
+
+
+*** END OF THE PROJECT GUTENBERG EBOOK, THE JUNIOR CLASSICS ***
+
+This file should be named 6302-0.txt or 6302-0.zip
+
+Project Gutenberg eBooks are often created from several printed
+editions, all of which are confirmed as Public Domain in the US
+unless a copyright notice is included.  Thus, we usually do not
+keep eBooks in compliance with any particular paper edition.
+
+We are now trying to release all our eBooks one year in advance
+of the official release dates, leaving time for better editing.
+Please be encouraged to tell us about any error or corrections,
+even years after the official publication date.
+
+Please note neither this listing nor its contents are final til
+midnight of the last day of the month of any such announcement.
+The official release date of all Project Gutenberg eBooks is at
+Midnight, Central Time, of the last day of the stated month.  A
+preliminary version may often be posted for suggestion, comment
+and editing by those who wish to do so.
+
+Most people start at our Web sites at:
+http://gutenberg.net or
+http://promo.net/pg
+
+These Web sites include award-winning information about Project
+Gutenberg, including how to donate, how to help produce our new
+eBooks, and how to subscribe to our email newsletter (free!).
+
+
+Those of you who want to download any eBook before announcement
+can get to them as follows, and just download by date.  This is
+also a good way to get them instantly upon announcement, as the
+indexes our cataloguers produce obviously take a while after an
+announcement goes out in the Project Gutenberg Newsletter.
+
+http://www.ibiblio.org/gutenberg/etext04 or
+ftp://ftp.ibiblio.org/pub/docs/books/gutenberg/etext04
+
+Or /etext03, 02, 01, 00, 99, 98, 97, 96, 95, 94, 93, 92, 92, 91 or 90
+
+Just search by the first five letters of the filename you want,
+as it appears in our Newsletters.
+
+
+Information about Project Gutenberg (one page)
+
+We produce about two million dollars for each hour we work.  The
+time it takes us, a rather conservative estimate, is fifty hours
+to get any eBook selected, entered, proofread, edited, copyright
+searched and analyzed, the copyright letters written, etc.   Our
+projected audience is one hundred million readers.  If the value
+per text is nominally estimated at one dollar then we produce $2
+million dollars per hour in 2002 as we release over 100 new text
+files per month:  1240 more eBooks in 2001 for a total of 4000+
+We are already on our way to trying for 2000 more eBooks in 2002
+If they reach just 1-2% of the world's population then the total
+will reach over half a trillion eBooks given away by year's end.
+
+The Goal of Project Gutenberg is to Give Away 1 Trillion eBooks!
+This is ten thousand titles each to one hundred million readers,
+which is only about 4% of the present number of computer users.
+
+Here is the briefest record of our progress (* means estimated):
+
+eBooks Year Month
+
+    1  1971 July
+   10  1991 January
+  100  1994 January
+ 1000  1997 August
+ 1500  1998 October
+ 2000  1999 December
+ 2500  2000 December
+ 3000  2001 November
+ 4000  2001 October/November
+ 6000  2002 December*
+ 9000  2003 November*
+10000  2004 January*
+
+
+The Project Gutenberg Literary Archive Foundation has been created
+to secure a future for Project Gutenberg into the next millennium.
+
+We need your donations more than ever!
+
+As of February, 2002, contributions are being solicited from people
+and organizations in: Alabama, Alaska, Arkansas, Connecticut,
+Delaware, District of Columbia, Florida, Georgia, Hawaii, Illinois,
+Indiana, Iowa, Kansas, Kentucky, Louisiana, Maine, Massachusetts,
+Michigan, Mississippi, Missouri, Montana, Nebraska, Nevada, New
+Hampshire, New Jersey, New Mexico, New York, North Carolina, Ohio,
+Oklahoma, Oregon, Pennsylvania, Rhode Island, South Carolina, South
+Dakota, Tennessee, Texas, Utah, Vermont, Virginia, Washington, West
+Virginia, Wisconsin, and Wyoming.
+
+We have filed in all 50 states now, but these are the only ones
+that have responded.
+
+As the requirements for other states are met, additions to this list
+will be made and fund raising will begin in the additional states.
+Please feel free to ask to check the status of your state.
+
+In answer to various questions we have received on this:
+
+We are constantly working on finishing the paperwork to legally
+request donations in all 50 states.  If your state is not listed and
+you would like to know if we have added it since the list you have,
+just ask.
+
+While we cannot solicit donations from people in states where we are
+not yet registered, we know of no prohibition against accepting
+donations from donors in these states who approach us with an offer to
+donate.
+
+International donations are accepted, but we don't know ANYTHING about
+how to make them tax-deductible, or even if they CAN be made
+deductible, and don't have the staff to handle it even if there are
+ways.
+
+Donations by check or money order may be sent to:
+
+Project Gutenberg Literary Archive Foundation
+PMB 113
+1739 University Ave.
+Oxford, MS 38655-4109
+
+Contact us if you want to arrange for a wire transfer or payment
+method other than by check or money order.
+
+The Project Gutenberg Literary Archive Foundation has been approved by
+the US Internal Revenue Service as a 501(c)(3) organization with EIN
+[Employee Identification Number] 64-622154.  Donations are
+tax-deductible to the maximum extent permitted by law.  As fund-raising
+requirements for other states are met, additions to this list will be
+made and fund-raising will begin in the additional states.
+
+We need your donations more than ever!
+
+You can get up to date donation information online at:
+
+http://www.gutenberg.net/donation.html
+
+
+***
+
+If you can't reach Project Gutenberg,
+you can always email directly to:
+
+Michael S. Hart <hart@pobox.com>
+
+Prof. Hart will answer or forward your message.
+
+We would prefer to send you information by email.
+
+
+**The Legal Small Print**
+
+
+(Three Pages)
+
+***START**THE SMALL PRINT!**FOR PUBLIC DOMAIN EBOOKS**START***
+Why is this "Small Print!" statement here? You know: lawyers.
+They tell us you might sue us if there is something wrong with
+your copy of this eBook, even if you got it for free from
+someone other than us, and even if what's wrong is not our
+fault. So, among other things, this "Small Print!" statement
+disclaims most of our liability to you. It also tells you how
+you may distribute copies of this eBook if you want to.
+
+*BEFORE!* YOU USE OR READ THIS EBOOK
+By using or reading any part of this PROJECT GUTENBERG-tm
+eBook, you indicate that you understand, agree to and accept
+this "Small Print!" statement. If you do not, you can receive
+a refund of the money (if any) you paid for this eBook by
+sending a request within 30 days of receiving it to the person
+you got it from. If you received this eBook on a physical
+medium (such as a disk), you must return it with your request.
+
+ABOUT PROJECT GUTENBERG-TM EBOOKS
+This PROJECT GUTENBERG-tm eBook, like most PROJECT GUTENBERG-tm eBooks,
+is a "public domain" work distributed by Professor Michael S. Hart
+through the Project Gutenberg Association (the "Project").
+Among other things, this means that no one owns a United States copyright
+on or for this work, so the Project (and you!) can copy and
+distribute it in the United States without permission and
+without paying copyright royalties. Special rules, set forth
+below, apply if you wish to copy and distribute this eBook
+under the "PROJECT GUTENBERG" trademark.
+
+Please do not use the "PROJECT GUTENBERG" trademark to market
+any commercial products without permission.
+
+To create these eBooks, the Project expends considerable
+efforts to identify, transcribe and proofread public domain
+works. Despite these efforts, the Project's eBooks and any
+medium they may be on may contain "Defects". Among other
+things, Defects may take the form of incomplete, inaccurate or
+corrupt data, transcription errors, a copyright or other
+intellectual property infringement, a defective or damaged
+disk or other eBook medium, a computer virus, or computer
+codes that damage or cannot be read by your equipment.
+
+LIMITED WARRANTY; DISCLAIMER OF DAMAGES
+But for the "Right of Replacement or Refund" described below,
+[1] Michael Hart and the Foundation (and any other party you may
+receive this eBook from as a PROJECT GUTENBERG-tm eBook) disclaims
+all liability to you for damages, costs and expenses, including
+legal fees, and [2] YOU HAVE NO REMEDIES FOR NEGLIGENCE OR
+UNDER STRICT LIABILITY, OR FOR BREACH OF WARRANTY OR CONTRACT,
+INCLUDING BUT NOT LIMITED TO INDIRECT, CONSEQUENTIAL, PUNITIVE
+OR INCIDENTAL DAMAGES, EVEN IF YOU GIVE NOTICE OF THE
+POSSIBILITY OF SUCH DAMAGES.
+
+If you discover a Defect in this eBook within 90 days of
+receiving it, you can receive a refund of the money (if any)
+you paid for it by sending an explanatory note within that
+time to the person you received it from. If you received it
+on a physical medium, you must return it with your note, and
+such person may choose to alternatively give you a replacement
+copy. If you received it electronically, such person may
+choose to alternatively give you a second opportunity to
+receive it electronically.
+
+THIS EBOOK IS OTHERWISE PROVIDED TO YOU "AS-IS". NO OTHER
+WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, ARE MADE TO YOU AS
+TO THE EBOOK OR ANY MEDIUM IT MAY BE ON, INCLUDING BUT NOT
+LIMITED TO WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A
+PARTICULAR PURPOSE.
+
+Some states do not allow disclaimers of implied warranties or
+the exclusion or limitation of consequential damages, so the
+above disclaimers and exclusions may not apply to you, and you
+may have other legal rights.
+
+INDEMNITY
+You will indemnify and hold Michael Hart, the Foundation,
+and its trustees and agents, and any volunteers associated
+with the production and distribution of Project Gutenberg-tm
+texts harmless, from all liability, cost and expense, including
+legal fees, that arise directly or indirectly from any of the
+following that you do or cause:  [1] distribution of this eBook,
+[2] alteration, modification, or addition to the eBook,
+or [3] any Defect.
+
+DISTRIBUTION UNDER "PROJECT GUTENBERG-tm"
+You may distribute copies of this eBook electronically, or by
+disk, book or any other medium if you either delete this
+"Small Print!" and all other references to Project Gutenberg,
+or:
+
+[1]  Only give exact copies of it.  Among other things, this
+     requires that you do not remove, alter or modify the
+     eBook or this "small print!" statement.  You may however,
+     if you wish, distribute this eBook in machine readable
+     binary, compressed, mark-up, or proprietary form,
+     including any form resulting from conversion by word
+     processing or hypertext software, but only so long as
+     *EITHER*:
+
+     [*]  The eBook, when displayed, is clearly readable, and
+          does *not* contain characters other than those
+          intended by the author of the work, although tilde
+          (~), asterisk (*) and underline (_) characters may
+          be used to convey punctuation intended by the
+          author, and additional characters may be used to
+          indicate hypertext links; OR
+
+     [*]  The eBook may be readily converted by the reader at
+          no expense into plain ASCII, EBCDIC or equivalent
+          form by the program that displays the eBook (as is
+          the case, for instance, with most word processors);
+          OR
+
+     [*]  You provide, or agree to also provide on request at
+          no additional cost, fee or expense, a copy of the
+          eBook in its original plain ASCII form (or in EBCDIC
+          or other equivalent proprietary form).
+
+[2]  Honor the eBook refund and replacement provisions of this
+     "Small Print!" statement.
+
+[3]  Pay a trademark license fee to the Foundation of 20% of the
+     gross profits you derive calculated using the method you
+     already use to calculate your applicable taxes.  If you
+     don't derive profits, no royalty is due.  Royalties are
+     payable to "Project Gutenberg Literary Archive Foundation"
+     the 60 days following each date you prepare (or were
+     legally required to prepare) your annual (or equivalent
+     periodic) tax return.  Please contact us beforehand to
+     let us know your plans and to work out the details.
+
+WHAT IF YOU *WANT* TO SEND MONEY EVEN IF YOU DON'T HAVE TO?
+Project Gutenberg is dedicated to increasing the number of
+public domain and licensed works that can be freely distributed
+in machine readable form.
+
+The Project gratefully accepts contributions of money, time,
+public domain materials, or royalty free copyright licenses.
+Money should be paid to the:
+"Project Gutenberg Literary Archive Foundation."
+
+If you are interested in contributing scanning equipment or
+software or other items, please contact Michael Hart at:
+hart@pobox.com
+
+[Portions of this eBook's header and trailer may be reprinted only
+when distributed free of all fees.  Copyright (C) 2001, 2002 by
+Michael S. Hart.  Project Gutenberg is a TradeMark and may not be
+used in any sales of Project Gutenberg eBooks or other materials be
+they hardware or software or any other related product without
+express permission.]
+
+*END THE SMALL PRINT! FOR PUBLIC DOMAIN EBOOKS*Ver.02/11/02*END*
+
