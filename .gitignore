@@ -10,3 +10,5 @@ ModelCreation_SentenceGenerator/SmoothedUnigram/crime
 ModelCreation_SentenceGenerator/SmoothedUnigram/history
 
 *.xml
+
+utils/SmoothedBigram/children
