@@ -3,15 +3,42 @@ Created on Sep 13, 2015
 
 @author: gaurav
 '''
+from utils.ModelingUtilities  import loadUnigramModels, loadBigramModels
 from utils.ModelingUtilities  import genres
-from scipy.stats                                        import rv_discrete
+from scipy.stats              import rv_discrete
 import pprint
 
 end_punctuation     = set(['.','!','?'])
 middle_punctuation  = set([',',';',':'])
 open_brace          = set(['(','['])
 close_brace         = set([')',']'])
+
+def main():
+    '''
+        Controller method for loading the models and calling the sentence generation
+        methods
+    '''
+    #Generate the unigram model for all the genres or load it from memory
+    unigram_model = loadUnigramModels()
     
+    #Generate random sentences from the unigram model which ends as soon as sentence end character is presented
+    generateRandomSentenceFromUnigram(unigram_model)
+    
+    #Generate the bigram model for all the genres
+    bigram_model = loadBigramModels('BigramSentenceModel')
+    
+    #Generate random sentences from the bigram model with default seed and n=200
+    generateRandomSentenceFromBigram(bigram_model, n=200)    
+    
+    #Generate random sentences from the bigram model with custom seed and n=100
+    #Will consider <START> character as seed for history which has not been specified
+    bigram_seed = {
+                 'children':'sjbdsabdoisabdoisbdoias', 
+                 'crime':'killed'
+                 }
+    generateRandomSentenceFromBigram(bigram_model, seed = bigram_seed, n=200)
+
+
 def generateRandomSentenceFromUnigram(unigram_model, n = None):
     '''
         Generating random sentences from the unigram model
@@ -52,6 +79,7 @@ def generateRandomSentenceFromUnigram(unigram_model, n = None):
     pprint.pprint(randomUnigramSentences)
     return randomUnigramSentences
 
+
 def generateRandomSentenceFromBigram(bigram_model, seed=None, n = None):
     '''
         Generating random sentences from the bigram model
@@ -73,7 +101,7 @@ def generateRandomSentenceFromBigram(bigram_model, seed=None, n = None):
         #the complete string from the beginning
         genre_sentence = genre_seed.split()
         
-        while ( n and count<=n ) or current_token not in end_punctuation:
+        while ( n and count<=n ) or (current_token not in end_punctuation):
             
             successor_dict = bigram_model[genre].get(current_token,None)
             
@@ -90,8 +118,9 @@ def generateRandomSentenceFromBigram(bigram_model, seed=None, n = None):
                 #Converts the sampled number to its corresponding word
                 current_token = numberToWordMapping[current_sample]
                 
-                genre_sentence.append(current_token)
-                count += 1
+                if not current_token == '<UNKNOWN>' or current_token == '<UNSEEN>':
+                    genre_sentence.append(current_token)
+                    count += 1
             
             else:
                 genre_sentence.append("(Word not seen in corpus before)")
@@ -144,7 +173,9 @@ def smartJoin(word_list):
         sentence_string += current_word if not use_space else ' ' + current_word
 
     return sentence_string
-
-
+    
+if __name__ == '__main__':
+    main()
+    
 
     

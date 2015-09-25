@@ -8,10 +8,11 @@ from utils.ModelingUtilities  import serializeModelToDisk, genres, training_path
 from nltk.tokenize            import word_tokenize
 from nltk.data                import load
 from collections              import defaultdict, Counter
-import os
 from Smoothing.GoodTuring     import applyGoodTuringBigramSmoothing
+from matplotlib.font_manager  import path
+import os
 
-def generateBigramModels():
+def generateBigramModels( random_sentence = False ):
     '''
         Controller module for the generation of the bigram models. Calls the various
         methods needed to generate the model and serialise it to the disc.
@@ -23,19 +24,22 @@ def generateBigramModels():
     # sentence starter words in the corpus
     for genre in genres:
         print("\nReading files for genre {0}".format(genre))
-        bigrams[genre], startchar_successors[genre] = getBigramsForGenre(training_path+genre)
+        path = training_path + genre
+        bigrams[genre], startchar_successors[genre] = getBigramsForGenre(path)
         
     #Creating the frequency model of the bigrams
     bigram_frequencies = getBigramFrequencies(bigrams)
     
     #Adding the frequency of the bigrams that include the start character
-    bigram_frequencies_with_startChar = getStartCharBigramFrequencies(bigram_frequencies, startchar_successors)
-
-    #Creating the bigram model i.e. calculating the probabilities of the unigrams
-    bigram_model = createBigramModel(bigram_frequencies_with_startChar)
-
-    #Storing the model on the disk in JSON format
-    serializeModelToDisk(bigram_model, 'Bigram')
+    if random_sentence:
+        bigram_frequencies_with_startChar = getStartCharBigramFrequencies(bigram_frequencies, startchar_successors)
+        bigram_model = createBigramModel(bigram_frequencies_with_startChar)
+        serializeModelToDisk(bigram_model, 'BigramSentenceModel')
+    
+    else:
+        bigram_model = createBigramModel(bigram_frequencies)
+        serializeModelToDisk(bigram_model, 'Bigram')
+    
 
     return bigram_model
 
@@ -44,19 +48,18 @@ def getBigramsForGenre(dir_path, unknown_words = True):
         Reads through the contents of a complete directory path and finds
         the bigrams present in a genre level corpus
     '''
-    genre_bigram               = []
     genre_tokens               = []
     genre_startchar_successors = []
     
     for path in os.listdir(dir_path):
         
         #Reading the file's contents and getting the tokens
-        tokens = getTokensForFile(dir_path + '/' + path)
-        genre_tokens.extend(tokens)
+        if not path.startswith('.'):
+            tokens = getTokensForFile(dir_path + '/' + path)
+            genre_tokens.extend(tokens)
 
-        #Finding the list of words that are sentence starters in the current corpus
-        #if not unknown_words:
-        #    genre_startchar_successors.extend(getStartCharSuccessorsForGenre(corpus))
+    #Finding the list of words that are sentence starters in the current corpus
+    genre_startchar_successors.extend(getStartCharSuccessorsForGenre(genre_tokens))
 
     #Modifying the list of tokens by inserting <UNKNOWN> for tokens that occur only once
     mod_tokens = insertUnknownWords(genre_tokens)
@@ -91,7 +94,7 @@ def getStartCharSuccessorsForGenre(content):
     sent_detector = load('tokenizers/punkt/english.pickle')
 
     #Splitting the corpus into sentences using nltk's tokenizer
-    sentences_split_corpus = sent_detector.tokenize(content.strip())
+    sentences_split_corpus = sent_detector.tokenize(' '.join(content).strip())
         
     #Extracting the first word of every sentence and storing it as a sentence starter
     sentence_start_words = [word_tokenize(sentence)[0] for sentence in sentences_split_corpus]

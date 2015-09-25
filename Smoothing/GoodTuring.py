@@ -45,7 +45,6 @@ def applyGoodTuringBigramSmoothing(bigram_frequencies, n = 5):
         unseen_bigram_count[genre] = total_bigram_count[genre] - len(bigram_counts)
         frequency_distribution[genre] = Counter(bigram_counts.values())
         frequency_distribution[genre].update({0 : unseen_bigram_count[genre]})
-        #print [frequency_distribution[genre][i] for i in range(11)]
     
     #Applying good turing smoothing on frequencies less than n
     smoothed_frequencies = defaultdict(dict)
@@ -53,7 +52,6 @@ def applyGoodTuringBigramSmoothing(bigram_frequencies, n = 5):
         for i in range(min(count_freq.keys()),n):
             smoothed_frequencies[genre][i] = (i + 1) * (float(count_freq[i+1])/count_freq[i])
             
-    
     #Updating the counts which were less than n in the original frequency distribution
     #with the new smoothed counts
     for genre, bigram_counts in bigram_frequencies.iteritems():

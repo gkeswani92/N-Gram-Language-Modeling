@@ -12,7 +12,7 @@ from nltk import word_tokenize
 
 #Variable definitions relative to the path of the source files
 base_path     = os.path.dirname(__file__)
-genres        = ['children','crime','history']
+genres        = ['children', 'crime', 'history']
 training_file_counts = {'children': 6, 'crime': 6, 'history': 3}
 training_path = base_path + '/books/train_books/'
 test_path     = base_path + '/books/test_books/'
@@ -23,7 +23,7 @@ def getTokensForFile(path):
         as a list
     '''
     print("Reading file at {0}".format(path))
-    
+
     #Using nltk for tokenizing the word
     f = codecs.open(path,'r','utf8', errors='ignore')
     words = word_tokenize(f.read());
@@ -63,11 +63,11 @@ def loadUnigramModels(dir_name='Unigram'):
     
     return unigram_model
 
-def loadBigramModels():
+def loadBigramModels( dir_name='Bigram'):
     '''
         Loads the bigram models for all genres by unpickling 
     '''
-    model_path = base_path + '/Bigram/'
+    model_path = base_path + '/{0}/'.format(dir_name)
     bigram_model = {}
     
     for genre in genres:

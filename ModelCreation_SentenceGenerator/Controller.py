@@ -9,27 +9,13 @@ from ModelCreation_SentenceGenerator.GenerateBigramModel     import generateBigr
 from utils.ModelingUtilities                                 import loadUnigramModels, loadBigramModels
 from ModelCreation_SentenceGenerator.RandomSentenceGenerator import generateRandomSentenceFromUnigram, generateRandomSentenceFromBigram
     
-def main( create_model = False ):
+def main():
     
-    #Generate the unigram model for all the genres or load it from memory
-    unigram_model = generateUnigramModels() if create_model else loadUnigramModels()
-    
-    #Generate random sentences from the unigram model which ends as soon as sentence end character is presented
-    generateRandomSentenceFromUnigram(unigram_model)
+    #Generate the unigram model for all the genres
+    _ = generateUnigramModels()
     
     #Generate the bigram model for all the genres
-    bigram_model = generateBigramModels() if create_model else loadBigramModels()
-    
-    #Generate random sentences from the bigram model with default seed and n=200
-    generateRandomSentenceFromBigram(bigram_model, n=200)    
-    
-    #Generate random sentences from the bigram model with custom seed and n=100
-    #Will consider <START> character as seed for history which has not been specified
-    bigram_seed = {
-                 'children':'sjbdsabdoisabdoisbdoias', 
-                  'crime':'killed'
-                 }
-    generateRandomSentenceFromBigram(bigram_model, seed = bigram_seed, n=200)
+    #_ = generateBigramModels( random_sentence  = False )
     
 if __name__ == '__main__':
     main()

@@ -49,7 +49,8 @@ def getUnigramFrequenciesforTrainingSet():
         
         #Reads in the unigrams one file at a time
         for path in os.listdir(training_path + genre):
-            word_list.extend(getTokensForFile(training_path + genre + '/' + path))
+            if not path.startswith('.'):
+                word_list.extend(getTokensForFile(training_path + genre + '/' + path))
         
         #Creating a counter of the frequencies at the genre level
         unigram_frequencies[genre] = Counter(word_list)
@@ -89,7 +90,7 @@ def handleUnknownWords(unigram_features):
     
     return modified_unigram_frequency
 
-def getUnknownWordSamplingProbs(unigram_features, iterations=10):
+def getUnknownWordSamplingProbs(unigram_features, iterations=100):
     '''
         Samples n_tokens/'training_file_counts' number of tokens from
         each of the training corpora 'iterations' many times, w/o replacement.
