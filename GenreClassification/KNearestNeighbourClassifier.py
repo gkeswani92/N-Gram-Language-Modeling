@@ -10,9 +10,9 @@ from nltk.tokenize                                      import word_tokenize
 import codecs
 import numpy
 import operator
+import math
 
-
-def KNearestNeighbourController(training_paths, training_labels, test_paths = None, test_labels = None, k = 1):
+def KNearestNeighbourController(training_paths, training_labels, test_paths = None, test_labels = None, k = 1, tf_idf = False):
     '''
         Controller function to co-ordinate the K-Nearest neighbour algorithm
     '''
@@ -23,71 +23,65 @@ def KNearestNeighbourController(training_paths, training_labels, test_paths = No
     #the rest of the them to create the training vectors
     if not test_paths:
         
-        count = 0
-       
         #Creating the vectors for the training set. This includes all but one book
         #which will be used for validation
         for validation_file in training_text_dict:
-            print(validation_file)
+            print("Validation being done on: {0}".format(validation_file))
             
             #Creating the training vectors and validation vectors from the training dictionary
             vectors, _ = createTrainingVectors(training_text_dict)
             
             #Performing tf-idf transform on all the vectors
-            #tfidf_transform_dict = tfIdfTransform(vectors)
-            tfidf_transform_dict = vectors
+            tfidf_transform_dict = tfIdfTransform(vectors) if tf_idf else vectors
             
+            #Separating the validation vector from the training one
             validation_vector = tfidf_transform_dict.pop(validation_file)
             training_vectors = tfidf_transform_dict
             
             #Finding the nearest neighbours by passing in a manual k
             nearest_neighbours = findNearestNeighbour(training_vectors, validation_vector, k)
-            
+
+            #Finding the genre with the concept of voting by neighbours           
             genre = detectClassOfTestSet(nearest_neighbours, training_labels, k)
+            print("Known label: {0} Calculated Label: {1}".format(training_labels.get(validation_file,"Unknown"), genre))
             
-            #TODO: Replace this and keep track of right and wrong answers
-            print(genre)
-            if genre == training_labels[validation_file]:
-                count += 1
-    
-                print(count)
-    
+    #Else clause gets activated in case the run is a final test run
     else:
-        
         #Creating the training vectors from the training dictionary
         vectors, zero_vector = createTrainingVectors(training_text_dict)
     
+        #Finding the genre of a test file one file at a time
         for test_file_path in test_paths:
             test_file = test_file_path.split('/')[-1]
             print("\nTest file is : {0}".format(test_file))
-            print("Known label of this file is {0}".format(test_labels.get(test_file,"Unknown")))
-            
+
+            #Creating the set of tokens for the test file
             test_text_dict = readTextFromFilePaths([test_file_path])
             
             #Running k nearest neighbours algorithms
-            genre = runKNearestNeighbours(vectors, test_text_dict, test_file, training_labels, zero_vector, k)
+            genre = runKNearestNeighbours(vectors, test_text_dict, test_file, training_labels, zero_vector, k, tf_idf)             
+            print("Known label: {0} Calculated Label: {1}".format(test_labels.get(test_file,"Unknown"), genre))
             
-            print("Calculated label of this file is {0}".format(genre))
+            if tf_idf:
+                vectors.pop(test_file)
 
-def runKNearestNeighbours(training_vectors, tokenized_test_file, test_file, training_labels, zero_vector, k):
+
+def runKNearestNeighbours(training_vectors, tokenized_test_file, test_file, training_labels, zero_vector, k, tf_idf = False):
     
     #Creating the test vector with only those tokens that were a part of the training set
-    print("Creating vectors for test data")
     training_vectors[test_file] = createTestVectors(tokenized_test_file[test_file], zero_vector)
     
     #Performing tf-idf transform on all the vectors
-    tfidf_transform_dict = tfIdfTransform(training_vectors)
+    tfidf_transform_dict = tfIdfTransform(training_vectors) if tf_idf else training_vectors
     
-    #tfidf_transform_dict = training_vectors
-    
+    #Seperating the test vector from the training vectors
     test_vector = tfidf_transform_dict.pop(test_file)
     training_vectors = tfidf_transform_dict
     
     #Finding the nearest neighbours by passing in a manual k
-    print("Finding the nearest neighbours")
     nearest_neighbours = findNearestNeighbour(training_vectors, test_vector, k)
-    print(nearest_neighbours)
     
+    #Running k nearest neighbours algorithms
     genre = detectClassOfTestSet(nearest_neighbours, training_labels, k)
     
     return genre  
@@ -151,10 +145,12 @@ def computeDistance(vector1, vector2, method = 'cosine'):
         Computes the distance between two vector depending on the method that
         is passed in. Default method is cosine distance
     '''
+    #Using cosine distance as a measure of distance
     if method == 'cosine':
         theta = numpy.dot(vector1, vector2) / numpy.sqrt(numpy.dot(vector1, vector1) * numpy.dot(vector2, vector2))  
         distance = 1 - theta
-        
+    
+    #Using the euclidean distance measure
     elif method == 'euclidean':
         distance = euclideanDistance(vector1, vector2)
         
@@ -196,14 +192,19 @@ def detectClassOfTestSet(nearest_neighbours, training_labels, k):
         count_genres = Counter(genres_neighbours)
         nearest_neighbour = [genre for genre, count in count_genres.iteritems() if count == max(count_genres.values())]
         
+        #If there is a majority, return the winning genre
         if len(nearest_neighbour) == 1:
             return nearest_neighbour[0]
+        
+        #If there is a tie, remove the last element from the nearest neighbours and vote again
         else:
             k = k - 1
             nearest_neighbours = nearest_neighbours[:k]
 
 def euclideanDistance(instance1, instance2):
-    import math
+    '''
+        Finds the euclidean distance between two vectors
+    '''
     distance = 0
     for x in range(len(instance1)):
         distance += pow((instance1[x] - instance2[x]), 2)

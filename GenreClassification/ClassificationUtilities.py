@@ -4,8 +4,8 @@ Created on Sep 18, 2015
 @author: gaurav
 '''
 
-from ModelCreation_SentenceGenerator.ModelingUtilities import genres
-from copy import deepcopy
+from utils.ModelingUtilities import genres
+from copy                    import deepcopy
 import math
 import os
 
@@ -16,16 +16,17 @@ def getFileListAndLabels(path):
         
         It also creates a dictionary of file name: genre
     ''' 
-    file_paths = []
+    file_paths   = []
     genre_labels = {}
     
     for genre in genres:
         dir_path = path + genre
         for file_name in os.listdir(dir_path):
-            file_paths.append(dir_path+'/'+file_name)
-            genre_labels[file_name] = genre
+            if not file_name.startswith('.'):
+                file_paths.append(dir_path+'/'+file_name)
+                genre_labels[file_name] = genre
             
-    print(genre_labels)
+    print("Labels of the file that have been read are {0}".format(genre_labels))
     return file_paths, genre_labels
     
 def tfIdfTransform(vector_dict):
