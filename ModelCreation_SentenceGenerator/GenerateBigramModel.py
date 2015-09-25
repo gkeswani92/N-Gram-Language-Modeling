@@ -155,16 +155,16 @@ def createBigramModel( bigram_frequencies ):
     
     for genre in genres:
         genre_level_model = defaultdict(dict)
-        unseen_word_count = len(bigram_frequencies[genre]) # approximately
+        vocab_size = len(bigram_frequencies[genre]) # approximately
         for word, followers in bigram_frequencies[genre].iteritems():
-            #total_count = float(sum(followers.values()))
-            # Subtract 1 because every word has an "<UNSEEN>" following it
-            total_count = float(sum(followers.values())) + (unseen_word_count-1)*followers.get('<UNSEEN>',0)
+            # Different words have different number of <UNSEEN> tokens following them
+            # The number of such tokens depends upon the number of *seen* words they have following them
+            # The equation is:  |w_(i-1)| + [V - w_(i-1)-followers] * |<UNSEEN>|
+            seen_word_count = sum(followers.values()) - followers.get('<UNSEEN>',0)
+            unseen_word_count = (vocab_size - len(followers) + 1) * followers.get('<UNSEEN>',0)
+            total_count = float(seen_word_count + unseen_word_count)
             
             for following_word, count in followers.iteritems():
-                # May need to change this normalization factor to account for fact that
-                # "<UNSEEN>" is actually a stand-in for ALL other words --> MUCH larger
-                # value of total_count
                 genre_level_model[word].update({following_word : count/total_count})
         
         bigram_model[genre] = genre_level_model                    
