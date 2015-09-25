@@ -5,11 +5,9 @@ Created on Sep 9, 2015
 '''
 
 from utils.ModelingUtilities  import genres, training_path, serializeModelToDisk, getTokensForFile, training_file_counts
-from Smoothing.GoodTuring     import applyGoodTuringUnigramSmoothing
 from collections              import Counter, defaultdict
-import os
 from numpy.random             import choice
-import csv
+import os
 
 def generateUnigramModels():
     '''
@@ -27,18 +25,15 @@ def generateUnigramModels():
     #Returns the frequency distributions with all tokens with frequency 1 replacedby <UNKNOWN>
     #unigram_features_unknown_words = handleUnknownWords(unigram_frequencies)
     unknown_word_probs = getUnknownWordSamplingProbs(unigram_frequencies)
-    #unigram_frequencies = {} #Releasing the unused memory to speed up the program
     
-    #Performing Good Turing Smoothing
+    #Performing Good Turing Smoothing. Removed this as it is not needed for unigrams
     #smoothed_frequencies = applyGoodTuringUnigramSmoothing(unigram_features_unknown_words, n = 5)
     
     #Creating the unigram model i.e. calculating the probabilities of the unigrams
-    #unigram_model = createUnigramModel(smoothed_frequencies, unigram_features)
-    #unigram_model = createUnigramModel(unigram_features_unknown_words, unigram_features)
     unigram_model = createUnigramModel(unigram_frequencies, unigram_features, unknown_word_probs)
      
     #Storing the model on the disk in JSON format
-    serializeModelToDisk(unigram_model, 'UnigramSampled')
+    serializeModelToDisk(unigram_model, 'Unigram')
     
     return unigram_model
 
@@ -94,41 +89,39 @@ def handleUnknownWords(unigram_features):
     
     return modified_unigram_frequency
 
-def getUnknownWordSamplingProbs(unigram_features, iterations=100):
+def getUnknownWordSamplingProbs(unigram_features, iterations=10):
     '''
         Samples n_tokens/'training_file_counts' number of tokens from
         each of the training corpora 'iterations' many times, w/o replacement.
 
         This mimics the behavior of drawing a random text, which is the size of
         the average book among the training books, and seeing how many of the words
-        in that "new" text are novel. This provides a good estimation for the <UNKOWN> frequency.
+        in that "new" text are novel. 
+        
+        This provides a good estimation for the <UNKNOWN> frequency.
     '''
     unknown_frequency_counts = defaultdict(list)
     unknown_frequency_probs = {}
+    
     for genre, frequency_dist in unigram_features.items():
-        # Convert Counter back into list
+        
+        #Convert Counter back into list while maintaining the frequency of the tokens
         token_list = [key for key,value in frequency_dist.items() for _ in range(value)]
+        
+        #Samplie size is the average number of tokens per file
         sample_size = len(token_list)/training_file_counts[genre]
-        for i in range(iterations):
+        
+        for _ in range(iterations):
+            
+            #Removing random tokens from the corpora and checking which ones are unseen
             new_tokens_counter = Counter(choice(token_list,sample_size,replace=False))
             old_tokens_counter = frequency_dist - new_tokens_counter
             novel_tokens_counter = new_tokens_counter - old_tokens_counter
             unknown_frequency_counts[genre].append(sum(novel_tokens_counter.values()))
-            #novel_words_set = set(new_words_counter.keys()) - set(old_words_counter.keys())
-            #unknown_frequency_counts[genre].append(len(novel_words_set))
-        # Compute average probabilities from unknown counts
+           
+        #Compute average probabilities from unknown counts
         average_count = sum(unknown_frequency_counts[genre]) * 1.0/iterations
         unknown_frequency_probs.update({genre: average_count * 1.0/sample_size})
-
-    # Write the unknown counts/probs to a file
-    dir_path = '/Users/Macbook/Documents/Cornell/CS 4740 - Natural Language Processing/Project 1/N-Gram-Language-Modeling/'
-    w = csv.writer(open(dir_path+'sampling_counts_dump.csv', "w"))
-    for key, val in unknown_frequency_counts.items():
-        w.writerow([key]+val)
-        #w.writerow([key, val])
-    w = csv.writer(open(dir_path+'sampling_probs_dump.csv', "w"))
-    for key, val in unknown_frequency_probs.items():
-        w.writerow([key, val])
 
     return unknown_frequency_probs
 

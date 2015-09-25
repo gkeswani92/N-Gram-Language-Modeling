@@ -41,8 +41,9 @@ def generateRandomSentenceFromUnigram(unigram_model, n = None):
             current_token  = numberToWordMapping[genre][current_sample]
             
             #Contains all the tokens of the senetnce
-            unigram_sentence.append(current_token)
-            count += 1
+            if current_token != '<UNKNOWN>':
+                unigram_sentence.append(current_token)
+                count += 1
             
         #Creating a sentence from the sample by matching the numbers to the words
         randomUnigramSentences[genre] = str(smartJoin(unigram_sentence))

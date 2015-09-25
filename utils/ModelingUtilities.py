@@ -54,7 +54,6 @@ def loadUnigramModels(dir_name='Unigram'):
     '''
         Loads the unigram models for all the genres from the JSON dump
     '''
-    #model_path = base_path + '/Unigram/'
     model_path = base_path + '/' + dir_name + '/'
     unigram_model = {}
     
@@ -64,14 +63,11 @@ def loadUnigramModels(dir_name='Unigram'):
     
     return unigram_model
 
-def loadBigramModels(smoothed=True):
+def loadBigramModels():
     '''
         Loads the bigram models for all genres by unpickling 
     '''
-    if smoothed:
-        model_path = base_path + '/SmoothedBigram/'
-    else:
-        model_path = base_path + '/Bigram/'
+    model_path = base_path + '/Bigram/'
     bigram_model = {}
     
     for genre in genres:
