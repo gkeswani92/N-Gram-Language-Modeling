@@ -4,8 +4,8 @@ Created on Sep 18, 2015
 @author: gaurav
 '''
 
-from GenreClassification.KNearestNeighbourClassifier import KNearestNeighbourController
-from GenreClassification.ClassificationUtilities     import getFileListAndLabels
+from KNearestGenreClassification.KNearestNeighbourClassifier import KNearestNeighbourController
+from KNearestGenreClassification.ClassificationUtilities     import getFileListAndLabels
 from utils.ModelingUtilities                         import training_path, test_path
 
 def main( validation = True ):

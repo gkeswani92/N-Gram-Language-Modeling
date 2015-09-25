@@ -4,9 +4,9 @@ Created on Sep 18, 2015
 @author: gaurav
 '''
 
-from GenreClassification.ClassificationUtilities        import tfIdfTransform
-from collections 										import OrderedDict, Counter
-from nltk.tokenize                                      import word_tokenize
+from KNearestGenreClassification.ClassificationUtilities        import tfIdfTransform
+from collections 										        import OrderedDict, Counter
+from nltk.tokenize                                              import word_tokenize
 import codecs
 import numpy
 import operator
