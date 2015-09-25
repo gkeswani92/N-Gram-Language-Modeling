@@ -26,16 +26,16 @@ def generateBigramModels():
         bigrams[genre], startchar_successors[genre] = getBigramsForGenre(training_path+genre)
         
     #Creating the frequency model of the bigrams
-    bigram_frequencies, unseen_frequencies = getBigramFrequencies(bigrams)
+    bigram_frequencies = getBigramFrequencies(bigrams)
     
     #Adding the frequency of the bigrams that include the start character
-    #bigram_frequencies_with_startChar = getStartCharBigramFrequencies(bigram_frequencies, startchar_successors)
+    bigram_frequencies_with_startChar = getStartCharBigramFrequencies(bigram_frequencies, startchar_successors)
 
     #Creating the bigram model i.e. calculating the probabilities of the unigrams
-    bigram_model = createBigramModel(bigram_frequencies)
+    bigram_model = createBigramModel(bigram_frequencies_with_startChar)
 
     #Storing the model on the disk in JSON format
-    serializeModelToDisk(bigram_model, 'SmoothedBigram')
+    serializeModelToDisk(bigram_model, 'Bigram')
 
     return bigram_model
 
@@ -109,12 +109,12 @@ def getBigramFrequencies( bigrams ):
     simple_frequency_distribution = dict((genre, Counter(pairs)) for genre, pairs in bigrams.iteritems())
 
     # Smooth bigram counts
-    smoothed_simple_frequency_distribution, unseen_frequencies = applyGoodTuringBigramSmoothing(simple_frequency_distribution, n=10)
+    smoothed_simple_frequency_distribution = applyGoodTuringBigramSmoothing(simple_frequency_distribution, n=5)
     
     #Creates a advanced bigram frequency model distribution like { a : { b:2, c:3 } }
     advanced_bigram_model = createAdvancedBigramFrequency(smoothed_simple_frequency_distribution, bigrams )
     
-    return advanced_bigram_model, unseen_frequencies
+    return advanced_bigram_model
 
 def createAdvancedBigramFrequency( simple_frequency_distribution, bigrams ):
     '''
@@ -156,7 +156,7 @@ def createBigramModel( bigram_frequencies ):
         for word, followers in bigram_frequencies[genre].iteritems():
             #total_count = float(sum(followers.values()))
             # Subtract 1 because every word has an "<UNSEEN>" following it
-            total_count = float(sum(followers.values())) + (unseen_word_count-1)*followers['<UNSEEN>']
+            total_count = float(sum(followers.values())) + (unseen_word_count-1)*followers.get('<UNSEEN>',0)
             
             for following_word, count in followers.iteritems():
                 # May need to change this normalization factor to account for fact that

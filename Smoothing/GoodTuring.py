@@ -56,7 +56,6 @@ def applyGoodTuringBigramSmoothing(bigram_frequencies, n = 5):
     
     #Updating the counts which were less than n in the original frequency distribution
     #with the new smoothed counts
-    unseen_freqs = {}
     for genre, bigram_counts in bigram_frequencies.iteritems():
         for token, count in bigram_counts.items():
             if count < n:
@@ -66,7 +65,4 @@ def applyGoodTuringBigramSmoothing(bigram_frequencies, n = 5):
             if (token[0],'<UNSEEN>') not in bigram_counts:
                 bigram_counts[(token[0],'<UNSEEN>')] = smoothed_frequencies[genre][0]
         
-        #Store the unseen frequency at the genre level
-        #unseen_freqs[genre] = smoothed_frequencies[genre][0]
-        
-    return bigram_frequencies, unseen_freqs
+    return bigram_frequencies

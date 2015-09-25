@@ -6,15 +6,13 @@ Created on Sep 21, 2015
 from utils.ModelingUtilities                              import test_path, genres, loadUnigramModels, getTokensForFile, loadBigramModels
 from math                                                 import exp, log
 from collections                                          import defaultdict
-import pprint
 import os
 
 def getUnigramPerplexity():
     '''
         Controller method to find the perplexity of all the test books with all the genres
     '''
-    #unigram_model = loadUnigramModels('UnigramSampled')
-    unigram_model = loadUnigramModels('UnigramSampled')
+    unigram_model = loadUnigramModels()
     
     #Reads in the unigrams one file at a time and stores it with their bookname
     book_tokens = {}
@@ -23,6 +21,7 @@ def getUnigramPerplexity():
         for path in os.listdir(test_path + genre):
             book_tokens[path] = getTokensForFile(test_path + genre + '/' + path)
     
+    #Computes the perplixity of every test corpus against each of the unigram models created
     book_perplexity = defaultdict(dict)
     for book, unigrams in book_tokens.iteritems():
         print('')
@@ -30,14 +29,14 @@ def getUnigramPerplexity():
             book_perplexity[book][genre] = computeUnigramPerplexity(model, unigrams)
             print("Perplexity of '{0}' book on {1} genre model: {2}".format(book,genre,book_perplexity[book][genre]))
     
-    pprint.pprint(book_perplexity)
+    return book_perplexity
     
-
+    
 def getBigramPerplexity():
     '''
         Controller method to find the perplexity of all the test books with all the genres
     '''
-    bigram_model = loadBigramModels(smoothed=True)
+    bigram_model = loadBigramModels()
 
     #Reads in the unigrams one file at a time and stores it with their bookname
     book_tokens = {}
@@ -56,8 +55,9 @@ def getBigramPerplexity():
     for book, bigrams in book_bigrams.iteritems():
         for genre in genres:
             book_perplexity[book][genre] = computeBigramPerplexity(bigram_model[genre], bigrams)
+            print("Perplexity of '{0}' book on {1} genre model: {2}".format(book, genre, book_perplexity[book][genre]))
 
-    pprint.pprint(book_perplexity)
+    return book_perplexity
 
 
 def computeUnigramPerplexity(genre_model, unigrams):
@@ -76,30 +76,38 @@ def computeBigramPerplexity(bigram_model, bigrams):
     '''
 
     bigram_probabilities = []
+    
     for bigram in bigrams:
         if bigram[0] in bigram_model:
             if bigram[1] in bigram_model:
+                
+                #If the bigram is one that was seen in the corpus
                 if bigram[1] in bigram_model[bigram[0]].keys():
                     bigram_probabilities.append(bigram_model[bigram[0]][bigram[1]])
+                    
+                #If the first word was seen, but the second word wasn't seen with it
                 else:
                     bigram_probabilities.append(bigram_model[bigram[0]]['<UNSEEN>'])
+                  
             else:
                 if '<UNKNOWN>' in bigram_model[bigram[0]]:
                     bigram_probabilities.append(bigram_model[bigram[0]]['<UNKNOWN>'])
                 else:
                     bigram_probabilities.append(bigram_model[bigram[0]]['<UNSEEN>'])
+                    
         elif bigram[1] in bigram_model:
             if bigram[1] in bigram_model['<UNKNOWN>']:
                 bigram_probabilities.append(bigram_model['<UNKNOWN>'][bigram[1]])
             else:
-                bigram_probabilities.append(bigram_model['<UNKNOWN>']['<UNSEEN>'])
+                bigram_probabilities.append(bigram_model['<UNKNOWN>']['<UNSEEN>'])  
         else:
             bigram_probabilities.append(bigram_model['<UNKNOWN>']['<UNKNOWN>'])
 
     perplexity_value = exp(1.0/len(bigram_probabilities) * sum([ -log(1.0 * x) for x in bigram_probabilities]))
+    
     return perplexity_value
 
 
 if __name__ == '__main__':
     getUnigramPerplexity()
-    #getBigramPerplexity()
+    getBigramPerplexity()
