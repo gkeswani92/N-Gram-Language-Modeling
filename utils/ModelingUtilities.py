@@ -14,8 +14,6 @@ from nltk import word_tokenize
 base_path     = os.path.dirname(__file__)
 genres        = ['children','crime','history']
 training_file_counts = {'children': 6, 'crime': 6, 'history': 3}
-#genres        = ['history']
-#training_file_counts = {'history': 3}
 training_path = base_path + '/books/train_books/'
 test_path     = base_path + '/books/test_books/'
 
